@@ -1,0 +1,64 @@
+body{
+	font-family: Quicksand !important;
+}
+#ordino{
+font-family: Quicksand; font-size: 3em;color: #4f4f4f; text-align:left; margin-left: -10px; margin-top: 8px;
+}
+p{
+	font-family: Open Sans;
+}
+.navbar-default .navbar-nav > li > a {
+	color: #4f4f4f !important;
+	font-size: 18px;
+	font-family: Quicksand;
+	background: #fff;
+	width: 100%;
+}
+.navbar-default .navbar-nav > li > a:hover {
+	color: #337ab7 !important;
+	font-size: 18px !important;
+	font-family: Quicksand !important;
+	background: #fff !important;
+	border-bottom: 1px solid #337ab7;
+}
+.navbar-default .navbar-nav > li > a:active, a:focus{
+	color: #337ab7 !important;
+}
+.nav-right{
+	float: right;
+	margin-top: 2.8%;
+}
+h2{
+	font-family: Open Sans;
+}
+.selectContainer{
+	float: right;
+}
+.selectContainer select{
+
+}
+.input-group{
+	margin-bottom:15px;
+}
+#label_category {
+	margin-top: 5px;
+}
+.toggle-button{
+	margin-top:35px !important;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	border-color:rgb(18,37,67) !important;
+	color: rgb(18,37,67) !important;
+}
+.btn-primary{
+	border-radius: 0px !important;
+	background-color: #fff !important;
+	border: 1px solid #4f4f4f !important;
+	color: #000 !important;
+}
+.btn-primary:hover{
+	border-radius: 0px !important;
+	background-color: #4f4f4f !important;
+	border: 1px solid #4f4f4f !important;
+	color: #337ab7 !important;
+}
