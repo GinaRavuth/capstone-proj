@@ -21,6 +21,7 @@ if (version_compare(PHP_VERSION, '5.3.7', '<')) {
 }
 
 // include the configs / constants for the database connection
+// should apply for all loaded views
 require_once("config/db.php");
 
 // load the login class
@@ -35,9 +36,11 @@ if ($login->isUserLoggedIn() == true) {
     // the user is logged in. you can do whatever you want here.
     // for demonstration purposes, we simply show the "you are logged in" view.
     
+    //if a GET variable for "view" has been set, begin routing
     if(isset($_GET['view'])) {
        $url = $_GET['view'];
         
+        //switch determines what page user is on, if variable is invalid default is home
         switch($url) {
             case 'addhardware':
                 include("views/addhardware.php");
@@ -59,7 +62,8 @@ if ($login->isUserLoggedIn() == true) {
                 break;
             default:
                 include("views/home.php");
-        }        
+        }
+    //if there is no variable set, redirect to home
     } else {
         include("views/home.php");
     }
