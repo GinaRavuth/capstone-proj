@@ -34,7 +34,36 @@ $login = new Login();
 if ($login->isUserLoggedIn() == true) {
     // the user is logged in. you can do whatever you want here.
     // for demonstration purposes, we simply show the "you are logged in" view.
-    include("views/logged_in.php");
+    
+    if(isset($_GET['view'])) {
+       $url = $_GET['view'];
+        
+        switch($url) {
+            case 'addhardware':
+                include("views/addhardware.php");
+                break;
+            case 'approvecheckout':
+                include("views/approvecheckout.php");
+                break;
+            case 'approvereturn':
+                include("views/approvereturn.php");
+                break;
+            case 'createcategory':
+                include("views/createcategory.php");
+                break;
+            case 'managesettings':
+                include("views/managesettings.php");
+                break;
+            case 'checkmessages':
+                include("views/checkmessages.php");
+                break;
+            default:
+                include("views/home.php");
+        }        
+    } else {
+        include("views/home.php");
+    }
+
 
 } else {
     // the user is not logged in. you can do whatever you want here.
