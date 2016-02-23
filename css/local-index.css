@@ -1,0 +1,58 @@
+body{
+	font-family: Quicksand !important;
+}
+
+.center-block{
+	margin-top: 15%;
+}
+.center-two{
+	display:table;
+	margin:0 auto;
+
+}
+h1{
+	 font-family:Quicksand; 
+	 font-size: 72px !important;
+	 color: #4F4F4F;
+	 text-align:center;
+}
+
+/* button styles */
+button{
+	width: 150px; 
+	font-family: Quicksand;
+	background-color:#4f4f4f;
+	color: #fff !important;
+	font-size: 18px !important;
+	 -o-transition:.5s;
+	  -ms-transition:.5s;
+	  -moz-transition:.5s;
+	  -webkit-transition:.5s;
+	  /* ...and now for the proper property */
+	  transition:.5s;
+}
+button:hover{
+	opacity: .9;
+	background:#337ab7;
+}
+.button-index{
+	padding-top: 15px;
+}
+/* end button styles */ 
+
+/* second paragraph */
+.second-p{
+	text-align:center; 
+	color: #4F4F4F;
+	margin-bottom:20px;
+	margin-top: 25px;
+}
+/* end second paragraph styles */
+/* paragraph  */
+/*div p{
+	display:table;
+	margin:0 auto;
+	margin-bottom: 25px;
+	width: 70%;
+	text-align: center;
+} */
