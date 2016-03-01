@@ -1,7 +1,11 @@
 body{
 	font-family: Quicksand !important;
 }
-
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
 .center-block{
 	margin-top: 15%;
 }

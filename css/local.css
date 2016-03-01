@@ -4,6 +4,11 @@ body{
 #ordino{
 font-family: Quicksand; font-size: 3em;color: #4f4f4f; text-align:left; margin-left: -10px; margin-top: 8px;
 }
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
 p{
 	font-family: Open Sans;
 }
