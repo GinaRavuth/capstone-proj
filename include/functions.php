@@ -39,7 +39,7 @@ function get_types() {
     return($types);
     
 }
-function get_hardware() {
+function get_hardware($cat) {
     $link = open_database_connection();
     $sql = 'SELECT hardware_id, type, status, model, notes, location FROM hardware';
     
@@ -48,9 +48,14 @@ function get_hardware() {
      */
     $order = ' ORDER BY hardware_id';
     
+    if($cat != NULL) {
+        $query = " WHERE type=:cat";
+        $sql .= $query;
+    }
+    
     $sql .= $order;
     
-    $result = $link->query($sql);
+    $result = $link->prepare($sql);
     $hardware = array();
     
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {

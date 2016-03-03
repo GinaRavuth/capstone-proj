@@ -9,43 +9,7 @@
 
 </head>
 <body >
-  <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle toggle-button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-					<a class="navbar-brand" href="#">
-					<h1 id="ordino">Ordino</h1>
-					</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse nav-right" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="index.html" class="active">Home</a>
-                    </li>
-                    <li>
-                        <a href="hardware.html">Hardware</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="returns.html">Returns</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-  
+<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/navbar.php'); ?>
 
 
 <div class="container" style="margin-top: 120px;">
@@ -58,7 +22,7 @@
     <div class="input-group">
         <label class="control-label" id="label_category" for="cats">Choose Category: &nbsp; </label>
         <div class="selectContainer">
-            <select name="categories" class="form-control" id="cats">
+            <select name="categories" class="form-control" id="cats" onchange="getCategory(this.value)">
                 <option value="select">Select Type</option>
                 <?php foreach($types as $type): ?>
                 <option value="<?php echo $type ?>"><?php echo $type ?></option>                
@@ -66,6 +30,7 @@
             </select>
         </div>
     </div>
+	<div id="txtHint"></div>
 <table class="table table-striped table-bordered" id="dataTable">
     <thead>
         <tr>
@@ -98,9 +63,32 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/js.php'); ?>
 
 <script>
+//initialize data-tables.js
 $(document).ready(function(){
     $('#dataTable').DataTable();
 });
+
+function getCategory(str) {
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+            }
+        };
+        xmlhttp.open("GET","/include/hardware.php?cat="+str,true);
+        xmlhttp.send();
+    }
+}
 </script>
   
   <!--end scripts -->
