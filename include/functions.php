@@ -43,7 +43,7 @@ function get_types() {
     return($types);
     
 }
-function get_hardware($cat) {
+function get_hardware() {
     $link = open_database_connection();
     $sql = 'SELECT hardware_id, type, status, model, notes, location FROM hardware';
     
@@ -51,11 +51,6 @@ function get_hardware($cat) {
      *build out the queries for refining hardware selection
      */
     $order = ' ORDER BY hardware_id';
-    
-    if($cat != NULL) {
-        $query = " WHERE type=:cat";
-        $sql .= $query;
-    }
     
     $sql .= $order;
     
