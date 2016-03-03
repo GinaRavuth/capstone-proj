@@ -23,7 +23,11 @@ function get_column_heads() {
     
     unset($columns[6]);
     unset($columns[7]);
-    
+
+    for ($i=0; $i<count($columns); $i++) {
+        ucfirst($columns[i]);
+        str_replace("_"," ",$columns[i]);
+    }
     return($columns);
 }
 function get_types() {
