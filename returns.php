@@ -6,8 +6,8 @@ $columnSetting = "front";
 
 //initialize page variables
 $title = ucfirst(basename(__FILE__, '.php'));
-$header = 'Find Hardware';
-$description = 'This section will tell about the different "categories" in the system. It will describe each category so users can know where to look for their item and have a better experience.';
+$header = 'Return Request';
+$description = 'Please find item in system that you checked out. After, request to return so administrator can approve your item return.';
 $columns = get_column_heads($columnSetting);
 $types = get_types();
 $hardware = get_hardware(); 

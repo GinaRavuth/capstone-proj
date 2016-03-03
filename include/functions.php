@@ -12,7 +12,7 @@ function open_database_connection() {
 function close_database_connection($link) {
     $link = null;
 }
-function get_column_heads() {
+function get_column_heads($var) {
     $link = open_database_connection();
     $sql = 'DESCRIBE hardware';
     $result = $link->prepare($sql);
@@ -21,13 +21,16 @@ function get_column_heads() {
     
     close_database_connection($link);
     
-    unset($columns[6]);
-    unset($columns[7]);
+    if($var == "front") {
+        unset($columns[6]);
+        unset($columns[7]);        
+    }
 
     for ($i=0; $i<count($columns); $i++) {
-        ucfirst($columns[i]);
-        str_replace("_"," ",$columns[i]);
+        $columns[$i] = str_replace("_"," ",$columns[$i]);
+        $columns[$i] = ucwords($columns[$i]);
     }
+    
     return($columns);
 }
 function get_types() {
@@ -54,7 +57,7 @@ function get_hardware() {
     
     $sql .= $order;
     
-    $result = $link->prepare($sql);
+    $result = $link->query($sql);
     $hardware = array();
     
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
