@@ -69,4 +69,20 @@ function get_hardware() {
     return($hardware);
     
 }
+function formatBody($content) {
+    $result = '';
+    foreach($content as $item):
+    $result .=
+    '<tr>
+        <td>'.$item['hardware_id'].'</td>
+        <td>'.$item['type'].'</td>
+        <td>'.$item['status'].'</td>
+        <td>'.$item['model'].'</td>
+        <td>'.$item['notes'].'</td>
+        <td>'.$item['location'].'</td>
+    </tr>';
+    endforeach;
+    
+    return $result;
+}
 ?>

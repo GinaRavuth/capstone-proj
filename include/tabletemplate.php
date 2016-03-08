@@ -47,16 +47,7 @@
 					</tr>
 				</thead>
 				<tbody id="tableBody">
-					<?php foreach($hardware as $item): ?>
-					<tr>
-						<td><?php echo $item['hardware_id']; ?></td>
-						<td><?php echo $item['type']; ?></td>
-						<td><?php echo $item['status']; ?></td>
-						<td><?php echo $item['model']; ?></td>
-						<td><?php echo $item['notes']; ?></td>
-						<td><?php echo $item['location']; ?></td>
-					</tr>
-					<?php endforeach; ?>
+					<?php echo $hardware; ?>
 				</tbody>
 			</table>
 
@@ -69,12 +60,7 @@
 
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/js.php');?>
 
-<script>
-	//initialize data-tables.js
-	$(document).ready(function(){
-		$('#dataTable').DataTable();
-	});
-</script>
+<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/js_functions.php');?>
   
   <!--end scripts -->
 </body>
