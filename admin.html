@@ -35,7 +35,7 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav text-center">
                 <li class="sidebar-brand">
-                    Ordino
+                    <h1>Ordino</h1>
                 </li>
                 <li>
                     <a href="#">Check Messages</a>
@@ -56,15 +56,34 @@
                     <a href="#">Manage Settings</a>
                 </li>
             </ul>
+			
+			
+			<ul id="footer-nav">
+			<li><a href="#">Log Out</a></li>
+			<li>|</li>
+			<li><a href="#">Settings</a></li>
+			</ul>
+			
         </div>
         <!-- /#sidebar-wrapper -->
 		<!-- nav bar at top -->
 		<nav class="navbar navbar-default navbar-static-top">
 		  <div class="container">
-			
+			<h1>Ordino</h1>
+			<!-- <ul class="nav navbar-nav navbar-right">
+				<!--<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Name<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Account Settings</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Log Out</a></li>
+					</ul> 
+				</li> 
+			</ul>-->
 		  </div>
 		</nav>
 		<!-- end nav -->
+		
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
@@ -186,12 +205,17 @@
 
     </div>
     <!-- /#wrapper -->
-
+	
+	<script>
+$(document).ready(function() {
+    $(".dropdown-toggle").dropdown();
+});	
+	
+	</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
     <!-- Menu Toggle Script -->
     <script>
