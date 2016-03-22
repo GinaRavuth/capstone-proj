@@ -47,7 +47,6 @@
 					</tr>
 				</thead>
 				<tbody id="tableBody">
-					<?php echo $hardware; ?>
 				</tbody>
 			</table>
 

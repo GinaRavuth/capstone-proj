@@ -26,10 +26,10 @@ function get_column_heads($var) {
         unset($columns[7]);        
     }
 
-    for ($i=0; $i<count($columns); $i++) {
+    /*for ($i=0; $i<count($columns); $i++) {
         $columns[$i] = str_replace("_"," ",$columns[$i]);
         $columns[$i] = ucwords($columns[$i]);
-    }
+    }*/
     
     return($columns);
 }
@@ -46,21 +46,30 @@ function get_types() {
     return($types);
     
 }
-function get_hardware() {
+function get_hardware($type) {
     $link = open_database_connection();
     $sql = 'SELECT hardware_id, type, status, model, notes, location FROM hardware';
     
     /*This section should contain code for adding parameters to the query, probably from GET variables passed via AJAX
      *build out the queries for refining hardware selection
      */
-    $order = ' ORDER BY hardware_id';
+    if($type!=NULL) {
+        $sql .= ' WHERE type=:type';
+    }
     
-    $sql .= $order;
+    $sql .= ' ORDER BY hardware_id';
     
-    $result = $link->query($sql);
+    $query = $link->prepare($sql);
+    
+    if($type!=NULL) {
+        $query->bindParam(':type', $type);
+    }
+    
+    $query->execute();
+    
     $hardware = array();
     
-    while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    while($row = $query->fetch(PDO::FETCH_ASSOC)) {
         $hardware[] = $row;
     }
     

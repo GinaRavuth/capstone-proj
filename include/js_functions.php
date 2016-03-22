@@ -1,8 +1,10 @@
 <script>
+
 	//initialize data-tables.js
 	$(document).ready(function(){
-		$('#dataTable').DataTable();
-        categoryChange();
+		table = $('#dataTable').DataTable({
+			'ajax' : '/include/ajax_queries.php'			
+		});
 	});
     
     function categoryChange() {
@@ -14,8 +16,6 @@
             $.ajax("/include/ajax_queries.php", {
                 data: { val: categoryOption },
                 success: function(data) {
-                    //call line display function
-                    $('#tableBody').html("");
                     window.alert(data);
                 }
             });
