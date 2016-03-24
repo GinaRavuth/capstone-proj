@@ -21,15 +21,15 @@ function get_column_heads($var) {
     
     close_database_connection($link);
     
-    if($var == "front") {
+    if($var === "front") {
         unset($columns[6]);
-        unset($columns[7]);        
+        unset($columns[7]);
+        
+        for ($i=0; $i<count($columns); $i++) {
+            $columns[$i] = str_replace("_"," ",$columns[$i]);
+            $columns[$i] = ucwords($columns[$i]);
+        }        
     }
-
-    /*for ($i=0; $i<count($columns); $i++) {
-        $columns[$i] = str_replace("_"," ",$columns[$i]);
-        $columns[$i] = ucwords($columns[$i]);
-    }*/
     
     return($columns);
 }
@@ -46,24 +46,13 @@ function get_types() {
     return($types);
     
 }
-function get_hardware($type) {
+function get_hardware() {
     $link = open_database_connection();
     $sql = 'SELECT hardware_id, type, status, model, notes, location FROM hardware';
-    
-    /*This section should contain code for adding parameters to the query, probably from GET variables passed via AJAX
-     *build out the queries for refining hardware selection
-     */
-    if($type!=NULL) {
-        $sql .= ' WHERE type=:type';
-    }
     
     $sql .= ' ORDER BY hardware_id';
     
     $query = $link->prepare($sql);
-    
-    if($type!=NULL) {
-        $query->bindParam(':type', $type);
-    }
     
     $query->execute();
     

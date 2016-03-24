@@ -30,7 +30,7 @@
 				<label class="control-label" id="label_category" for="cats">Choose Category: &nbsp; </label>
 				<div class="selectContainer">
 					<select name="categories" class="form-control" id="cats">
-						<option value="select">Select Type</option>
+						<option value="select" selected disabled>Select Type</option>
 						<?php foreach($types as $type): ?>
 						<option value="<?php echo $type ?>"><?php echo $type ?></option>                
 						<?php endforeach; ?>
