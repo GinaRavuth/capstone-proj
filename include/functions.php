@@ -83,4 +83,16 @@ function formatBody($content) {
     
     return $result;
 }
+function linkDataTablesID($array,$url) {
+$a = count($array['data']);
+$b = 0;
+
+do {
+    $id = $array['data'][$b][0];
+    $array['data'][$b][0] = "<a href='$url&id=$id'>$id</a>";
+    $b++;
+} while ($b < $a);
+
+return $array;
+}
 ?>

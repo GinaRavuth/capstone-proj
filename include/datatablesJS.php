@@ -3,7 +3,7 @@ $(document).ready(function() {
 	var table = $('#dataTable').DataTable( {
         "processing": true,
         "serverSide": true,
-        "ajax": "/include/ajax_queries.php"
+        "ajax": "/include/datatablesAJAX.php"
     });
 	
     function categoryChange() {

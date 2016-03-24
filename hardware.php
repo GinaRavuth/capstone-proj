@@ -7,7 +7,7 @@ $columnSetting = "front";
 //initialize page variables
 $title = ucfirst(basename(__FILE__, '.php'));
 $header = 'Find Hardware';
-$description = 'This section will tell about the different "categories" in the system. It will describe each category so users can know where to look for their item and have a better experience.';
+$description = 'Filter your search by category, or search for a specific hardware ID, type of hardware, model, or location to best determine if there is hardware available to suit your needs.';
 $columns = get_column_heads($columnSetting);
 $types = get_types();
 

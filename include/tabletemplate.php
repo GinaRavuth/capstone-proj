@@ -59,7 +59,7 @@
 
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/js.php');?>
 
-<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/js_functions.php');?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/datatablesJS.php');?>
   
   <!--end scripts -->
 </body>

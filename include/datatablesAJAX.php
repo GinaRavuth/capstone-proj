@@ -57,6 +57,9 @@ $sqlDetails = array(
  
 require($_SERVER['DOCUMENT_ROOT'].'/include/classes/ssp.class.php');
  
-echo json_encode(
-    SSP::simple( $_GET, $sqlDetails, $table, $primaryKey, $columns )
-);
+$results = SSP::simple( $_GET, $sqlDetails, $table, $primaryKey, $columns );
+$url = '/checkout.php';
+
+
+echo json_encode(linkDataTablesID($results,$url));
+?>
