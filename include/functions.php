@@ -12,23 +12,25 @@ function open_database_connection() {
 function close_database_connection($link) {
     $link = null;
 }
-function get_column_heads($var) {
+function get_column_heads($var,$table) {
     $link = open_database_connection();
-    $sql = 'DESCRIBE hardware';
+    $sql = "DESCRIBE $table";
     $result = $link->prepare($sql);
     $result->execute();
     $columns = $result->fetchAll(PDO::FETCH_COLUMN);
     
     close_database_connection($link);
     
-    if($var === "front") {
+    //if table is hardware, perform front/backend cleanup of columns
+    if($table==="hardware") {
         unset($columns[6]);
-        unset($columns[7]);
-        
+        unset($columns[7]);    
+    }
+    if($var==="front") {
         for ($i=0; $i<count($columns); $i++) {
             $columns[$i] = str_replace("_"," ",$columns[$i]);
             $columns[$i] = ucwords($columns[$i]);
-        }        
+        }
     }
     
     return($columns);
@@ -84,15 +86,29 @@ function formatBody($content) {
     return $result;
 }
 function linkDataTablesID($array,$url) {
-$a = count($array['data']);
-$b = 0;
-
-do {
-    $id = $array['data'][$b][0];
-    $array['data'][$b][0] = "<a href='$url&id=$id'>$id</a>";
-    $b++;
-} while ($b < $a);
-
-return $array;
+    //get size of array returned from SQL database
+    $a = count($array['data']);
+    $b = 0;
+    
+    //get the current url to see where to direct user
+    switch($url) {
+        case 'hardware.php':
+            $destinationURL = 'hardware-checkout.php';
+            break;
+        case 'returns.php':
+            $destinationURL = 'hardware-return.php';
+            break;
+        default:
+            $destinationURL = '#';
+    }
+    
+    //loop through array and change id table cell to a link taking the user to a checkout or return page based on their origin.
+    do {
+        $id = $array['data'][$b][0];
+        $array['data'][$b][0] = "<a href='$destinationURL?id=$id'>$id</a>";
+        $b++;
+    } while ($b < $a);
+    
+    return $array;
 }
 ?>
