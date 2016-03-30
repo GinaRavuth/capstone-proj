@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ordino - Returns</title>
+ <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/local.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<link href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" rel="stylesheet" type='text/css'>
+
+  <style>
+  </style>
+</head>
+<body >
+<!--
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	 <div class="navbar-header">
+		  <a class="navbar-brand" href="#">
+			<h1 id="ordino">Ordino</h1>
+		  </a>
+		  
+		</div>		
+			<ol class="breadcrumb">
+			<li><a href="index.html">Home</a></li>
+			<li class="active"><a href="#">Hardware</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Returns</a></li>
+			</ol>
+  </div>
+</nav> -->
+
+  <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle toggle-button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+					<a class="navbar-brand" href="#">
+					<h1 id="ordino">Ordino</h1>
+					</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse nav-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="hardware.html">Hardware</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="returns.html">Returns</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+  
+
+
+<div class="container" style="margin-top: 120px;">
+	<div class="row">
+		<div class="col-md-12">
+		<h2 >Return Request</h2>
+		<p>Please find item in system that you checked out. After, request to return so administrator can approve your item return.
+</p><br />
+
+    <div class="input-group">
+        <label class="control-label" id="label_category" for="cats">Choose Category: &nbsp; </label>
+        <div class="selectContainer">
+            <select name="categories" class="form-control" id="cats">
+                <option value="select">Select Category</option>
+                <option value="cat1">Category 1</option>
+                <option value="cat2">Category 2</option>
+                <option value="cat3">Category 3</option>
+                <option value="cat4">Category 4</option>
+                <option value="cat5">Category 5</option>
+            </select>
+        </div>
+    </div>
+			
+			<table class="table table-responsive table-striped">
+			<tr>
+				<th>Item</th>
+				<th>Description</th>
+				<th>Availability</th>
+				<th>View</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td></td>
+				<td></td>
+				<td></td>				
+			</tr>
+			<tr>
+				<td>2</td>
+				<td></td>
+				<td></td>
+				<td></td>				
+			</tr>
+			<tr>
+				<td>3</td>
+				<td></td>
+				<td></td>
+				<td></td>				
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+				<td></td>
+				<td></td>				
+			</tr>
+			<tr>
+				<td>5</td>
+				<td></td>
+				<td></td>
+				<td></td>				
+			</tr>
+			<tr>
+				<td>6</td>
+				<td></td>
+				<td></td>
+				<td></td>				
+			</tr>
+			<tr>
+				<td>7</td>
+				<td></td>
+				<td></td>
+				<td></td>				
+			</tr>
+			<tr>
+				<td>8</td>
+				<td></td>
+				<td></td>
+				<td></td>				
+			</tr>
+			<tr>
+				<td>9</td>
+				<td></td>
+				<td></td>
+				<td></td>				
+			</tr>
+			<tr>
+				<td>10</td>
+				<td></td>
+				<td></td>
+				<td></td>				
+			</tr>
+			<tr>
+				<td>11</td>
+				<td></td>
+				<td></td>
+				<td></td>				
+			</tr>
+			<tr>
+				<td>12</td>
+				<td></td>
+				<td></td>
+				<td></td>				
+			</tr>
+			</table>
+			
+			<nav>
+				<ul class="pagination">
+					<li>
+						<a href="#" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+						</a>
+					</li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li>
+						<a href="#" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+
+
+<!--scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  
+  <!--end scripts -->
+</body>
+</html>
