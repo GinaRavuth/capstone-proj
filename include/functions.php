@@ -93,7 +93,7 @@ function linkDataTablesID($array,$url) {
     //get the current url to see where to direct user
     switch($url) {
         case 'hardware.php':
-            $destinationURL = 'hardware-checkout.php';
+            $destinationURL = 'checkout.php';
             break;
         case 'returns.php':
             $destinationURL = 'hardware-return.php';
@@ -105,7 +105,12 @@ function linkDataTablesID($array,$url) {
     //loop through array and change id table cell to a link taking the user to a checkout or return page based on their origin.
     do {
         $id = $array['data'][$b][0];
-        $array['data'][$b][0] = "<a href='$destinationURL?id=$id'>$id</a>";
+        $type = $array['data'][$b][1];
+        $status = $array['data'][$b][2];
+        $model = $array['data'][$b][3];
+        $notes = $array['data'][$b][4];
+        $location = $array['data'][$b][5];
+        $array['data'][$b][0] = "<a href='$destinationURL?id=$id&type=$type&status=$status&model=$model&notes=$notes&location=$location'>$id</a>";
         $b++;
     } while ($b < $a);
     
