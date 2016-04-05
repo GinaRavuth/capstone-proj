@@ -14,6 +14,7 @@ function close_database_connection($link) {
 }
 function get_column_heads($var,$table) {
     $link = open_database_connection();
+    //this needs to be refactored to use bindParam instead of direct variable injection
     $sql = "DESCRIBE $table";
     $result = $link->prepare($sql);
     $result->execute();
@@ -115,5 +116,24 @@ function linkDataTablesID($array,$url) {
     } while ($b < $a);
     
     return $array;
+}
+function checkIfExists($id, $table) {
+    $link = open_database_connection();
+    
+    $sql = "SELECT hardware_id FROM $table WHERE hardware_id = $id";
+    $query = $link->prepare($sql);
+    
+    $query->execute();
+
+    $rows = $query->fetchAll(PDO::FETCH_NUM);
+    
+    if(count($rows) >= 1) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+function moveToLoaned($id) {
+    
 }
 ?>
