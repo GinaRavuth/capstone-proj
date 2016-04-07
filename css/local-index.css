@@ -9,10 +9,48 @@ body{
 .center-block{
 	margin-top: 15%;
 }
+#background{
+	background-color: ##18315a !important;
+}
+.dec-marg{
+	margin-top: 8% !important;
+}
+/* for admin forgot link */
+.space-password-button{
+	margin-top: 20px;
+}
+.space-password-button a{
+	text-decoration:none !important;
+	color: #333;
+	 -o-transition:.5s;
+	  -ms-transition:.5s;
+	  -moz-transition:.5s;
+	  -webkit-transition:.5s;
+	  /* ...and now for the proper property */
+	  transition:.5s;
+}
+.space-password-button a:hover,a:active,a:focus,a:visited{
+	text-decoration:none !important;
+	opacity: .9;
+}
+/* end admin forgot link */
+/* x button on admin login */
+.close span{
+	color: #333 !important;
+	float: right;
+}
+.modal-header h3{
+	margin:0;
+	padding:0 !important;
+}
 .center-two{
 	display:table;
 	margin:0 auto;
 
+}
+.form-group{
+	margin:0 auto;
+	display: table;
 }
 h1{
 	 font-family:Quicksand; 
@@ -38,6 +76,9 @@ button{
 button:hover{
 	opacity: .9;
 	background:#337ab7;
+}
+.btn{
+	background:#337ab7 !important;
 }
 .button-index{
 	padding-top: 15px;

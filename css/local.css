@@ -64,3 +64,10 @@ h2{
 #cats{
 	border-radius: 3px !important;
 }
+
+footer p{
+	margin-top: 50px;
+	font-family: Quicksand;
+	position:fixed;
+	height:60px;	
+}
