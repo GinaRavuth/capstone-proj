@@ -53,7 +53,7 @@
 
   <div class="form-group">
     <div class="col-sm-8">
-      <input type="submit" class="btn btn-default pull-right" id="submit" name="submit">Submit</input>
+      <input type="submit" class="btn btn-default pull-right" id="submit" name="submit">
     </div>
   </div>
 </form>
