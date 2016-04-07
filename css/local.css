@@ -12,6 +12,10 @@ font-family: Quicksand; font-size: 3em;color: #4f4f4f; text-align:left; margin-l
 p{
 	font-family: Open Sans;
 }
+.navbar-default{
+	background: #fff !important;
+	border-color: #fff !important;
+}
 .navbar-default .navbar-nav > li > a {
 	color: #4f4f4f !important;
 	font-size: 18px;
