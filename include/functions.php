@@ -26,6 +26,9 @@ function get_column_heads($var,$table) {
     if($table==="hardware") {
         unset($columns[6]);
         unset($columns[7]);    
+    } elseif($table==="loaned_hardware") {
+        unset($columns[4]);
+        unset($columns[5]);
     }
     if($var==="front") {
         for ($i=0; $i<count($columns); $i++) {
@@ -104,24 +107,36 @@ function linkDataTablesID($array,$url) {
     }
     
     //loop through array and change id table cell to a link taking the user to a checkout or return page based on their origin.
-    do {
-        $id = $array['data'][$b][0];
-        $type = $array['data'][$b][1];
-        $status = $array['data'][$b][2];
-        $model = $array['data'][$b][3];
-        $notes = $array['data'][$b][4];
-        $location = $array['data'][$b][5];
-        $array['data'][$b][0] = "<a href='$destinationURL?id=$id&type=$type&status=$status&model=$model&notes=$notes&location=$location'>$id</a>";
-        $b++;
-    } while ($b < $a);
+    if($url==='hardware.php') {
+        do {
+            $id = $array['data'][$b][0];
+            $type = $array['data'][$b][1];
+            $status = $array['data'][$b][2];
+            $model = $array['data'][$b][3];
+            $notes = $array['data'][$b][4];
+            $location = $array['data'][$b][5];
+            $array['data'][$b][0] = "<a href='$destinationURL?id=$id&type=$type&status=$status&model=$model&notes=$notes&location=$location'>$id</a>";
+            $b++;
+        } while ($b < $a);
+    } elseif($url==='returns.php') {
+        do {
+            $id = $array['data'][$b][0];
+            $eId = $array['data'][$b][1];
+            $name = $array['data'][$b][2];
+            $date = $array['data'][$b][3];
+            $array['data'][$b][0] = "<a href='$destinationURL?id=$id&eID=$eId&name=$name&date=$date'>$id</a>";
+            $b++;
+        } while ($b < $a);        
+    }
     
     return $array;
 }
 function checkIfExists($id, $table) {
     $link = open_database_connection();
     
-    $sql = "SELECT hardware_id FROM $table WHERE hardware_id = $id";
+    $sql = "SELECT hardware_id FROM $table WHERE hardware_id = :id";
     $query = $link->prepare($sql);
+    $query->bindParam(':id',$id);
     
     $query->execute();
 
@@ -133,7 +148,25 @@ function checkIfExists($id, $table) {
         return 0;
     }
 }
-function moveToLoaned($id) {
+function moveToLoaned($id, $name, $eId, $reason) {
+    $link = open_database_connection();
     
+    $date = date('Y-m-d G:i:s');
+    
+    $sql = "INSERT INTO loaned_hardware (hardware_id, eagle_id, name, date_out) VALUES ((SELECT hardware_id FROM hardware WHERE hardware_id=:hardware_id), :eagle_id, :name, :date)";
+    $insert = $link->prepare($sql);
+    $insert->bindParam(':hardware_id',$id);
+    $insert->bindParam(':eagle_id',$eId);
+    $insert->bindParam(':name',$name);
+    $insert->bindParam(':date', $date);
+
+    
+    if($insert->execute()) {
+        $status = "Checkout successful";
+    } else {
+        $status = "Checkout unsuccessful";
+    }
+    
+    return $status;
 }
 ?>
