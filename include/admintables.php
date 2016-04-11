@@ -8,10 +8,11 @@
     <meta name="author" content="">
 	<link href='http://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
     <title>Ordino - Admin Dashboard</title>
+	 <?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/css.php'); ?>
 <!-- Bootstrap Core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom CSS -->
-    <link href="../css/simple-sidebar.css" rel="stylesheet">
+    <link href="/css/simple-sidebar.css" rel="stylesheet">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -54,76 +55,47 @@
 			<h1>Ordino</h1>
 		</div>
 		</nav>
-<!-- end nav -->		
-<!-- Page Content -->
-		<div class="col-sm-12 ">
-			<h2>Approve Checkouts</h2>
-			<p>Please select checkouts to approve. <br>To approve, please select checkout request, read over the request, and then click Submit to approve.</p>
-			<br><br>
-			<table class="table table-striped table-bordered" id="datatable">
-			<tr>
-				<th>Item ID</th>
-				<th>Type</th>
-				<th>Status</th>
-				<th>Location</th>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>TV</td>
-				<td>Not Available</td>
-				<td>Rm 2208</td>				
-			</tr>
-			<tr>
-				<td>2</td>
-				<td></td>
-				<td></td>
-				<td></td>				
-			</tr>
-			<tr>
-				<td>3</td>
-				<td></td>
-				<td></td>
-				<td></td>				
-			</tr>
-			<tr>
-				<td>4</td>
-				<td></td>
-				<td></td>
-				<td></td>				
-			</tr>
-			<tr>
-				<td>5</td>
-				<td></td>
-				<td></td>
-				<td></td>				
-			</tr>
-			<tr>
-				<td>6</td>
-				<td></td>
-				<td></td>
-				<td></td>				
-			</tr>
-			<tr>
-				<td>7</td>
-				<td></td>
-				<td></td>
-				<td></td>				
-			</tr>
-			<tr>
-				<td>8</td>
-				<td></td>
-				<td></td>
-				<td></td>				
-			</tr>
-			</table>	
-		<div class="form-group">
-		<div class="col-xs-12">
-			<button type="submit" class="btn btn-default pull-right" id="submit">Approve</button>
-		</div>		
+<!-- Hardware Table -->
+		<div class="container" style="margin-top: 120px;">
+	<div class="row">
+		<div class="col-md-12">
+			
+			<h1><?php echo $header; ?></h1>
+			<p><?php echo $description; ?></p>
+			
 		</div>
-<!-- /#page-content-wrapper -->
-    </div>
-<!-- /#wrapper -->
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			
+			<div class="input-group">
+				<label class="control-label" id="label_category" for="cats">Choose Category: &nbsp; </label>
+				<div class="selectContainer">
+					<select name="categories" class="form-control" id="cats">
+						<option value="select" selected disabled>Select Type</option>
+						<?php foreach($types as $type): ?>
+						<option value="<?php echo $type ?>"><?php echo $type ?></option>                
+						<?php endforeach; ?>
+					</select>
+				</div>
+			</div>
+	
+			<table class="table table-striped table-bordered" id="dataTable">
+				<thead>
+					<tr>
+					<?php foreach($columns as $tableHead): ?>
+						<th><?php echo $tableHead; ?></th>
+					<?php endforeach; ?>
+					</tr>
+				</thead>
+				<tbody id="tableBody">
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+</div>
+<!-- End Table -->
 <!-- Modal -->
 			<div class="modal fade" id="logOut" tabindex="-1" role="dialog" aria-labelledby="logOut">
 			  <div class="modal-dialog" role="document">
@@ -153,5 +125,8 @@
 			$("#wrapper").toggleClass("toggled");
 		});
     </script>
+<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/js.php');?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/datatablesJS.php');?>
+<!--end scripts -->
 </body>
 </html>

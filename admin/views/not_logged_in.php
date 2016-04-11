@@ -1,18 +1,4 @@
-<?php
-// show potential errors / feedback (from login object)
-if (isset($login)) {
-    if ($login->errors) {
-        foreach ($login->errors as $error) {
-            echo $error;
-        }
-    }
-    if ($login->messages) {
-        foreach ($login->messages as $message) {
-            echo $message;
-        }
-    }
-}
-?>
+
 
 <!DOCTYPE html>
 <html>
@@ -30,6 +16,23 @@ if (isset($login)) {
 			<div class="col-lg-12 center-block dec-marg">
 				<h1>Ordino</h1>
 				<h3 style="text-align:center">Admin Portal</h3>
+			</div>
+			<div class="error">
+				<?php
+					// show potential errors / feedback (from login object)
+					if (isset($login)) {
+						if ($login->errors) {
+							foreach ($login->errors as $error) {
+								echo $error;
+							}
+					}
+						if ($login->messages) {
+							foreach ($login->message as $alert) {
+								echo  $alert;
+							}
+						}
+					}
+				?>
 			</div>
 		</div>
 <div class="row">
@@ -50,14 +53,9 @@ if (isset($login)) {
 	<div class="col-sm-4"></div>			
 </div>
 </div>
-
-
-
 <!--  scripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <!-- end scripts -->
-
-
 </body>
 </html>

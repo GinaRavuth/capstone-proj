@@ -10,8 +10,10 @@
  * DB_NAME: name of the database. please note: database and database table are not the same thing
  * DB_USER: user for your database. the user needs to have rights for SELECT, UPDATE, DELETE and INSERT.
  * DB_PASS: the password of the above user
+ !0rdinO1?
+ alexgoff_ordino
  */
 define("DB_HOST", "127.0.0.1");
 define("DB_NAME", "alexgoff_ordino");
-define("DB_USER", "alexgoff_ordino");
-define("DB_PASS", "!0rdinO1?");
+define("DB_USER", "root");
+define("DB_PASS", "");

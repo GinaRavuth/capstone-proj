@@ -43,8 +43,8 @@ if ($login->isUserLoggedIn() == true) {
             case 'hardware':
                 include("views/hardware.php");
                 break;
-            case 'checkouts':
-                include("views/checkouts.php");
+            case 'checkout':
+                include("views/checkout.php");
                 break;
             case 'returns':
                 include("views/returns.php");

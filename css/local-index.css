@@ -58,7 +58,12 @@ h1{
 	 color: #4F4F4F;
 	 text-align:center;
 }
+.error {
+	font-size: 15px;
+	text-align: center;
+	color: #ff0033;  
 
+}
 /* button styles */
 button{
 	width: 150px; 
