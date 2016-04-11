@@ -16,9 +16,9 @@
     <div class="container" style="margin-top: 120px;">
   <div class="row">
     <div class="col-md-12">
+	<h1><?php echo $header; ?></h1>
     <h2 class="bold">Item Name</h2>
 
-        <h1><?php echo $header; ?></h1>
         <p><?php echo $description; ?></p>
 
 </div>
@@ -29,25 +29,19 @@
   <div class="form-group">
     <label for="name" class="col-sm-1 control-label text-left">Name</label>
     <div class="col-sm-7">
-      <input type="text" class="form-control" id="name" placeholder="Name">
+      <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
     </div>
   </div>
   <div class="form-group">
     <label for="eagleid" class="col-sm-1 control-label text-left">Eagle ID</label>
     <div class="col-sm-7">
-      <input type="text" class="form-control" id="eagleid" placeholder="Eagle ID">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="date" class="col-sm-1 control-label text-left">Date Needed</label>
-    <div class="col-sm-7">
-      <input type="date" class="form-control" id="date">
+      <input type="text" class="form-control" id="eagleid" name="eagleid" placeholder="Eagle ID" required>
     </div>
   </div>
   <div class="form-group">
   <label for="message" class="col-sm-1 control-label text-left">Reason</label>
   <div class="col-sm-7">
-  <textarea class="form-control" rows="5" id="message" placeholder="Why do you need this hardware?"></textarea>
+  <textarea class="form-control" rows="5" id="message" name="message" placeholder="Why do you need this hardware?"></textarea>
   </div>
   </div>
 
