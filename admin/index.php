@@ -1,5 +1,4 @@
 <?php
-
 /**
  * A simple, clean and secure PHP Login Script / MINIMAL VERSION
  * For more versions (one-file, advanced, framework-like) visit http://www.php-login.net
@@ -38,27 +37,23 @@ if ($login->isUserLoggedIn() == true) {
     
     //if a GET variable for "view" has been set, begin routing
     if(isset($_GET['view'])) {
-       $url = $_GET['view'];
-        
+       $url = $_GET['view']; 
         //switch determines what page user is on, if variable is invalid default is home
         switch($url) {
-            case 'addhardware':
-                include("views/addhardware.php");
+            case 'hardware':
+                include("views/hardware.php");
                 break;
-            case 'approvecheckout':
-                include("views/approvecheckout.php");
+            case 'checkouts':
+                include("views/checkouts.php");
                 break;
-            case 'approvereturn':
-                include("views/approvereturn.php");
+            case 'returns':
+                include("views/returns.php");
                 break;
-            case 'createcategory':
-                include("views/createcategory.php");
+            case 'category':
+                include("views/category.php");
                 break;
-            case 'managesettings':
-                include("views/managesettings.php");
-                break;
-            case 'checkmessages':
-                include("views/checkmessages.php");
+            case 'messages':
+                include("views/messages.php");
                 break;
             default:
                 include("views/home.php");
@@ -67,8 +62,6 @@ if ($login->isUserLoggedIn() == true) {
     } else {
         include("views/home.php");
     }
-
-
 } else {
     // the user is not logged in. you can do whatever you want here.
     // for demonstration purposes, we simply show the "you are not logged in" view.

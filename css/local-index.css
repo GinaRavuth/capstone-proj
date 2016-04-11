@@ -73,6 +73,19 @@ button{
 	  /* ...and now for the proper property */
 	  transition:.5s;
 }
+#btn-style{
+	width: 150px; 
+	font-family: Quicksand;
+	background-color:#4f4f4f;
+	color: #fff !important;
+	font-size: 18px !important;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	/* ...and now for the proper property */
+	transition:.5s;
+	}
 button:hover{
 	opacity: .9;
 	background:#337ab7;
