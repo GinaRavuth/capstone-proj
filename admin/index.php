@@ -49,6 +49,9 @@ if ($login->isUserLoggedIn() == true) {
             case 'returns':
                 include("views/returns.php");
                 break;
+			case 'register':
+				include("views/register.php");
+				break;
             case 'category':
                 include("views/category.php");
                 break;

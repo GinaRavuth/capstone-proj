@@ -43,7 +43,7 @@
                     <a href="index.php?view=category">Create Category</a>
                 </li>
                 <li>
-                    <a href="#" data-toggle="modal" data-target="#logOut">Log Out</a>
+                    <a href="" name="logout" id="logout" value="logout">Log out</a>
                 </li>
             </ul>
         </div>
@@ -121,7 +121,8 @@
 <!-- /#wrapper -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="admin_functions/admin_js.js"></script>
 <!-- jQuery -->
     <script src="/js/jquery.js"></script>
 <!-- Menu Toggle Script -->

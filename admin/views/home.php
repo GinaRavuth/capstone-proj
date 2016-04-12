@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +44,7 @@
                     <a href="index.php?view=category">Create Category</a>
                 </li>
                 <li>
-                    <a href="#" data-toggle="modal" data-target="#logOut">Log Out</a>
+                   <a href="" name="logout" id="logout" value="logout">Log out</a>
                 </li>
             </ul>
         </div>
@@ -146,24 +147,6 @@
                         </div>
 					</a>
                     </div>
-				<div class="col-lg-4 col-sm-6" id="logoutbox">
-					<a href="#" data-toggle="modal" data-target="#logOut">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-comments fa-5x"></i>
-                                    </div><br/><br/>
-									<div class="col-lg-12 text-center">
-										<br/>
-										<h2>Log Out</h2>
-										<span class="glyphicon glyphicon-log-out"></span>											
-									</div>
-                                </div>
-                            </div>
-                        </div>
-					</a>
-                    </div>
                 </div>
 <!-- end 2nd row -->
             </div>
@@ -171,26 +154,9 @@
 <!-- /#page-content-wrapper -->
     </div>
 <!-- /#wrapper -->
-<!-- Modal -->
-			<div class="modal fade" id="logOut" tabindex="-1" role="dialog" aria-labelledby="logOut">
-			  <div class="modal-dialog" role="document">
-				<div class="modal-content">
-				  <div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				  </div>
-				  <div class="modal-body">
-				  <p>Are you sure you want to log out?</p>
-					<div id="log_buttons">
-						<button type="button" class="btn btn-primary">Yes</button>&nbsp;&nbsp;
-						<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-					</div>
-				  </div>
-				</div>
-			  </div>
-			</div>	
-			
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="admin_functions/admin_js.js"></script>
 <!-- jQuery -->
     <script src="/js/jquery.js"></script>
 <!-- Menu Toggle Script -->
