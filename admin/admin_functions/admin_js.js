@@ -28,4 +28,16 @@ $(document).ready(function() {
 			}
 		});
 	});
+	
+	$('#category_submit').click(function(){
+		var cat = $('#category').val();
+		var dataString = 'category='+category;
+		$.ajax({
+			type: 'POST',
+			url: 'admin_functions/admin_functions.php',
+			data: dataString,
+			success: function(data){
+			}
+		});
+	});
 });

@@ -131,6 +131,8 @@ function linkDataTablesID($array,$url) {
     
     return $array;
 }
+
+
 function checkIfExists($id, $table) {
     $link = open_database_connection();
     
@@ -189,5 +191,19 @@ function addHardware($id, $type, $model, $status, $description, $location){
     }
     
     return $status;
+}
+
+function message($name, $email, $subject, $message){
+	$link = open_database_connection();
+	
+	$sql = "INSERT INTO messages (name, email, subject, message) VALUES (:name, :email, :subject, :message)";
+	
+	$insert = $link->prepare($sql);
+	$insert->bindParam(':name',$name);
+	$insert->bindParam(':email',$email);
+	$insert->bindParam(':subject',$subject);
+	$insert->bindParam(':message',$message);
+	
+	$insert->execute();
 }
 ?>

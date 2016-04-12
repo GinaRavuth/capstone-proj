@@ -34,7 +34,7 @@
                     <a href="index.php?view=returns">Approve Returns</a>
                 </li>
                 <li>
-                    <a href="index.php?view=checkouts">Approve Checkouts</a>
+                    <a href="index.php?view=checkout">Approve Checkouts</a>
                 </li>
                 <li>
                     <a href="index.php?view=hardware">Add Hardware</a>
@@ -58,7 +58,7 @@
 <!-- Page Content -->
 		<div class="col-sm-12">
 			<h2 >Create Category</h2>
-				<p>Please fill out the form about the piece of hardware you would like to add and click submit.</p>
+				<p>Please fill out the form below to create a new table.</p>
 			<br />
 			<br />
 		</div>
@@ -66,12 +66,12 @@
 			<div class="form-group">
 				<label for="id" class="col-sm-2 control-label text-left">Category Name</label>
 			<div class="col-sm-6">
-				<input type="text" class="form-control" id="id" placeholder="Name">
+				<input type="text" class="form-control" id="category" placeholder="Name">
 			</div>
 			</div>
 			<div class="form-group">
 			<div class="col-xs-8">
-				<button type="submit" class="btn btn-default pull-right" id="submit">Submit</button>
+				<input type="submit" class="btn btn-default pull-right" id="category_submit" value="Submit">
 			</div>
 			</div>
 		</form>
