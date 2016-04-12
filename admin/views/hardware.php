@@ -1,3 +1,4 @@
+<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,40 +62,46 @@
 			<p>Please fill out the form about the piece of hardware you would like to add and click submit.</p>
 			<br><br>
 		</div>
-		<form class="form-horizontal">
+		<form id="hardware_form" class="form-horizontal" method="post" action="index.php?view=hardware">
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Hardware ID</label>
 			<div class="col-sm-6">
-			  <input type="text" class="form-control" id="id" placeholder="ID">
+			  <input type="text" class="form-control" id="id" name="id" placeholder="ID">
 			</div>
 		  </div>
 		  <div class="form-group">
 			<label for="type" class="col-sm-2 control-label text-left">Type</label>
 			<div class="col-sm-6">
-			  <input type="text" class="form-control" id="type" placeholder="Type">
+			  <input type="text" class="form-control" id="type" name="type" placeholder="Type">
+			</div>
+		  </div>
+		  <div class="form-group">
+			<label for="type" class="col-sm-2 control-label text-left">Model</label>
+			<div class="col-sm-6">
+			  <input type="text" class="form-control" id="model" name="model" placeholder="Type">
 			</div>
 		  </div>
 		  <div class="form-group">
 			<label for="status" class="col-sm-2 control-label text-left">Status</label>
 			<div class="col-sm-6">
-			  <input type="text" class="form-control" id="status" placeholder="Status">
+			  <input type="text" class="form-control" id="status" name="status" placeholder="Status">
 			</div>
 		  </div>
 		  <div class="form-group">
 			<label for="desc" class="col-sm-2 control-label text-left">Description</label>
 			<div class="col-sm-6">
-				<textarea class="form-control" rows="5" id="desc" placeholder="Description of hardware"></textarea>
+				<textarea class="form-control" rows="5" id="description" name="description" placeholder="Description of hardware"></textarea>
 			</div>
 		  </div>
 		  <div class="form-group">
 			<label for="location" class="col-sm-2 control-label text-left">Location</label>
 			<div class="col-sm-6">
-			  <input type="text" class="form-control" id="location" placeholder="Location">
+			  <input type="text" class="form-control" id="location" name="location" placeholder="Location">
 			</div>
 		  </div>
 		  <div class="form-group">
 			<div class="col-xs-8">
-			  <button type="submit" class="btn btn-default pull-right" id="submit">Submit</button>
+			 <input type="submit" class="btn btn-default pull-right" id="submit_hardware" value="Submit">
 			</div>
 		  </div>
 		</form>

@@ -169,4 +169,25 @@ function moveToLoaned($id, $name, $eId, $reason) {
     
     return $status;
 }
+
+function addHardware($id, $type, $model, $status, $description, $location){
+	$link = open_database_connection();
+	 
+	$sql = "INSERT INTO hardware (hardware_id, type, model, status, notes, location) VALUES (:id, :type, :model, :status, :notes, :location)";
+	$insert = $link->prepare($sql);
+	$insert->bindParam(':id',$id);
+	$insert->bindParam(':type',$type);
+	$insert->bindParam(':model',$model);
+	$insert->bindParam(':status',$status);
+	$insert->bindParam(':notes',$notes);
+	$insert->bindParam(':location',$location);
+	
+	 if($insert->execute()) {
+        $status = "Checkout successful";
+    } else {
+        $status = "Checkout unsuccessful";
+    }
+    
+    return $status;
+}
 ?>
