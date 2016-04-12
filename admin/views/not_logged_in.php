@@ -46,9 +46,6 @@
 				<p  class="space-password-button">
 					<a href="#">Forgot password? </a>
 				</p>
-				<p class="space-password-button">
-					<a href="register.php">Register new administrator</a>
-				</p>
 			</div>
 		</form>
 	<div class="col-sm-4"></div>			

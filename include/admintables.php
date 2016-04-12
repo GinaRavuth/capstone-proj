@@ -35,7 +35,7 @@
                     <a href="index.php?view=returns">Approve Returns</a>
                 </li>
                 <li>
-                    <a href="index.php?view=checkouts">Approve Checkouts</a>
+                    <a href="index.php?view=checkout">Approve Checkouts</a>
                 </li>
                 <li>
                     <a href="index.php?view=hardware">Add Hardware</a>
@@ -110,6 +110,7 @@
 		});
     </script>
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/js.php');?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/css.php');?>
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/datatablesJS.php');?>
 <!--end scripts -->
 </body>

@@ -43,6 +43,9 @@
                 <li>
                     <a href="index.php?view=category">Create Category</a>
                 </li>
+				<li>
+					<a href="index.php?view=register">New Account</a>
+				<li>
                 <li>
                    <a href="" name="logout" id="logout" value="logout">Log out</a>
                 </li>
