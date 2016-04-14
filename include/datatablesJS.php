@@ -1,19 +1,21 @@
 <script>
 $(document).ready(function() {
+	
+	//get url for use in tables
 	var url = window.location.pathname;
 	var fileName = url.substring(url.lastIndexOf('/')+1);
+	
+	//set up table
 	var table = $('#dataTable').DataTable( {
-        "processing": true,
-        "serverSide": true,
-        "ajax": {
+		"processing": true,
+		"ajax": {
 			'type': 'POST',
-			'url': '/include/datatablesAJAX.php',
+			'url': '/include/ajax/frontendAjax.php',
 			'data': {
 				URL: fileName
 			}
-		}			
-		});
-	
+		}
+	});
     function categoryChange() {
         $("#cats").change(function() {
             var categoryOption = $(this).val();
@@ -21,6 +23,6 @@ $(document).ready(function() {
         });          
     }
 	
-	categoryChange();
+	categoryChange();	
 });
 </script>

@@ -1,5 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'].'/admin/config/db.php');
+/*-----DATABASE FUNCTIONS-----*/
 function open_database_connection() {
     $host = DB_HOST;
     $name = DB_NAME;
@@ -9,12 +10,52 @@ function open_database_connection() {
     
     return $link;
 }
+
 function close_database_connection($link) {
     $link = null;
 }
-function get_column_heads($var,$table) {
+/*----------------*/
+
+/*-----Column Heads-----*/
+//gets raw column head information used for backend function and querying
+function get_column_heads($table) {
     $link = open_database_connection();
-    //this needs to be refactored to use bindParam instead of direct variable injection
+    
+    $sql = "DESCRIBE $table";
+    $result = $link->prepare($sql);
+    $result->execute();
+    $columns = $result->fetchAll(PDO::FETCH_COLUMN);
+    
+    close_database_connection($link);
+    
+    return($columns);
+}
+
+//removes extra columns from array, maxLength is number of columns you want to truncate to
+function truncate_columns($columns,$maxLength) {
+    $arrLength = count($columns);
+    
+    for ($i = $maxLength; $i<=$arrLength; $i++) {
+        unset($columns[$i]);
+    }
+    
+    return $columns;
+}
+
+//formats column heads for display, capitalizes letters, replaces underscores with whitespaces
+function format_column_heads($columns) {
+    for ($i=0; $i<count($columns); $i++) {
+        $columns[$i] = str_replace("_"," ",$columns[$i]);
+        $columns[$i] = ucwords($columns[$i]);
+    }
+    
+    return $columns;
+}
+/*----------------*/
+
+/*function get_column_heads($var,$table) {
+    $link = open_database_connection();
+    
     $sql = "DESCRIBE $table";
     $result = $link->prepare($sql);
     $result->execute();
@@ -30,15 +71,10 @@ function get_column_heads($var,$table) {
         unset($columns[4]);
         unset($columns[5]);
     }
-    if($var==="front") {
-        for ($i=0; $i<count($columns); $i++) {
-            $columns[$i] = str_replace("_"," ",$columns[$i]);
-            $columns[$i] = ucwords($columns[$i]);
-        }
-    }
     
     return($columns);
 }
+*/
 function get_types() {
     $link = open_database_connection();
     $sql = 'SELECT DISTINCT type FROM hardware';
@@ -73,22 +109,7 @@ function get_hardware() {
     return($hardware);
     
 }
-function formatBody($content) {
-    $result = '';
-    foreach($content as $item):
-    $result .=
-    '<tr>
-        <td>'.$item['hardware_id'].'</td>
-        <td>'.$item['type'].'</td>
-        <td>'.$item['status'].'</td>
-        <td>'.$item['model'].'</td>
-        <td>'.$item['notes'].'</td>
-        <td>'.$item['location'].'</td>
-    </tr>';
-    endforeach;
-    
-    return $result;
-}
+
 function linkDataTablesID($array,$url) {
     //get size of array returned from SQL database
     $a = count($array['data']);
@@ -98,37 +119,32 @@ function linkDataTablesID($array,$url) {
     switch($url) {
         case 'hardware.php':
             $destinationURL = 'checkout.php';
+            do {
+                $id = $array['data'][$b][0];
+                $type = $array['data'][$b][1];
+                $status = $array['data'][$b][2];
+                $model = $array['data'][$b][3];
+                $notes = $array['data'][$b][4];
+                $location = $array['data'][$b][5];
+                $array['data'][$b][0] = "<a href='$destinationURL?id=$id&type=$type&status=$status&model=$model&notes=$notes&location=$location'>$id</a>";
+                $b++;
+            } while ($b < $a);
             break;
         case 'returns.php':
             $destinationURL = 'hardware-return.php';
+            do {
+                $id = $array['data'][$b][0];
+                $eId = $array['data'][$b][1];
+                $name = $array['data'][$b][2];
+                $date = $array['data'][$b][3];
+                $array['data'][$b][0] = "<a href='$destinationURL?id=$id&eID=$eId&name=$name&date=$date'>$id</a>";
+                $b++;
+            } while ($b < $a);   
             break;
         default:
             $destinationURL = '#';
     }
-    
-    //loop through array and change id table cell to a link taking the user to a checkout or return page based on their origin.
-    if($url==='hardware.php') {
-        do {
-            $id = $array['data'][$b][0];
-            $type = $array['data'][$b][1];
-            $status = $array['data'][$b][2];
-            $model = $array['data'][$b][3];
-            $notes = $array['data'][$b][4];
-            $location = $array['data'][$b][5];
-            $array['data'][$b][0] = "<a href='$destinationURL?id=$id&type=$type&status=$status&model=$model&notes=$notes&location=$location'>$id</a>";
-            $b++;
-        } while ($b < $a);
-    } elseif($url==='returns.php') {
-        do {
-            $id = $array['data'][$b][0];
-            $eId = $array['data'][$b][1];
-            $name = $array['data'][$b][2];
-            $date = $array['data'][$b][3];
-            $array['data'][$b][0] = "<a href='$destinationURL?id=$id&eID=$eId&name=$name&date=$date'>$id</a>";
-            $b++;
-        } while ($b < $a);        
-    }
-    
+
     return $array;
 }
 
