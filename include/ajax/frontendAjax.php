@@ -49,6 +49,6 @@ for($i = 0; $i < count($columnNames); $i++) {
 
 //query and echo results
 $results = SSP::simple( $_GET, $sqlDetails, $table, $primaryKey, $columns );
-echo json_encode(linkRowId($results,$url));
+echo json_encode(linkDataTablesID($results,$url));
 
 ?>
