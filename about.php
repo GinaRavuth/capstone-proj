@@ -44,7 +44,7 @@
                         <a href="about.html">About</a>
                     </li>
                     <li>
-                        <a href="returns.html">Returns</a>
+                        <a href="returns.php">Returns</a>
                     </li>
                 </ul>
             </div>

@@ -38,13 +38,13 @@
                         <a href="index.html" class="active">Home</a>
                     </li>
                     <li>
-                        <a href="hardware.html">Hardware</a>
+                        <a href="hardware.php">Hardware</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="about.php">About</a>
                     </li>
                     <li>
-                        <a href="returns.html">Returns</a>
+                        <a href="returns.php">Returns</a>
                     </li>
                 </ul>
             </div>

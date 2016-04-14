@@ -1,7 +1,16 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php'); 
 
-if(isset($_POST['Submit']) AND !empty($_POST['name'])  AND !empty($_POST['email'])  AND !empty($_POST['subject']) AND !empty($_POST['message'])){
+if(empty($_POST['name'])  AND empty($_POST['email'])  AND empty($_POST['subject']) AND empty($_POST['message'])){
+
+$display = "There was a problem.";
+$status = "Please re-submit your message.";
+$url = 'about.php';
+$text = 'Return';
+
+} else {
+$display = "There was a problem.";
+$status = "Please re-submit your message.";
 
 $name = $_POST['name'];
 $email = $_POST['email'];
@@ -12,10 +21,8 @@ message($name, $email, $subject, $message);
 
 $display = "Message Sent!";
 $status = "Thank you for using Ordino!";
-
-} else {
-$display = "There was a problem.";
-$status = "Please re-submit your message.";
+$url = 'hardware.php';
+$text = 'Home';
 }
 
 ?>
@@ -41,8 +48,8 @@ $status = "Please re-submit your message.";
 		</div>
 
 		<div class="text-center button-index">
-			<a href="about.php">
-				<button type="button" class="btn">Return</button>
+			<a href="<?php echo $url ?>">
+				<button type="button" class="btn"><?php echo $text ?></button>
 			</a>
 		</div>
 	</div>
