@@ -88,33 +88,6 @@ function get_hardware() {
     
 }
 
-function linkRowId($array,$url) {
-    //get size of array returned from SQL database
-    $a = count($array['data']);
-    $b = 0;
-    
-    switch($url) {
-        case 'hardware.php':
-            $destURL = 'checkout.php';
-            $urlVar = array('id','type','status','model','notes','location');
-            break;
-        case 'returns.php':
-            $destURL = 'hardware-return.php';
-            $urlVar = array('id','eId','name','date');
-            break;
-        default:
-            $destURL = '#';
-            $urlVar = array();
-    }
-    
-    do {
-        $newURL = "<a href='$destURL'></a>";
-        $array['data'][$b][0] = 'TEST';
-    } while ($b < $a);
-    
-    return $array;
-}
-
 function linkDataTablesID($array,$url) {
     //get size of array returned from SQL database
     $a = count($array['data']);
