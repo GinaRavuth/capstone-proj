@@ -65,7 +65,7 @@
 </div>
 </div>
 <h2 class="bold">Contact Us</h2><br>
-<form class="form-horizontal" method="post" action="message_splash.php">
+<form class="form-horizontal" method="post" action="splash.php">
   <div class="form-group">
     <label for="name" class="col-sm-1 control-label text-left">Name</label>
     <div class="col-sm-11">
@@ -93,7 +93,7 @@
 
   <div class="form-group">
     <div class="col-xs-12">
-      <input type="submit" class="btn btn-default pull-right" id="message_submit" value="Submit"> 
+      <input type="submit" class="btn btn-default pull-right" id="message_submit" name="Submit" value="Submit"> 
     </div>
   </div>
 </form>

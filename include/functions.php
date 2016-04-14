@@ -213,6 +213,29 @@ function message_push($name, $email, $subject, $message){
 	}
 }
 
+function splash_text($source){
+	if($source == 'Checkout'){
+		$array = array(
+			"display" => "Checkout request sent!",
+			"status" => "Use the button below to return home.",
+			"url" => "hardware.php",
+			"text" => 'Home'
+		);
+		
+		return $array;
+	} else if ($source == 'Return'){
+		$array = array(
+			"display" => "Return request sent!",
+			"status" => "Use the button below to return home.",
+			"url" => "hardware.php",
+			"text" => 'Home'
+		);
+		
+		return $array;
+	}
+	
+}
+
 // Insert message into database
 function message($name, $email, $subject, $message){
 	$link = open_database_connection();

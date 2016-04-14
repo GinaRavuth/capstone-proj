@@ -63,7 +63,7 @@
 </div>
 <h2 class="bold">Return Hardware</h2>
 <p>Please fill out the form to request hardware return.</p><br>
-<form class="form-horizontal">
+<form class="form-horizontal" method="post" action="splash.php">
   <div class="form-group">
     <label for="name" class="col-sm-1 control-label text-left">Name</label>
     <div class="col-sm-7">
@@ -91,7 +91,7 @@
 
   <div class="form-group">
     <div class="col-sm-8">
-      <button type="submit" class="btn btn-default pull-right" id="submit">Submit</button>
+      <button type="submit" class="btn btn-default pull-right" name="Return" id="submit">Return</button>
     </div>
   </div>
 </form>
