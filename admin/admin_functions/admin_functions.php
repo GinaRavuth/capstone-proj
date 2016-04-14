@@ -20,9 +20,4 @@ $location = $_POST['location'];
 
 addHardware($id, $type, $model, $status, $description, $location);
 }
-
-// Messaging
-if(isset($_GET['message'])){
-loadMessages();
-}
 ?>
