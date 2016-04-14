@@ -65,18 +65,7 @@
 				<th>From:</th>
 				<th>Subject:</th>
 			</tr>
-			<tr>
-				<td>student@email.edu</td>
-				<td>New TV Request!</td>				
-			</tr>
-			<tr>
-				<td>student@email.edu</td>
-				<td>New TV Request!</td>					
-			</tr>
-			<tr>
-				<td>student@email.edu</td>
-				<td>New TV Request!</td>				
-			</tr>
+			
 			</table>	
 		</div>
 <!-- /#page-content-wrapper -->
@@ -86,6 +75,6 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="admin_functions/admin_js.js"></script>
-	<script type="text/javascript" src="admin_functions/message.js"></script>
+	<script type="text/javascript" src="admin_functions/message/message_js.js"></script>
 </body>
 </html>
