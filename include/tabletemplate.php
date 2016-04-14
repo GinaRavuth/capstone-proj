@@ -31,6 +31,7 @@
 				<div class="selectContainer">
 					<select name="categories" class="form-control" id="cats">
 						<option value="select" selected disabled>Select Type</option>
+						<option value="">All Categories</option>
 						<?php foreach($types as $type): ?>
 						<option value="<?php echo $type ?>"><?php echo $type ?></option>                
 						<?php endforeach; ?>

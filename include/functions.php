@@ -53,28 +53,6 @@ function format_column_heads($columns) {
 }
 /*----------------*/
 
-/*function get_column_heads($var,$table) {
-    $link = open_database_connection();
-    
-    $sql = "DESCRIBE $table";
-    $result = $link->prepare($sql);
-    $result->execute();
-    $columns = $result->fetchAll(PDO::FETCH_COLUMN);
-    
-    close_database_connection($link);
-    
-    //if table is hardware, perform front/backend cleanup of columns
-    if($table==="hardware") {
-        unset($columns[6]);
-        unset($columns[7]);    
-    } elseif($table==="loaned_hardware") {
-        unset($columns[4]);
-        unset($columns[5]);
-    }
-    
-    return($columns);
-}
-*/
 function get_types() {
     $link = open_database_connection();
     $sql = 'SELECT DISTINCT type FROM hardware';
@@ -108,6 +86,33 @@ function get_hardware() {
     
     return($hardware);
     
+}
+
+function linkRowId($array,$url) {
+    //get size of array returned from SQL database
+    $a = count($array['data']);
+    $b = 0;
+    
+    switch($url) {
+        case 'hardware.php':
+            $destURL = 'checkout.php';
+            $urlVar = array('id','type','status','model','notes','location');
+            break;
+        case 'returns.php':
+            $destURL = 'hardware-return.php';
+            $urlVar = array('id','eId','name','date');
+            break;
+        default:
+            $destURL = '#';
+            $urlVar = array();
+    }
+    
+    do {
+        $newURL = "<a href='$destURL'></a>";
+        $array['data'][$b][0] = 'TEST';
+    } while ($b < $a);
+    
+    return $array;
 }
 
 function linkDataTablesID($array,$url) {
