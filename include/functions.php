@@ -165,7 +165,7 @@ function moveToLoaned($id, $name, $eId, $reason) {
     
     return $status;
 }
-
+// Add hardware to database for backend
 function addHardware($id, $type, $model, $status, $description, $location){
 	$link = open_database_connection();
 	 
@@ -187,6 +187,33 @@ function addHardware($id, $type, $model, $status, $description, $location){
     return $status;
 }
 
+// Front-end message push
+function message_push($name, $email, $subject, $message){
+	
+	if(empty($_POST['name'])  AND empty($_POST['email'])  AND empty($_POST['subject']) AND empty($_POST['message'])){
+
+		$array = array(
+			"display" => "There was a problem.",
+			"status" => "Please re-submit your message.",
+			"url" => "about.php",
+			"text" => 'Return'
+			);
+		return $array;
+
+	} else {
+	
+		$array = array(
+			"display" => "Message Sent!",
+			"status" => "Thank you for using Ordino",
+			"url" => "hardware.php",
+			"text" => 'Home'
+			);
+		return $array;
+		message($name, $email, $subject, $message);
+	}
+}
+
+// Insert message into database
 function message($name, $email, $subject, $message){
 	$link = open_database_connection();
 	
