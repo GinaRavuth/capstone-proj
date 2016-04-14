@@ -1,0 +1,13 @@
+$(document).ready(function() {
+	message();
+	function message(){  
+		$.ajax({
+		type: 'GET',
+		url: 'admin_functions/admin_functions.php',
+		data: "message=get",
+		success: function(data){
+			
+			}
+		});
+	}
+});

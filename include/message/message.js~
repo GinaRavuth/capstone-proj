@@ -8,7 +8,7 @@ $(document).ready(function() {
 		
 		$.ajax({
 			type: 'POST',
-			url: 'message.php',
+			url: 'message/message.php',
 			data: { name: name, email: email, subject: subject, message: message},
 			success: function(data){
 				alert(data);

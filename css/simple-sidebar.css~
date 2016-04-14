@@ -174,7 +174,7 @@ padding-top: 0 !important;
 .sidebar-nav li a:hover {
     text-decoration: none;
 	color:#999999;
-	background: #f9f9f9;
+	background: #f4f4f4;
 }
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {

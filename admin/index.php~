@@ -32,7 +32,6 @@ $login = new Login();
 
 // ... ask if we are logged in here:
 if ($login->isUserLoggedIn() == true) {
-	
     // the user is logged in. you can do whatever you want here.
     // for demonstration purposes, we simply show the "you are logged in" view.
     
@@ -51,8 +50,8 @@ if ($login->isUserLoggedIn() == true) {
                 include("views/returns.php");
                 break;
 	case 'register':
-		require_once('classes/Registration.php');
 		$registration = new Registration();
+		require_once('classes/Registration.php');
 		include("views/register.php");
 		break;
             case 'category':
