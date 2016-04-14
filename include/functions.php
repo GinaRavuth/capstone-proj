@@ -158,9 +158,9 @@ function moveToLoaned($id, $name, $eId, $reason) {
 
     
     if($insert->execute()) {
-        $status = "Checkout successful";
+        $status = 1;
     } else {
-        $status = "Checkout unsuccessful";
+        $status = 0;
     }
     
     return $status;

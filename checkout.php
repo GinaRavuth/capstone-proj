@@ -33,7 +33,11 @@ if(isset($_POST['submit']) && checkIfExists($_GET['id'],'hardware') === 1) {
     $reason = $_POST['message'];
     $status = moveToLoaned($id, $name, $eId, $reason);
     
-    $description .= "<p>$status</p>";
+    if($status===1) {
+        header('Location: /checked.html');
+    } else {
+        $description = "<h4>Checkout failed</h4>";
+    }
 }
 
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/checkoutreturntemplate.php');
