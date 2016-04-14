@@ -41,7 +41,7 @@
                     <a href="index.php?view=hardware">Add Hardware</a>
                 </li>
                 <li>
-                    <a href="index.php?view=category">Create Category</a>
+                    <a href="index.php?view=register">Create Account</a>
                 </li>
                 <li>
                     <a href="" name="logout" id="logout" value="logout">Log out</a>

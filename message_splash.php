@@ -20,7 +20,7 @@ $message = $_POST['message'];
 message($name, $email, $subject, $message);
 
 $display = "Message Sent!";
-$status = "Thank you for using Ordino!";
+$status = "Thank you for using Ordino.";
 $url = 'hardware.php';
 $text = 'Home';
 }

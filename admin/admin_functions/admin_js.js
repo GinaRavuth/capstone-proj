@@ -7,7 +7,7 @@ $(document).ready(function() {
 			url: 'admin_functions/admin_functions.php',
 			data: "action=logout", 
 			success: function(data){
-				window.location.reload();
+				//window.location.reload();
 			}
 		});
 	});
@@ -19,19 +19,7 @@ $(document).ready(function() {
 		var status = $('#status').val(); 
 		var description = $('#description').val();
 		var location = $('#location').val();
-		var dataString = 'id='+id+'&type='+type+'&model='+model+'&status='+status+'&description='+description+'&location='+location;
-		$.ajax({
-			type: 'POST',
-			url: 'admin_functions/admin_functions.php',
-			data: dataString,
-			success: function(data){
-			}
-		});
-	});
-	
-	$('#category_submit').click(function(){
-		var cat = $('#category').val();
-		var dataString = 'category='+category;
+		var dataString = {id: id, type: type, model: model, status: status, description: description, location: location};
 		$.ajax({
 			type: 'POST',
 			url: 'admin_functions/admin_functions.php',

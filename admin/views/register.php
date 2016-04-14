@@ -60,6 +60,8 @@
 		<div class="col-sm-12">
 		<h2 >Create Account</h2>
 		<p>Please fill out the form to create a new admin account.</p>
+		<br />
+		<br />
 		<div class="error">
 		<?php
 		// show potential errors / feedback (from registration object)

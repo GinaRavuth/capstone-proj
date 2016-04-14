@@ -22,12 +22,13 @@
 </head>
 <body>
 <!-- nav bar at top -->
-		<nav class="navbar navbar-default navbar-static-top">
+		<a href="/index.html"><nav class="navbar navbar-default navbar-static-top">
 		<div id="home" class="container">
 			<h1>Ordino</h1>
 			<p>Dashboard</p>
 		</div>
 		</nav>
+		</a>
 <!-- end nav -->
 <!-- Page Content -->
         <div id="page-content-wrapper">
@@ -121,7 +122,7 @@
 					</a>
                     </div>
 			<div class="col-lg-4 col-sm-6 spaced">
-			<a href="" name="logout" id="logout" value="logout"">
+			<a href="" id="logout">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">
@@ -146,16 +147,7 @@
     </div>
 <!-- /#wrapper -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="admin_functions/admin_js.js"></script>
-<!-- jQuery -->
-    <script src="/js/jquery.js"></script>
-<!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
