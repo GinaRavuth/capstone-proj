@@ -213,6 +213,7 @@ function message_push($name, $email, $subject, $message){
 	}
 }
 
+// Pull name and subject for inbox
 function get_message(){
 	
 	$link = open_database_connection();
@@ -232,6 +233,7 @@ function get_message(){
     
     return $messages;	
 }
+// Generate text for appropriate splash pages
 function splash_text($source){
 	if($source == 'Checkout'){
 		$array = array(
@@ -252,7 +254,6 @@ function splash_text($source){
 		
 		return $array;
 	}
-	
 }
 
 // Insert message into database
