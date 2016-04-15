@@ -16,4 +16,4 @@
 define("DB_HOST", "127.0.0.1");
 define("DB_NAME", "alexgoff_ordino");
 define("DB_USER", "alexgoff_ordino");
-define("DB_PASS", "!0ordinO1");
+define("DB_PASS", "!0rdinO1");
