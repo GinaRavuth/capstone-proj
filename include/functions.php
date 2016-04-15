@@ -253,6 +253,15 @@ function splash_text($source){
 		);
 		
 		return $array;
+	} else if ($source == 'addHardware'){
+		$array = array(
+		"display" => "Hardware Added!",
+		"status" => "Use the button below to go back.",
+		"url" => "admin/index.php?view=hardware",
+		"text" => 'Return'
+		);
+		
+		return $array;
 	}
 }
 

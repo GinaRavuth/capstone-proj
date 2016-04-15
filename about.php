@@ -57,7 +57,7 @@
   <div class="row">
     <div class="col-md-12">
     <h2 class="bold">How It Started</h2>
-    <p>Ordino is the culmination of our group's desire to develop a compact and agile system to solve a particular need within Georgia Southern's IT Department. We noticed a particular problem with the traceability of student accessible hardware in the IT labs. Thus, Ordino was born. 
+    <p>Ordino is the culmination of our group's desire to develop a compact and agile system to solve a particular need within Georgia Southern's IT Department. We noticed a particular problem with the traceability of student accessible hardware in the IT labs. Thus, the idea for Ordino was born. 
 </p><br>
     <h2 class="bold">How It Works</h2>
     <p>To use Ordino, simply select a hardware item from the tables, fill out the form on the product page, and submit the request. It’s that simple. To return, simply select the hardware which you previously checked out from the Returns page, fill out the form, and submit the return request. 
