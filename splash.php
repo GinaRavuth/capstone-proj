@@ -29,6 +29,12 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
 		$url = $return['url'];
 		$text = $return['text'];
 	
+} else if (isset($_POST['addHardware'])){
+		$return = splash_text('addHardware');
+		$display = $return['display'];
+		$status = $return['status'];
+		$url = $return['url'];
+		$text = $return['text'];
 }
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/splash_template.php');
 ?>
