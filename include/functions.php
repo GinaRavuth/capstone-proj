@@ -201,7 +201,7 @@ function message_push($name, $email, $subject, $message){
 		return $array;
 
 	} else {
-	
+		message($name, $email, $subject, $message);
 		$array = array(
 			"display" => "Message Sent!",
 			"status" => "Thank you for using Ordino",
@@ -209,10 +209,29 @@ function message_push($name, $email, $subject, $message){
 			"text" => 'Home'
 			);
 		return $array;
-		message($name, $email, $subject, $message);
+
 	}
 }
 
+function get_message(){
+	
+	$link = open_database_connection();
+    $sql = 'SELECT name, subject FROM messages';
+    
+    $query = $link->prepare($sql);
+    
+    $query->execute();
+    
+    $messages = array();
+    
+    while($row = $query->fetch(PDO::FETCH_ASSOC)) {
+        $messages[] = $row;
+    }
+    
+    close_database_connection($link);
+    
+    return $messages;	
+}
 function splash_text($source){
 	if($source == 'Checkout'){
 		$array = array(
