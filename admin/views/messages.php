@@ -56,10 +56,11 @@
 		</nav>
 <!-- end nav -->
 <!-- Page Content -->
-		<div class="col-sm-12" id="message">
+		<div class="col-sm-10" id="message">
 			<h2>Message Inbox</h2>
-			<p></p>
-			<br><br>
+			<p>Check your messages below.</p>
+			<br />
+			<br />
 			<table class="table table-striped table-bordered" id="message_table">
 				<tr>
 					<th>From:</th>

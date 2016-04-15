@@ -61,6 +61,9 @@ if ($login->isUserLoggedIn() == true) {
             case 'messages':
                 include("views/messages.php");
                 break;
+			case 'inbox';
+				include("views/inbox.php");
+				break;
             default:
                 include("views/home.php");
         }
