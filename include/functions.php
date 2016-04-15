@@ -260,6 +260,8 @@ function splash_text($source){
 		"url" => "index.php?view=hardware",
 		"text" => 'Return'
 		);
+		
+		return $array;
 	}
 }
 
