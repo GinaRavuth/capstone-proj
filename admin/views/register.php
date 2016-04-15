@@ -51,17 +51,17 @@
 <!-- /#sidebar-wrapper -->
 <!-- nav bar at top -->
 		<nav class="navbar navbar-default navbar-static-top">
-		<div id="page" class="container">
-			<h1>Ordino</h1>
-		</div>
+			<div id="page" class="container">
+				<h1>Ordino</h1>
+			</div>
 		</nav>
 <!-- end nav -->
 <!-- Page Content -->
 		<div class="col-sm-12">
-		<h2 >Create Account</h2>
-		<p>Please fill out the form to create a new admin account.</p>
-		<br />
-		<br />
+			<h2 >Create Account</h2>
+			<p>Please fill out the form to create a new admin account.</p>
+			<br />
+			<br />
 		<div class="error">
 		<?php
 		// show potential errors / feedback (from registration object)

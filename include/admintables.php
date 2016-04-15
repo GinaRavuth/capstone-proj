@@ -32,7 +32,7 @@
                     <a href="index.php?view=messages">Check Messages</a>
                 </li>
                 <li>
-                    <a href="index.php?view=returns">Approve Returns</a>
+                    <a href="index.php?view=return">Approve Returns</a>
                 </li>
                 <li>
                     <a href="index.php?view=checkout">Approve Checkouts</a>
@@ -100,18 +100,9 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="admin_functions/admin_js.js"></script>
-<!-- jQuery -->
-    <script src="/js/jquery.js"></script>
-<!-- Menu Toggle Script -->
-    <script>
-		$("#menu-toggle").click(function(e) {
-			e.preventDefault();
-			$("#wrapper").toggleClass("toggled");
-		});
-    </script>
-<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/js.php');?>
-<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/css.php');?>
-<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/datatablesJS.php');?>
+	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/js.php');?>
+	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/css.php');?>
+	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/datatablesJS.php');?>
 <!--end scripts -->
 </body>
 </html>

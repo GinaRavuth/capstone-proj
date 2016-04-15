@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +51,7 @@
 					</a>
                     </div>
                     <div class="col-lg-4 col-sm-6 spaced">
-					<a href="index.php?view=returns">
+					<a href="index.php?view=return">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">
@@ -103,7 +102,7 @@
                         </div>
 					</a>
                     </div>
-		<div class="col-lg-4 col-sm-6 spaced">
+					<div class="col-lg-4 col-sm-6 spaced">
 					<a href="index.php?view=register">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
@@ -121,8 +120,8 @@
                         </div>
 					</a>
                     </div>
-			<div class="col-lg-4 col-sm-6 spaced">
-			<a href="" id="logout">
+					<div class="col-lg-4 col-sm-6 spaced">
+					<a href="" id="logout">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">

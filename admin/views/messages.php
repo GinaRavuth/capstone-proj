@@ -31,7 +31,7 @@
                     <a href="index.php?view=messages">Check Messages</a>
                 </li>
                 <li>
-                    <a href="index.php?view=returns">Approve Returns</a>
+                    <a href="index.php?view=return">Approve Returns</a>
                 </li>
                 <li>
                     <a href="index.php?view=checkout">Approve Checkouts</a>
@@ -50,9 +50,9 @@
 <!-- /#sidebar-wrapper -->
 <!-- nav bar at top -->
 		<nav class="navbar navbar-default navbar-static-top">
-		<div id="page" class="container">
-			<h1>Ordino</h1>
-		</div>
+			<div id="page" class="container">
+				<h1>Ordino</h1>
+			</div>
 		</nav>
 <!-- end nav -->
 <!-- Page Content -->
@@ -61,11 +61,10 @@
 			<p></p>
 			<br><br>
 			<table class="table table-striped table-bordered" id="message_table">
-			<tr>
-				<th>From:</th>
-				<th>Subject:</th>
-			</tr>
-			
+				<tr>
+					<th>From:</th>
+					<th>Subject:</th>
+				</tr>
 			</table>	
 		</div>
 <!-- /#page-content-wrapper -->

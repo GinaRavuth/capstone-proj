@@ -32,7 +32,7 @@
                     <a href="index.php?view=messages">Check Messages</a>
                 </li>
                 <li>
-                    <a href="index.php?view=returns">Approve Returns</a>
+                    <a href="index.php?view=return">Approve Returns</a>
                 </li>
                 <li>
                     <a href="index.php?view=checkout">Approve Checkouts</a>
@@ -59,49 +59,50 @@
 <!-- Page Content -->
 		<div class="col-sm-12">
 			<h2 >Add Hardware</h2>
-			<p>Please fill out the form about the piece of hardware you would like to add and click submit.</p>
-			<br><br>
+				<p>Please fill out the form about the piece of hardware you would like to add and click submit.</p>
+			<br />
+			<br />
 		</div>
 		<form id="hardware_form" class="form-horizontal" method="post" action="index.php?view=hardware">
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Hardware ID</label>
-			<div class="col-sm-6">
-			  <input type="text" class="form-control" id="id" name="id" placeholder="ID">
-			</div>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" id="id" name="id" placeholder="ID">
+				</div>
 		  </div>
 		  <div class="form-group">
 			<label for="type" class="col-sm-2 control-label text-left">Type</label>
-			<div class="col-sm-6">
-			  <input type="text" class="form-control" id="type" name="type" placeholder="Type">
-			</div>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" id="type" name="type" placeholder="Type">
+				</div>
 		  </div>
 		  <div class="form-group">
 			<label for="type" class="col-sm-2 control-label text-left">Model</label>
-			<div class="col-sm-6">
-			  <input type="text" class="form-control" id="model" name="model" placeholder="Type">
-			</div>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" id="model" name="model" placeholder="Type">
+				</div>
 		  </div>
 		  <div class="form-group">
 			<label for="status" class="col-sm-2 control-label text-left">Status</label>
-			<div class="col-sm-6">
-			  <input type="text" class="form-control" id="status" name="status" placeholder="Status">
-			</div>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" id="status" name="status" placeholder="Status">
+				</div>
 		  </div>
 		  <div class="form-group">
 			<label for="desc" class="col-sm-2 control-label text-left">Description</label>
-			<div class="col-sm-6">
-				<textarea class="form-control" rows="5" id="description" name="description" placeholder="Description of hardware"></textarea>
-			</div>
+				<div class="col-sm-6">
+					<textarea class="form-control" rows="5" id="description" name="description" placeholder="Description of hardware"></textarea>
+				</div>
 		  </div>
 		  <div class="form-group">
 			<label for="location" class="col-sm-2 control-label text-left">Location</label>
-			<div class="col-sm-6">
-			  <input type="text" class="form-control" id="location" name="location" placeholder="Location">
-			</div>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" id="location" name="location" placeholder="Location">
+				</div>
 		  </div>
 		  <div class="form-group">
 			<div class="col-xs-8">
-			 <input type="submit" class="btn btn-default pull-right" id="submit_hardware" value="Submit">
+				<input type="submit" class="btn btn-default pull-right" id="submit_hardware" value="Submit">
 			</div>
 		  </div>
 		</form>

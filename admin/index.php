@@ -47,14 +47,14 @@ if ($login->isUserLoggedIn() == true) {
             case 'checkout':
                 include("views/checkout.php");
                 break;
-            case 'returns':
-                include("views/returns.php");
+            case 'return':
+                include("views/return.php");
                 break;
-	case 'register':
-		require_once('classes/Registration.php');
-		$registration = new Registration();
-		include("views/register.php");
-		break;
+			case 'register':
+				require_once('classes/Registration.php');
+				$registration = new Registration();
+				include("views/register.php");
+				break;
             case 'category':
                 include("views/category.php");
                 break;

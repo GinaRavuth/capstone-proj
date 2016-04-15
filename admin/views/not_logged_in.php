@@ -43,9 +43,9 @@
 			<br />
 			<div class="text-center button-index">
 				<input id="btn-style" type="submit" class="btn"  name="login" value="Log In" />
-				<p  class="space-password-button">
-					<a href="#">Forgot password? </a>
-				</p>
+					<p  class="space-password-button">
+						<a href="#">Forgot password? </a> | <a href="/index.html">Ordino Homepage</a>
+					</p>
 			</div>
 		</form>
 	<div class="col-sm-4"></div>			
@@ -54,7 +54,7 @@
 <!--  scripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/admin_functions/admin_js.js"></script>
+	<script type="text/javascript" src="admin_functions/admin_js.js"></script>
 <!-- end scripts -->
 </body>
 </html>
