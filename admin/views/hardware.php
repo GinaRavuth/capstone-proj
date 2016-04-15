@@ -63,7 +63,7 @@
 			<br />
 			<br />
 		</div>
-		<form id="hardware_form" class="form-horizontal" method="post" action="index.php?view=hardware">
+		<form id="hardware_form" class="form-horizontal" method="post" action="/splash.php">
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Hardware ID</label>
 				<div class="col-sm-6">
@@ -102,7 +102,7 @@
 		  </div>
 		  <div class="form-group">
 			<div class="col-xs-8">
-				<input type="submit" class="btn btn-default pull-right" id="submit_hardware" value="Submit">
+				<input type="submit" class="btn btn-default pull-right" id="submit_hardware" name="addHardware" value="Submit">
 			</div>
 		  </div>
 		</form>
