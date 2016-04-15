@@ -257,7 +257,7 @@ function splash_text($source){
 		$array = array(
 		"display" => "Hardware Added!",
 		"status" => "Use the button below to go back.",
-		"url" => "index.php?view=hardware",
+		"url" => "admin/index.php?view=hardware",
 		"text" => 'Return'
 		);
 		
