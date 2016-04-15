@@ -214,10 +214,10 @@ function message_push($name, $email, $subject, $message){
 }
 
 // Pull name and subject for inbox
-function get_message(){
+function get_messages(){
 	
 	$link = open_database_connection();
-    $sql = 'SELECT name, subject FROM messages';
+    $sql = 'SELECT name, subject, email, message FROM messages';
     
     $query = $link->prepare($sql);
     

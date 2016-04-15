@@ -51,23 +51,6 @@
 					</a>
                     </div>
                     <div class="col-lg-4 col-sm-6 spaced">
-					<a href="index.php?view=return">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-comments fa-5x"></i>
-                                    </div><br/><br/>
-									<div class="col-lg-12 text-center">
-										<h2>Approve Returns</h2>
-										<span class="glyphicon glyphicon-repeat icon-flipped"></span>					
-									</div>
-                                </div>
-                            </div>
-                        </div>
-					</a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 spaced">
 					<a href="index.php?view=checkout">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
@@ -77,6 +60,23 @@
                                     </div><br/><br/>
 									<div class="col-lg-12 text-center">
 										<h2>Approve Checkouts</h2>
+										<span class="glyphicon glyphicon-repeat icon-flipped"></span>					
+									</div>
+                                </div>
+                            </div>
+                        </div>
+					</a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 spaced">
+					<a href="index.php?view=return">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-comments fa-5x"></i>
+                                    </div><br/><br/>
+									<div class="col-lg-12 text-center">
+										<h2>Approve Returns</h2>
 										<span class="glyphicon glyphicon-ok"></span>										
 									</div>
                                 </div>
@@ -94,7 +94,7 @@
                                     </div><br/><br/>
 									<div class="col-lg-12 text-center">
 									<br/>
-										<h2>Add Hardware</h2>
+										<h2>Manage Hardware</h2>
 										<span class="glyphicon glyphicon-plus"></span>
 									</div>
                                 </div>

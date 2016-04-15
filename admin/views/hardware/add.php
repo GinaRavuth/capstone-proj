@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +22,7 @@
 <body>
     <div id="wrapper">
 <!-- Sidebar -->
-       <div id="sidebar-wrapper">
+         <div id="sidebar-wrapper">
             <ul class="sidebar-nav text-center">
                 <li class="sidebar-brand">
                    <a href="index.php"><h1>Ordino</h1></a>

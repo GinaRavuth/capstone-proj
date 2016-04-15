@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +22,7 @@
 <body>
     <div id="wrapper">
 <!-- Sidebar -->
-       <div id="sidebar-wrapper">
+          <div id="sidebar-wrapper">
             <ul class="sidebar-nav text-center">
                 <li class="sidebar-brand">
                    <a href="index.php"><h1>Ordino</h1></a>
@@ -69,7 +68,7 @@
 <!-- end nav -->
 <!-- Page Content -->
 		<div class="col-sm-12">
-			<h2 >Add Hardware</h2>
+			<h2 >Delete Hardware</h2>
 				<p>Please fill out the form about the piece of hardware you would like to add and click submit.</p>
 			<br />
 			<br />

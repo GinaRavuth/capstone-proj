@@ -43,10 +43,22 @@ if ($login->isUserLoggedIn() == true) {
         switch($url) {
             case 'hardware':
                 include("views/hardware.php");
+				//
+				//include("views/hardware/edit.php");
+				//include("views/hardware/delete.php");
                 break;
             case 'checkout':
                 include("views/checkout.php");
                 break;
+			case 'add':
+				include("views/hardware/add.php");
+				break;
+			case 'edit':
+				include("views/hardware/edit.php");
+				break;
+			case 'delete':
+				include("views/hardware/delete.php");
+				break;
             case 'return':
                 include("views/return.php");
                 break;
