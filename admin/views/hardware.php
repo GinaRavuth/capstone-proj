@@ -69,12 +69,12 @@
 <!-- end nav -->
 <!-- Page Content -->
 		<div class="col-sm-12">
-			<h2 >Add Hardware</h2>
-				<p>Please fill out the form about the piece of hardware you would like to add and click submit.</p>
+			<h2 >Manage Hardware</h2>
+				<p>Use the sidebar to navigate the hardware module. You may add, edit, or delete hardware. </p>
 			<br />
 			<br />
 		</div>
-		<form id="hardware_form" class="form-horizontal" method="post" action="/splash.php">
+		<!-- <form id="hardware_form" class="form-horizontal" method="post" action="/splash.php">
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Hardware ID</label>
 				<div class="col-sm-6">
@@ -116,13 +116,13 @@
 				<input type="submit" class="btn btn-default pull-right" id="submit_hardware" name="addHardware" value="Submit">
 			</div>
 		  </div>
-		</form>
+		</form>  -->
 <!-- /#page-content-wrapper -->
     </div>
 <!-- /#wrapper -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>		
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="admin_functions/admin_js.js"></script>
+	<script type="text/javascript" src="admin_functions/admin_functions.js"></script>
 </body>
 </html>

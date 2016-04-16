@@ -217,7 +217,7 @@ function message_push($name, $email, $subject, $message){
 function get_messages(){
 	
 	$link = open_database_connection();
-    $sql = 'SELECT name, subject, email, message FROM messages';
+    $sql = 'SELECT id, name, subject, email, message FROM messages';
     
     $query = $link->prepare($sql);
     
@@ -250,15 +250,6 @@ function splash_text($source){
 			"status" => "Use the button below to return home.",
 			"url" => "hardware.php",
 			"text" => 'Home'
-		);
-		
-		return $array;
-	} else if ($source == 'addHardware'){
-		$array = array(
-		"display" => "Hardware Added!",
-		"status" => "Use the button below to go back.",
-		"url" => "admin/index.php?view=hardware",
-		"text" => 'Return'
 		);
 		
 		return $array;

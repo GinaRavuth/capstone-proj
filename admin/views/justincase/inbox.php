@@ -57,17 +57,10 @@
 <!-- end nav -->
 <!-- Page Content -->
 		<div class="col-sm-10" id="message">
-			<h2>Message Inbox</h2>
-			<p>Check your messages below.</p>
+			<h2>Message</h2>
+			<p>From: </p>
 			<br />
-			<br />
-			<table class="table table-striped table-bordered" id="message_table">
-				<tr>
-					<th>#</th>
-					<th>From:</th>
-					<th>Subject:</th>
-				</tr>
-			</table>	
+			<br />	
 		</div>
 <!-- /#page-content-wrapper -->
     </div>
@@ -75,7 +68,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="admin_functions/admin_functions.js"></script>
-	<script type="text/javascript" src="admin_functions/message/message_functions.js"></script>
+	<script type="text/javascript" src="admin_functions/admin_js.js"></script>
+	<script type="text/javascript" src="admin_functions/message/message_js.js"></script>
 </body>
 </html>
