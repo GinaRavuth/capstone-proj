@@ -7,7 +7,7 @@ $(document).ready(function() {
 		success: function(data){
 			var data = JSON.parse(data);
 			$.each(data, function(index,val){
-				$("#message_table").append('<tr><td>'+data[index]['id']+'<td><a class="inbox" id="'+data[index]['id']+'"href="">'+data[index]['name']+'</a></td><td>'+data[index]['subject']+'</td></tr>');
+				$("#message_table").append('<tr><td>'+data[index]['id']+'<td><a class="inbox" id="'+data[index]['id']+'"href="">'+data[index]['name']+'</a></td><td>'+data[index]['subject']+'</td><td><span><button>Delete</button></span></td></tr>');
 			});
 			click(data);
 		}
@@ -22,7 +22,7 @@ $(document).ready(function() {
 			var email = data[id]['email'];				
 			var subject = data[id]['subject'];
 			var message = data[id]['message'];
-			$('#message').html('<h3 id="name">From: '+name+'</h2><h3 id="email">Email: '+email+'</h2><h3 id="subject">Subject: '+subject+'</h2><hr /><br /><p id="message">'+message+'</p><button type="button" class="btn">Return to Inbox</button>');
+			$('#message').html('<h4><b>From:</b> '+name+'</h4><h4><b>Email:</b> '+email+'</h4><h4><b>Subject:</b> '+subject+'</h4><hr /><br /><p>'+message+'</p><br /><br /><button type="button" class="btn">Return to Inbox</button>');
 			});
 			inbox();
 	}

@@ -31,7 +31,10 @@
 	font-size: 15px;
 	color: #ff0033;  
 }
-
+span{
+	display: block;
+	text-align:center;
+}
 /* media query */
 @media screen and (max-device-width: 480px) {
     .sidebar-nav h1{
@@ -61,8 +64,8 @@ a {
 	text-decoration: none !important;
 }
 .glyphicon{
-		font-size: 3em;
-		margin-top: 25px;
+		display:block;
+		font-size: 15px;	
 }
 .icon-flipped {
 transform: scaleX(-1);
