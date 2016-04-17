@@ -8,3 +8,4 @@
 8. Implement message responses (may need to be hosted on something with an email server).
 9. Implement CSS dropdown submenu on admin dashboard sidebar
 10.Implement hardware management functions and forms for the backend
+11. Add error handling to ALL splash pages
