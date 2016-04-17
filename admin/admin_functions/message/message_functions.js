@@ -11,14 +11,14 @@ $(document).ready(function() {
 				$('#message').html('<p>No messages!</p>');
 			} else {
 			$.each(data, function(index,val){
-				$("#message_table").append('<tr><td>'+(index+1)+'</td><td><a class="inbox" id="'+index+'"href="">'+data[index]['name']+'</a></td><td>'+data[index]['subject']+'</td><td><span id="'+data[index]['id']+'"><button>Delete</button></span></td></tr>');
+				$("#message_table").append('<tr id="row" class="'+data[index]['id']+'"><td>'+(index+1)+'</td><td><a class="inbox" id="'+index+'"href="">'+data[index]['name']+'</a></td><td>'+data[index]['subject']+'</td><td><span id="'+data[index]['id']+'"><button>Delete</button></span></td></tr>');
 			});
 			remove(data);
 			click(data);
 		}
 		}
 	});
-	
+
 	// Inject HTML to view the message
 	function click(data){
 		$(document).on('click','a.inbox',function(e){
@@ -33,27 +33,33 @@ $(document).ready(function() {
 			inbox();
 	}
 	
-	// Reload page to reset back to inbox
+	// Go back to inbox by reloading page
 	function inbox(){
 		$(document).on('click','button.btn', function(e){
 			location.reload();
 		});
 	}
 	
+	// Delete message
 	function remove(data){
 		$(document).on('click','span', function(e){
-		var id = $(this).attr('id');
-		var data = {'delete': id};
-		$.ajax({
-			type: 'POST',
-			url: 'admin_functions/message/message_functions.php',
-			data: data,
-			success: function(data){
-				location.reload();
-				remove();
-				click();
-			}
-		});
+			var id = $(this).attr('id');
+			var data = {'delete': id};
+			$.ajax({
+				type: 'POST',
+				url: 'admin_functions/message/message_functions.php',
+				data: data,
+				success: function(data){
+					e.preventDefault();
+					$('.error').append('<p>Message deleted! Reloading...</p>');
+					$('tr').remove();
+					//alert(("."+id));
+					setTimeout(function(){
+						location.reload();
+					}, 1300);
+					
+				}
+			});
 		});
 	}
 });

@@ -63,7 +63,6 @@
 			
 			</div>
 			<br />
-			<br />
 			<table class="table table-striped table-bordered" id="message_table">
 				<tr>
 					<th>#</th>
