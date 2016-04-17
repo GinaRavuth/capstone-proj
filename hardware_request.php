@@ -5,8 +5,9 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
 $columnSetting = 'front';   
 
 //initialize page variables
-$title = ucfirst(basename(__FILE__, '.php'));
-$header = 'Hardware Request';
+$title = str_replace('_',' ',ucfirst(basename(__FILE__, '.php')));
+$header = 'Request Hardware Checkout';
+$description_title = 'Item Description';
 
 $id = $_GET['id'];
 $type = $_GET['type'];

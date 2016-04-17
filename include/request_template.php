@@ -12,7 +12,8 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h1><?php echo $header; ?></h1>
-				<h2 class="bold">Item</h2>
+				<br />
+				<h2 class="bold"><?php echo $description_title; ?></h2>		
 				<p><?php echo $description; ?></p>
 			</div>
 		</div>

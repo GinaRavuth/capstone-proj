@@ -109,13 +109,14 @@ function linkDataTablesID($array,$url) {
             } while ($b < $a);
             break;
         case 'returns.php':
-            $destinationURL = 'hardware-return.php';
+            $destinationURL = 'return_request.php';
             do {
                 $id = $array['data'][$b][0];
-                $eId = $array['data'][$b][1];
+                $eID = $array['data'][$b][1];
                 $name = $array['data'][$b][2];
                 $date = $array['data'][$b][3];
-                $array['data'][$b][0] = "<a href='$destinationURL?id=$id&eID=$eId&name=$name&date=$date'>$id</a>";
+				
+                $array['data'][$b][0] = "<a href='$destinationURL?id=$id&eID=$eID&name=$name&date=$date'>$id</a>";
                 $b++;
             } while ($b < $a);   
             break;
