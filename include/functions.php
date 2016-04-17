@@ -270,4 +270,14 @@ function message($name, $email, $subject, $message){
 	
 	$insert->execute();
 }
+
+function delete_message($id){
+	$link = open_database_connection();
+	
+	$sql = "DELETE FROM messages WHERE id = :id";
+	$delete = $link->prepare($sql);
+	$delete->bindParam(':id',$id);
+	$delete->execute();	
+}
+
 ?>

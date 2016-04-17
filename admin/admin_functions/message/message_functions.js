@@ -6,10 +6,16 @@ $(document).ready(function() {
 		url: 'admin_functions/message/message_functions.php',
 		success: function(data){
 			var data = JSON.parse(data);
+	// Handle empty messages
+			if($.isEmptyObject(data)){
+				$('#message').html('<p>No messages!</p>');
+			} else {
 			$.each(data, function(index,val){
-				$("#message_table").append('<tr><td>'+data[index]['id']+'<td><a class="inbox" id="'+data[index]['id']+'"href="">'+data[index]['name']+'</a></td><td>'+data[index]['subject']+'</td><td><span><button>Delete</button></span></td></tr>');
+				$("#message_table").append('<tr><td>'+(index+1)+'</td><td><a class="inbox" id="'+index+'"href="">'+data[index]['name']+'</a></td><td>'+data[index]['subject']+'</td><td><span id="'+data[index]['id']+'"><button>Delete</button></span></td></tr>');
 			});
+			remove(data);
 			click(data);
+		}
 		}
 	});
 	
@@ -17,7 +23,7 @@ $(document).ready(function() {
 	function click(data){
 		$(document).on('click','a.inbox',function(e){
 			e.preventDefault();
-			var id = ($(this).attr('id')-1);
+			var id = ($(this).attr('id'));
 			var name = data[id]['name'];
 			var email = data[id]['email'];				
 			var subject = data[id]['subject'];
@@ -31,6 +37,23 @@ $(document).ready(function() {
 	function inbox(){
 		$(document).on('click','button.btn', function(e){
 			location.reload();
+		});
+	}
+	
+	function remove(data){
+		$(document).on('click','span', function(e){
+		var id = $(this).attr('id');
+		var data = {'delete': id};
+		$.ajax({
+			type: 'POST',
+			url: 'admin_functions/message/message_functions.php',
+			data: data,
+			success: function(data){
+				location.reload();
+				remove();
+				click();
+			}
+		});
 		});
 	}
 });
