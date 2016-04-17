@@ -32,15 +32,26 @@
                     <a href="index.php?view=messages">Check Messages</a>
                 </li>
                 <li>
-                    <a href="index.php?view=returns">Approve Returns</a>
-                </li>
-                <li>
                     <a href="index.php?view=checkout">Approve Checkouts</a>
                 </li>
                 <li>
-                    <a href="index.php?view=hardware">Add Hardware</a>
+                    <a href="index.php?view=return">Approve Returns</a>
                 </li>
                 <li>
+                    <a id="hardware" href="index.php?view=hardware">Manage Hardware <b class="caret"></b></a>
+                </li>
+					<ul id="submenu">
+						<li>
+							<a href="index.php?view=add">Add Hardware</a>
+						</li>
+						<li>
+							<a href="index.php?view=edit">Edit Hardware</a>
+						</li>
+						<li>
+							<a href="index.php?view=delete">Delete Hardware</a>
+						</li>
+					</ul>
+				<li>
                     <a href="index.php?view=register">Create Account</a>
                 </li>
                 <li>
@@ -60,8 +71,6 @@
 		<div class="col-sm-12">
 			<h2 >Create Account</h2>
 			<p>Please fill out the form to create a new admin account.</p>
-			<br />
-			<br />
 		<div class="error">
 		<?php
 		// show potential errors / feedback (from registration object)
@@ -79,6 +88,7 @@
 		}
 		?>
 		</div>
+		<br />
 		<br />
 		</div>
   		<form id="register_form" class="form-horizontal" method="post" action="index.php?view=register" name="registerform">

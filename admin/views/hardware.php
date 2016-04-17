@@ -38,9 +38,9 @@
                     <a href="index.php?view=return">Approve Returns</a>
                 </li>
                 <li>
-                    <a href="index.php?view=hardware">Manage Hardware<b class="caret"></b></a>
+                    <a id="hardware" href="index.php?view=hardware">Manage Hardware <b class="caret"></b></a>
                 </li>
-					<ul class="submenu">
+					<ul id="submenu">
 						<li>
 							<a href="index.php?view=add">Add Hardware</a>
 						</li>

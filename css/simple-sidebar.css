@@ -155,6 +155,10 @@ padding-top: 0 !important;
 }
 
 /* Sidebar Styles */
+#submenu{
+	display:none;
+	list-style: none;
+}
 .sidebar-nav {
     position: absolute;
     top: 0;
@@ -178,6 +182,7 @@ padding-top: 0 !important;
     text-decoration: none;
 	color:#999999;
 	background: #f9f9f9;
+	display:block;
 }
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {

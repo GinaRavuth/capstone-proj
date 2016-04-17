@@ -22,7 +22,7 @@
 <body>
     <div id="wrapper">
 <!-- Sidebar -->
-       <div id="sidebar-wrapper">
+      <div id="sidebar-wrapper">
             <ul class="sidebar-nav text-center">
                 <li class="sidebar-brand">
                    <a href="index.php"><h1>Ordino</h1></a>
@@ -31,15 +31,26 @@
                     <a href="index.php?view=messages">Check Messages</a>
                 </li>
                 <li>
-                    <a href="index.php?view=return">Approve Returns</a>
-                </li>
-                <li>
                     <a href="index.php?view=checkout">Approve Checkouts</a>
                 </li>
                 <li>
-                    <a href="index.php?view=hardware">Add Hardware</a>
+                    <a href="index.php?view=return">Approve Returns</a>
                 </li>
                 <li>
+                    <a id="hardware" href="index.php?view=hardware">Manage Hardware <b class="caret"></b></a>
+                </li>
+					<ul id="submenu">
+						<li>
+							<a href="index.php?view=add">Add Hardware</a>
+						</li>
+						<li>
+							<a href="index.php?view=edit">Edit Hardware</a>
+						</li>
+						<li>
+							<a href="index.php?view=delete">Delete Hardware</a>
+						</li>
+					</ul>
+				<li>
                     <a href="index.php?view=register">Create Account</a>
                 </li>
                 <li>

@@ -6,9 +6,9 @@ $columnSetting = "front";
 
 //initialize page variables
 $title = ucfirst(basename(__FILE__, '.php'));
-$header = 'Approve Checkouts';
+$header = 'Approve Checkout Request';
 $description = 'Approve checkout request using the table below.';
-$columns = get_column_heads($columnSetting,"hardware");
+$columns = format_column_heads(truncate_columns(get_column_heads("hardware"),6));
 $types = get_types();
 
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/admin_tables.php');
