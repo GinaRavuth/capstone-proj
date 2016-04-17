@@ -67,7 +67,7 @@
 		</nav>
 <!-- end nav -->
 <!-- Page Content -->
-		<div class="col-sm-10" id="message">
+		<div class="col-sm-8" id="message">
 			<h2>Message Inbox</h2>
 			<p>Check your messages below.</p>
 			<div class="error">
