@@ -96,7 +96,7 @@ function linkDataTablesID($array,$url) {
     //get the current url to see where to direct user
     switch($url) {
         case 'hardware.php':
-            $destinationURL = 'checkout.php';
+            $destinationURL = 'hardware_request.php';
             do {
                 $id = $array['data'][$b][0];
                 $type = $array['data'][$b][1];

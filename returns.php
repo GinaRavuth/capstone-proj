@@ -11,5 +11,5 @@ $description = 'Please find item in system that you checked out. After, request 
 $columns = format_column_heads(truncate_columns(get_column_heads("loaned_hardware"),4));
 $types = get_types();
 
-require_once($_SERVER['DOCUMENT_ROOT'].'/include/tabletemplate.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/include/table_template.php');
 ?>

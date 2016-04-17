@@ -6,7 +6,7 @@ $columnSetting = 'front';
 
 //initialize page variables
 $title = ucfirst(basename(__FILE__, '.php'));
-$header = 'Checkout Hardware';
+$header = 'Hardware Request';
 
 $id = $_GET['id'];
 $type = $_GET['type'];
@@ -40,5 +40,5 @@ if(isset($_POST['submit']) && checkIfExists($_GET['id'],'hardware') === 1) {
     }
 }
 
-require_once($_SERVER['DOCUMENT_ROOT'].'/include/checkoutreturntemplate.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/include/request_template.php');
 ?>

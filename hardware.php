@@ -11,5 +11,5 @@ $description = 'Filter your search by category, or search for a specific hardwar
 $columns = format_column_heads(truncate_columns(get_column_heads("hardware"),6));
 $types = get_types();
 
-require_once($_SERVER['DOCUMENT_ROOT'].'/include/tabletemplate.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/include/table_template.php');
 ?>
