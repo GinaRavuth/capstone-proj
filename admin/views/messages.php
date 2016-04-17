@@ -64,12 +64,7 @@
 			</div>
 			<br />
 			<table class="table table-striped table-bordered" id="message_table">
-				<tr>
-					<th>#</th>
-					<th>From:</th>
-					<th>Subject:</th>
-					<th></th>
-				</tr>
+				
 			</table>	
 		</div>
 <!-- /#page-content-wrapper -->

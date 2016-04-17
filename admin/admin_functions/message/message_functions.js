@@ -8,8 +8,10 @@ $(document).ready(function() {
 			var data = JSON.parse(data);
 	// Handle empty messages
 			if($.isEmptyObject(data)){
-				$('#message').html('<p>No messages!</p>');
+				$('#message').html('<h2>Message Inbox</h2><p>Check your messages below.</p><div class="error"><p>Inbox empty!</p></div>');
 			} else {
+	// Draw table with messages from database
+			$("#message_table").append('<tr><th>#</th><th>From:</th><th>Subject:</th><th></th></tr>');
 			$.each(data, function(index,val){
 				$("#message_table").append('<tr id="row" class="'+data[index]['id']+'"><td>'+(index+1)+'</td><td><a class="inbox" id="'+index+'"href="">'+data[index]['name']+'</a></td><td>'+data[index]['subject']+'</td><td><span id="'+data[index]['id']+'"><button>Delete</button></span></td></tr>');
 			});
