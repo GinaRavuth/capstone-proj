@@ -22,7 +22,7 @@
 <body>
     <div id="wrapper">
 <!-- Sidebar -->
-         <div id="sidebar-wrapper">
+       <div id="sidebar-wrapper">
             <ul class="sidebar-nav text-center">
                 <li class="sidebar-brand">
                    <a href="index.php"><h1>Ordino</h1></a>
@@ -37,9 +37,9 @@
                     <a href="index.php?view=return">Approve Returns</a>
                 </li>
                 <li>
-                    <a href="index.php?view=hardware">Manage Hardware<b class="caret"></b></a>
+                    <a id="hardware" href="index.php?view=hardware">Manage Hardware <b class="caret"></b></a>
                 </li>
-					<ul class="submenu">
+					<ul id="submenu">
 						<li>
 							<a href="index.php?view=add">Add Hardware</a>
 						</li>
@@ -73,7 +73,7 @@
 			<br />
 			<br />
 		</div>
-		<form id="hardware_form" class="form-horizontal" method="post" action="index.php?view=hardware">
+		<form id="hardware_form" class="form-horizontal" method="post" action="/splash.php">
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Hardware ID</label>
 				<div class="col-sm-6">
@@ -112,7 +112,7 @@
 		  </div>
 		  <div class="form-group">
 			<div class="col-xs-8">
-				<input type="submit" class="btn btn-default pull-right" id="submit_hardware" value="Submit">
+				<input type="submit" class="btn btn-default pull-right" id="submit_hardware" name="add" value="Add Hardware">
 			</div>
 		  </div>
 		</form>

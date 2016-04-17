@@ -236,7 +236,8 @@ function get_messages(){
 }
 // Generate text for appropriate splash pages
 function splash_text($source){
-	if($source == 'Checkout'){
+	switch($source){
+	case 'Checkout':
 		$array = array(
 			"display" => "Checkout request sent!",
 			"status" => "Use the button below to return home.",
@@ -245,7 +246,8 @@ function splash_text($source){
 		);
 		
 		return $array;
-	} else if ($source == 'Return'){
+		break;
+	case 'Return':
 		$array = array(
 			"display" => "Return request sent!",
 			"status" => "Use the button below to return home.",
@@ -254,8 +256,39 @@ function splash_text($source){
 		);
 		
 		return $array;
+		break;
+	case 'Add':
+		$array = array(
+			"display" => "Hardware Added!",
+			"status" => "Use the button below to go back.",
+			"url" => "admin/index.php?view=add",
+			"text" => "Back"
+		);
+		return $array;
+	break;
+	
+	case 'Edit':
+		$array = array(
+			"display" => "Hardware Edited!",
+			"status" => "Use the button below to go back.",
+			"url" => "admin/index.php?view=edit",
+			"text" => "Back"
+		);
+		return $array;
+	break;
+	
+	case 'Delete':
+		$array = array(
+			"display" => "Hardware Deleted!",
+			"status" => "Use the button below to go back.",
+			"url" => "admin/index.php?view=delete",
+			"text" => "Back"
+		);
+		return $array;
+	break;
 	}
 }
+
 
 // Insert message into database
 function message($name, $email, $subject, $message){

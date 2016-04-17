@@ -37,9 +37,9 @@
                     <a href="index.php?view=return">Approve Returns</a>
                 </li>
                 <li>
-                    <a href="index.php?view=hardware">Manage Hardware<b class="caret"></b></a>
+                    <a id="hardware" href="index.php?view=hardware">Manage Hardware <b class="caret"></b></a>
                 </li>
-					<ul class="submenu">
+					<ul id="submenu">
 						<li>
 							<a href="index.php?view=add">Add Hardware</a>
 						</li>
@@ -69,11 +69,11 @@
 <!-- Page Content -->
 		<div class="col-sm-12">
 			<h2 >Edit Hardware</h2>
-				<p>Please fill out the form about the piece of hardware you would like to add and click submit.</p>
+				<p>Please fill out the form below to edit an item in the database.</p>
 			<br />
 			<br />
 		</div>
-		<form id="hardware_form" class="form-horizontal" method="post" action="index.php?view=hardware">
+		<form id="hardware_form" class="form-horizontal" method="post" action="/splash.php">
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Hardware ID</label>
 				<div class="col-sm-6">
@@ -112,7 +112,7 @@
 		  </div>
 		  <div class="form-group">
 			<div class="col-xs-8">
-				<input type="submit" class="btn btn-default pull-right" id="submit_hardware" value="Submit">
+				<input type="submit" class="btn btn-default pull-right" id="submit_hardware" name="edit" value="Edit Hardware">
 			</div>
 		  </div>
 		</form>
