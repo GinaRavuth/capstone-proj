@@ -30,7 +30,7 @@ $(document).ready(function() {
 			var email = data[id]['email'];				
 			var subject = data[id]['subject'];
 			var message = data[id]['message'];
-			$('#message').html('<h4><b>From:</b> '+name+'</h4><h4><b>Email:</b> '+email+'</h4><h4><b>Subject:</b> '+subject+'</h4><hr /><br /><p>'+message+'</p><br /><br /><button type="button" class="btn btn-default pull-right">Return to Inbox</button><span id="'+data[id]['id']+'"><button class="btn btn-default pull-right">Delete</button></span><button type="button" id="reply" class="btn btn-default pull-right">Reply</button>');
+			$('#message').html('<h4>From: '+name+'</h4><h4>Email: '+email+'</h4><h4>Subject: '+subject+'</h4><hr /><br /><p>'+message+'</p><br /><br /><button type="button" class="btn btn-default pull-right">Return to Inbox</button><span id="'+data[id]['id']+'"><button class="btn btn-default pull-right">Delete</button></span><button type="button" id="reply" class="btn btn-default pull-right">Reply</button>');
 		});
 			inbox();
 			remove(data);
