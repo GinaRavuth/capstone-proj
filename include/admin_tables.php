@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	<link href='http://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="icon" type="image/png" href="../css/favicon-32x32.png" sizes="32x32">
     <title>Ordino - Admin Dashboard</title>
 	 <?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/css.php'); ?>
 <!-- Bootstrap Core CSS -->

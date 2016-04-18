@@ -56,11 +56,10 @@ $(document).ready(function() {
 				data: data,
 				success: function(data){
 					e.preventDefault();
-					$('.error').append('<p>Message deleted! Refreshing...</p>');
 					$('tr').remove();
-					setTimeout(function(){
+					/* setTimeout(function(){
 						location.reload();
-					}, 1100);
+					}, 1500); */
 					
 				}
 			});

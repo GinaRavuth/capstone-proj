@@ -9,6 +9,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open Sans:400,300,700' rel='stylesheet' type='text/css'>
 	<link href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" rel="stylesheet" type='text/css'>
+	<link rel="icon" type="image/png" href="css/favicon-32x32.png" sizes="32x32">
 </head>
 <body >
 <!-- Navigation -->
