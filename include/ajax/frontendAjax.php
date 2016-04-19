@@ -20,12 +20,13 @@ switch($url) {
     case "hardware.php":
         $table = 'hardware';
         $primaryKey = 'hardware_id';
-        $maxLength = 5;
+        $alias1 = 'h';
+        $alias2 = 'l';
+        $joinQuery = "FROM hardware AS $alias1 LEFT JOIN loaned_hardware AS $alias2 ON $alias1.hardware_id = $alias2.loaned_hardware_id WHERE $alias2.loaned_hardware_id IS NULL";
         break;
     case "returns.php":
         $table = 'loaned_hardware';
         $primaryKey = 'eagle_id';
-        $maxLength = 5;
         break;
     default:
         $table = 'hardware';
@@ -47,8 +48,16 @@ for($i = 0; $i < count($columnNames); $i++) {
     array_push($columns,$pushArray);
 }
 
+
+
+if(isset($joinQuery)) {
+    $results = SSP::simple( $_GET, $sqlDetails, $table, $primaryKey, $columns, $joinQuery);
+} else {
+    $results = SSP::simple( $_GET, $sqlDetails, $table, $primaryKey, $columns);
+}
+
 //query and echo results
-$results = SSP::simple( $_GET, $sqlDetails, $table, $primaryKey, $columns );
+
 echo json_encode(linkDataTablesID($results,$url));
 
 ?>
