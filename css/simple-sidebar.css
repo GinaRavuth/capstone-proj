@@ -39,9 +39,9 @@ td{
 	vertical-align: middle !important;
 }
 /* media query */
-@media screen and (max-device-width: 480px) {
-    .sidebar-nav h1{
-       display:none;
+@media screen and (max-device-width: 768px) {
+    #sidebar-wrapper{
+       display:none !important;
     }
 }
 @media screen and (max-width: 768px) {
@@ -61,7 +61,7 @@ td{
 }
 /* end media query */
 body {
-	font-family: quicksand !important;
+	font-family: Quicksand !important;
 }
 a {
 	text-decoration: none !important;
