@@ -41,7 +41,7 @@ td{
 /* media query */
 @media screen and (max-device-width: 768px) {
     #sidebar-wrapper{
-       display:none;
+       display:none !important;
     }
 }
 @media screen and (max-width: 768px) {
