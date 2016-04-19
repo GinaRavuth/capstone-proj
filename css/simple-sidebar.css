@@ -19,6 +19,11 @@
 	display:table;
 	margin:0 auto;
 }
+.modal-body{
+	display: table;
+	margin:0 auto;
+	margin-bottom: 20px;
+}
 .modal-header{
 	border: none;
 }
@@ -27,6 +32,7 @@
 	text-align: center;
 	color: #999999;
 }
+#marg-left{margin-left: 10px;}
 .error{
 	font-size: 15px;
 	color: #ff0033;  
@@ -61,7 +67,7 @@ td{
 }
 /* end media query */
 body {
-	font-family: quicksand !important;
+	font-family: Quicksand !important;
 }
 a {
 	text-decoration: none !important;
