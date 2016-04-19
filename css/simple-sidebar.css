@@ -10,6 +10,16 @@
      -moz-border-radius: 0 !important;
           border-radius: 0 !important;
 }
+/* dropdown */
+#drop li {
+	text-decoration:none;
+	list-style-type:none;
+}
+#drop li a{
+	padding-right: 50px;
+	
+}
+/*end dropdown */
 .modal-body{
 	display: table;
 	margin:0 auto;
@@ -192,6 +202,7 @@ padding-top: 0 !important;
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
     text-decoration: none;
+	background: #f9f9f9;
 }
 
 .sidebar-nav > .sidebar-brand {
