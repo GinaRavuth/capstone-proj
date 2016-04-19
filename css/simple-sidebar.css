@@ -39,8 +39,8 @@ td{
 	vertical-align: middle !important;
 }
 /* media query */
-@media screen and (max-width: 768px) {
-    .sidebar-nav{
+@media screen and (max-device-width: 768px) {
+    #sidebar-wrapper{
        display:none;
     }
 }
