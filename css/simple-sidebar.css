@@ -19,31 +19,14 @@
 	display:table;
 	margin:0 auto;
 }
-.modal-body{
-	display: table;
-	margin:0 auto;
-	margin-bottom: 20px;
-}
 .modal-header{
 	border: none;
 }
-
-#home.container{
-	text-align: center;
-	color: #999999;
-}
-#marg-left{margin-left: 10px;}
 .error{
 	font-size: 15px;
 	color: #ff0033;  
 }
-span{
-	display: block;
-	text-align:center;
-}
-td{
-	vertical-align: middle !important;
-}
+#marg-left{margin-left: 10px;}
 /* media query */
 @media screen and (max-device-width: 480px) {
     .sidebar-nav h1{
@@ -56,9 +39,9 @@ td{
 	}
 }
 @media screen and (min-width: 768px) {
-	 #page.container h1{
+	 .container h1{
 		display:none;
-	} 
+	}
 }
 @media screen and (min-width: 768px) {
      #logoutbox {
@@ -67,14 +50,14 @@ td{
 }
 /* end media query */
 body {
-	font-family: Quicksand !important;
+	font-family: quicksand !important;
 }
 a {
 	text-decoration: none !important;
 }
 .glyphicon{
+		font-size: 3em;
 		margin-top: 25px;
-		font-size: 3em;	
 }
 .icon-flipped {
 transform: scaleX(-1);
@@ -86,7 +69,10 @@ nav{
     z-index: -1 !important;
 	
 }
-
+/* class for bold */
+.bold{
+	font-weight:bold;
+}
 .badge{
 	border-radius:5px !important;
 }
@@ -97,12 +83,12 @@ nav{
 .panel-heading{
 	height: 300px;
 	border-radius: none;
-		 -o-transition:.5s;
-	  -ms-transition:.5s;
-	  -moz-transition:.5s;
-	  -webkit-transition:.5s;
-	  /* ...and now for the proper property */
-	  transition:.5s;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	/* ...and now for the proper property */
+	transition:.5s;
 }
 .panel-heading:hover{
 	opacity: .8;
@@ -113,9 +99,11 @@ nav{
 
 #wrapper {
     padding-left: 0;
-    
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
-
 
 #wrapper.toggled {
     padding-left: 250px;
@@ -130,9 +118,12 @@ nav{
     margin-left: -250px;
     overflow-y: auto;
     background: #fff;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 	padding: 10px;
 }
-
 #footer-nav{
 	position: absolute;
 	bottom: 15px;
@@ -164,10 +155,6 @@ padding-top: 0 !important;
 }
 
 /* Sidebar Styles */
-#submenu{
-	display:none;
-	list-style: none;
-}
 .sidebar-nav {
     position: absolute;
     top: 0;
@@ -191,7 +178,6 @@ padding-top: 0 !important;
     text-decoration: none;
 	color:#999999;
 	background: #f9f9f9;
-	display:block;
 }
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
