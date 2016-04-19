@@ -12,10 +12,12 @@
 }
 /* dropdown */
 #drop li {
+	
 	text-decoration:none;
 	list-style-type:none;
 }
 #drop li a{
+	text-decoration: none;
 	padding-right: 50px;
 	
 }

@@ -10,7 +10,9 @@ $(document).ready(function() {
 			}
 		});
 	});
-
+	
+	
+	// Add hardware to database
 	$('#submit_hardware').click(function(){
 		var id = $('#id').val();
 		var type = $('#type').val();
@@ -28,4 +30,9 @@ $(document).ready(function() {
 		});
 	});
 	
+	// Menu dropdown
+	$('#li').click(function(){
+	$("#drop").accordion({collapsible : true, active : false});
+	$('.collapse').collapse();
+	});
 });

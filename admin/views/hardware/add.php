@@ -37,19 +37,13 @@
                     <a href="index.php?view=return">Approve Returns</a>
                 </li>
                 <li>
-                    <a id="hardware" href="index.php?view=hardware">Manage Hardware <b class="caret"></b></a>
-                </li>
-					<ul id="submenu">
-						<li>
-							<a href="index.php?view=add">Add Hardware</a>
-						</li>
-						<li>
-							<a href="index.php?view=edit">Edit Hardware</a>
-						</li>
-						<li>
-							<a href="index.php?view=delete">Delete Hardware</a>
-						</li>
-					</ul>
+					<a role="button" data-toggle="collapse" href="#drop" aria-expanded="false" aria-controls="collapseExample">Manage Hardware <span class="caret"></a>
+						<ul class="collapse" id="drop">
+							<li><a href="index.php?view=add">Add Hardware</a></li>
+							<li><a href="index.php?view=edit">Edit Hardware</a></li>
+							<li><a href="index.php?view=delete">Delete Hardware</a></li>
+						</ul>
+				</li>
 				<li>
                     <a href="index.php?view=register">Create Account</a>
                 </li>
