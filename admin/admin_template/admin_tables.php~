@@ -3,6 +3,7 @@
 <head>
    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_head.php'); ?>
     <title>Ordino - Admin Dashboard</title>
+	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/css.php'); ?>
 </head>
 <body>
 <!-- Wrapper -->

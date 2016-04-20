@@ -14,16 +14,15 @@
 				<h1>Ordino</h1>
 			</div>
 		</nav>
+<!-- End top navbar -->
 <!-- Page Content -->
 		<div class="col-sm-8" id="message">
 			<h2>Message Inbox</h2>
 			<p>Check your messages below.</p>
 			<div class="error">
-			
 			</div>
 			<br />
-			<table class="table table-striped table-bordered" id="message_table">
-				
+			<table class="table table-striped table-bordered" id="message_table">	
 			</table>	
 		</div>
 <!-- End page content -->

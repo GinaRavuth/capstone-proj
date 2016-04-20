@@ -14,19 +14,22 @@
 				<h1>Ordino</h1>
 			</div>
 		</nav>
+<!-- End top navbar -->
 <!-- Page Content -->
 		<div class="col-sm-8" id="message">
 			<h2>Message Inbox</h2>
 			<p>Check your messages below.</p>
+<!-- Error message div -->
 			<div class="error">
 			
 			</div>
+<!-- End error message div -->
 			<br />
 			<table class="table table-striped table-bordered" id="message_table">
 				
 			</table>	
 		</div>
-
+<!-- End page content -->
     </div>
 <!-- End wrapper -->
 	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_script.php'); ?>

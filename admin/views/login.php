@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Admin login header -->
 	<title>Ordino - Admin Login</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='/css/local-index.css' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+<!-- End login header -->
 </head>
 <body id="background">
+<!-- Login page content -->
 	<div class="container">
 		<div class="row centered">
 			<div class="col-lg-12 center-block dec-marg">
 				<h1>Ordino</h1>
 				<h3 style="text-align:center">Admin Portal</h3>
 			</div>
+<!-- Error message div -->
 			<div class="error">
 				<?php
 					// show potential errors / feedback (from login object)
@@ -32,7 +36,9 @@
 					}
 				?>
 			</div>
+<!-- End error message div -->
 		</div>
+<!-- Login form -->
 <div class="row">
 	<div class="col-sm-4"></div>
 		<form class="form-group col-sm-4" method="post" action="index.php" name="loginform">
@@ -48,9 +54,11 @@
 					</p>
 			</div>
 		</form>
+<!-- End form -->
 	<div class="col-sm-4"></div>			
 </div>
 </div>
+<!-- End content -->
 	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_script.php'); ?>
 </body>
 </html>
