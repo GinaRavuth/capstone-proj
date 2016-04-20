@@ -25,8 +25,8 @@
                     <a role="button" data-toggle="collapse" href="#drop2">Manage Accounts <span class="caret"></a>
 						<ul class="collapse" id="drop2">
 							 <li><a href="index.php?view=create_account">Create Account</a></li>
-							 <li><a href="index.php?view=register">Edit Account</a></li>
-							<li><a href="index.php?view=register">Delete Account</a></li>
+							 <li><a href="index.php?view=edit_account">Edit Account</a></li>
+							<li><a href="index.php?view=delete_account">Delete Account</a></li>
 						</ul>
                 </li>
                 <li>
