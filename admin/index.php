@@ -59,11 +59,17 @@ if ($login->isUserLoggedIn() == true) {
             case 'return':
                 include("views/return.php");
                 break;
-			case 'register':
+			case 'create_account':
 				require_once('classes/Registration.php');
 				$registration = new Registration();
-				include("views/register.php");
+				include("views/account/register.php");
 				break;
+			case 'edit_account':
+			
+			break;
+			case 'delete_account':
+			
+			break;
             case 'category':
                 include("views/category.php");
                 break;
