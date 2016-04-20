@@ -313,7 +313,6 @@ function remove_hardware($id){
 function edit_hardware($id, $type, $model, $status, $description, $location){
 
 }
-
 function delete_message($id){
 	$link = open_database_connection();
 	

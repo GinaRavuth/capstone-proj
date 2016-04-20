@@ -6,10 +6,10 @@ $columnSetting = "front";
 
 //initialize page variables
 $title = ucfirst(basename(__FILE__, '.php'));
-$header = 'Approve Return Request';
-$description = 'Approve return request using the table below.';
+$header = 'Approve Checkout Request';
+$description = 'Approve checkout request using the table below.';
 $columns = format_column_heads(truncate_columns(get_column_heads("hardware"),6));
 $types = get_types();
 
-require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_tables.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/include/admin_tables.php');
 ?>

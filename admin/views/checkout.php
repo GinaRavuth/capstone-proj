@@ -11,5 +11,5 @@ $description = 'Approve checkout request using the table below.';
 $columns = format_column_heads(truncate_columns(get_column_heads("hardware"),6));
 $types = get_types();
 
-require_once($_SERVER['DOCUMENT_ROOT'].'/include/admin_tables.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_tables.php');
 ?>

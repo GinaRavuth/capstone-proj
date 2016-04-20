@@ -5,17 +5,14 @@
     <title>Ordino - Admin Dashboard</title>
 </head>
 <body>
+<!-- Wrapper -->
     <div id="wrapper">
-<!-- Sidebar -->
        <?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_nav.php'); ?>
-<!-- /#sidebar-wrapper -->
-<!-- nav bar at top -->
 		<nav class="navbar navbar-default navbar-static-top">
 		  <div id="page" class="container">
 			<h1>Ordino</h1>
 		  </div>
 		</nav>
-<!-- end nav -->
 <!-- Page Content -->
 		<div class="col-sm-12">
 			<h2 >Add Hardware</h2>
@@ -68,9 +65,9 @@
 			</div>
 		  </div>
 		</form>
-<!-- /#page-content-wrapper -->
+<!-- End page content -->
     </div>
-<!-- /#wrapper -->
+<!-- End wrapper -->
 	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_script.php'); ?>
 </body>
 </html>

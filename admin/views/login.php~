@@ -51,6 +51,8 @@
 	<div class="col-sm-4"></div>			
 </div>
 </div>
+<!--  scripts -->
 	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_script.php'); ?>
+<!-- end scripts -->
 </body>
 </html>

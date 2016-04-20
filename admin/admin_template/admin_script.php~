@@ -4,4 +4,3 @@
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <script type="text/javascript" src="admin_functions/admin_functions.js"></script>
 <script type="text/javascript" src="admin_functions/message/message_functions.js"></script>
-<!-- End script links -->

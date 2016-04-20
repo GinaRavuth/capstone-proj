@@ -26,7 +26,7 @@
 				
 			</table>	
 		</div>
-<!-- End page content -->
+
     </div>
 <!-- End wrapper -->
 	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_script.php'); ?>

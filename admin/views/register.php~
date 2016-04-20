@@ -68,9 +68,9 @@
 			</div>
 		  </div>
 		</form>
-<!-- End page content -->
+<!-- /#page-content-wrapper -->
     </div>
-<!-- End wrapper -->
+<!-- /#wrapper -->
 	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_script.php'); ?>
 </body>
 </html>

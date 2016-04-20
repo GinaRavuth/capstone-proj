@@ -16,7 +16,6 @@ $(document).ready(function() {
 	
 	// AJAX for database
 	$('#submit_hardware').click(function(){
-		//var submit = 
 		var id = $('#id').val();
 		var type = $('#type').val();
 		var model = $('#model').val();
