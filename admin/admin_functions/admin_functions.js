@@ -24,58 +24,62 @@ $(document).ready(function() {
 	// Variable to determine where the submission is from
 		var function_switch = $('#database_interact').val();
 	// Execute different AJAX calls with different error messaging based on where it's from
-		if (function_switch == 'Add Hardware'){
-			var id = $('#id').val();
-			var type = $('#type').val();
-			var model = $('#model').val();
-			var status = $('#status').val(); 
-			var description = $('#description').val();
-			var location = $('#location').val();
+		switch(function_switch){
 			
-			if (!id || !type){
-				$('.error').html('<p>You must enter an ID and a type!</p>');
-				$('#hardware_form')[0].reset();
-			} else {
-				var dataString = {function_switch: function_switch, id: id, type: type, model: model, status: status, description: description, location: location};
-				$.ajax({
-					type: 'POST',
-					url: 'admin_functions/admin_functions.php',
-					data: dataString,
-					success: function(data){
-						$('.error').html('<p>Hardware has been added to the database!</p>');
-						$('#hardware_form')[0].reset();
-						setTimeout(function(){
-							window.location.reload();
-						}, 1500); 
-					}
-				});
-			}
-		} else if (function_switch == 'Edit Hardware'){
-			var id = $('#id').val();
-			var type = $('#type').val();
-			var model = $('#model').val();
-			var status = $('#status').val(); 
-			var description = $('#description').val();
-			var location = $('#location').val();
+			case 'Add Hardware':
+				var id = $('#id').val();
+				var type = $('#type').val();
+				var model = $('#model').val();
+				var status = $('#status').val(); 
+				var description = $('#description').val();
+				var location = $('#location').val();
+			
+				if (!id || !type){
+					$('.error').html('<p>You must enter an ID and a type!</p>');
+					$('#hardware_form')[0].reset();
+				} else {
+					var dataString = {function_switch: function_switch, id: id, type: type, model: model, status: status, description: description, location: location};
+					$.ajax({
+						type: 'POST',
+						url: 'admin_functions/admin_functions.php',
+						data: dataString,
+						success: function(data){
+							$('.error').html('<p>Hardware has been added to the database!</p>');
+							$('#hardware_form')[0].reset();
+							setTimeout(function(){
+								window.location.reload();
+							}, 1500); 
+						}
+					});
+				}
+			break;
+			case 'Edit Hardware':
+				var id = $('#id').val();
+				var type = $('#type').val();
+				var model = $('#model').val();
+				var status = $('#status').val(); 
+				var description = $('#description').val();
+				var location = $('#location').val();
 
-			if (!id){
-				$('.error').html('<p>You must enter an ID!</p>');
-				$('#hardware_form')[0].reset();
-			} else {
-				var dataString = {function_switch: function_switch, id: id, type: type, model: model, status: status, description: description, location: location};
-				$.ajax({
-					type: 'POST',
-					url: 'admin_functions/admin_functions.php',
-					data: dataString,
-					success: function(data){
-						$('.error').html('<p>Hardware has been edited in the database!</p>');
-						setTimeout(function(){
-							window.location.reload();
-						}, 1500); 
-					}
-				});
-			}
-		} else if (function_switch == 'Delete Hardware'){
+				if (!id){
+					$('.error').html('<p>You must enter an ID!</p>');
+					$('#hardware_form')[0].reset();
+				} else {
+					var dataString = {function_switch: function_switch, id: id, type: type, model: model, status: status, description: description, location: location};
+					$.ajax({
+						type: 'POST',
+						url: 'admin_functions/admin_functions.php',
+						data: dataString,
+						success: function(data){
+							$('.error').html('<p>Hardware has been edited in the database!</p>');
+							setTimeout(function(){
+								window.location.reload();
+							}, 1500); 
+						}
+					});
+				}
+			break;
+			case 'Delete Hardware':
 			var id = $('#id').val();
 			if (!id){
 				$('.error').html('<p>You must enter an ID!</p>');
@@ -95,8 +99,35 @@ $(document).ready(function() {
 					}
 				});
 			}
+			break;
+		case 'Delete Account':
+		
+			var user = $('#username').val();
+			var email = $('#email').val();
+			var password = $('#password').val();
+			
+			if (!user || !email || !password){
+				$('.error').html('<p>You must fill out all form sections!</p>');
+				$('#account_form')[0].reset();
+			}else {
+				var dataString = {function_switch: function_switch, user: user, email:email, password:password};
+				$.ajax({
+					type: 'POST',
+					url: 'admin_functions/admin_functions.php',
+					data: dataString,
+					success: function(data){
+						alert(data);
+						$('.error').html('<p>The account has been deleted from the database!</p>');
+						$('#hardware_form')[0].reset();
+						setTimeout(function(){
+							window.location.reload();
+						}, 1500); 
+					}
+				});
+			}
 		}
 	});
+
 	
 	// Menu dropdown
 	$('li').click(function(){

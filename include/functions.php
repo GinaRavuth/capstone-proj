@@ -312,11 +312,31 @@ function delete_message($id){
 }
 
 function edit_account(){
+	$link = open_database_connection();
 	
+	$sql = "UPDATE users SET user_id = :id, user_name = :username, user_password_hash = :password WHERE hardware_id = :id";
+	
+	$edit = $link->prepare($sql);
+	$edit->bindParam(':id',$id);
+	$edit->bindParam(':type',$type);
+	$edit->bindParam(':status',$status);
+	$edit->bindParam(':notes',$notes);
+	$edit->bindParam(':location',$location);
+	$edit->bindParam(':id',$id);
+	
+	$edit->execute();
 }
 
-function delete_account(){
+function delete_account($user,$email,$password){
+	$link = open_database_connection();
 	
+	$sql = "DELETE FROM users WHERE user_name = :user, user_email = :email, user_password_hash = :password";
+	$delete = $link->prepare($sql);
+	$delete->bindParam(':user',$user);
+	$delete->bindParam(':email',$email);
+	$delete->bindParam(':password',$password);
+	
+	$delete->execute();	
 }
 
 ?>

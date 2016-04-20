@@ -36,23 +36,23 @@
 		<br />
 		<br />
 		</div>
-  		<form id="register_form" class="form-horizontal" method="post" action="index.php?view=register" name="registerform">
+  		<form id="register_form" class="form-horizontal" method="post" action="index.php?view=edit_account">
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Username</label>
 			<div class="col-sm-6">
-			  <input type="text" id="login_input_username" name="username" placeholder="Letters and numbers only" class="form-control" pattern="[a-zA-Z0-9]{2,64}" required>
+			  <input type="text" name="username" placeholder="Letters and numbers only" class="form-control" pattern="[a-zA-Z0-9]{2,64}">
 			</div>
 		  </div>
 		  <div class="form-group">
 			<label for="type" class="col-sm-2 control-label text-left">Email</label>
 			<div class="col-sm-6">
-			  <input type="email" id="login_input_email" name="email" placeholder="Email address" class="form-control" required>
+			  <input type="email" name="email" placeholder="Email address" class="form-control">
 			</div>
 		  </div>
 		  <div class="form-group">
-			<label for="type" class="col-sm-2 control-label text-left">Password</label>
+			<label for="type" class="col-sm-2 control-label text-left">New password</label>
 			<div class="col-sm-6">
-			  <input type="password" id="login_input_password_new" name="password" placeholder="6 character minimum" pattern=".{6,}" class="form-control" required autocomplete="off">
+			  <input type="password" id="login_input_password_new" name="password" placeholder="6 character minimum" pattern=".{6,}" class="form-control" autocomplete="off">
 			</div>
 		  </div>
 		  <div class="form-group">

@@ -17,53 +17,31 @@
 			<h2>Delete Account</h2>
 			<p>Please fill out the form to delete an admin account.</p>
 		<div class="error">
-		<?php
-		// show potential errors / feedback (from registration object)
-			if (isset($registration)) {
-    			if ($registration->errors) {
-        			foreach ($registration->errors as $error) {
-            				echo $error;
-       			 	}
-				}
-    			if ($registration->messages) {
-        			foreach ($registration->messages as $message) {
-            				echo $message;
-        			}
-    			}
-			}
-		?>
 		</div>
 		<br />
-		<br />
 		</div>
-  		<form id="register_form" class="form-horizontal" method="post" action="index.php?view=register" name="registerform">
+  		<form id="hardware_form" class="form-horizontal" method="post" action="index.php?view=delete_account">
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Username</label>
 			<div class="col-sm-6">
-			  <input type="text" id="login_input_username" name="user_name" placeholder="Letters and numbers only" class="form-control" pattern="[a-zA-Z0-9]{2,64}" required>
+			  <input type="text"  name="name" id="username" placeholder="Letters and numbers only" class="form-control" pattern="[a-zA-Z0-9]{2,64}">
 			</div>
 		  </div>
 		  <div class="form-group">
 			<label for="type" class="col-sm-2 control-label text-left">Email</label>
 			<div class="col-sm-6">
-			  <input type="email" id="login_input_email" name="user_email" placeholder="Email address" class="form-control" required>
+			  <input type="email"  name="email" id="email" placeholder="Email address" class="form-control">
 			</div>
 		  </div>
 		  <div class="form-group">
-			<label for="type" class="col-sm-2 control-label text-left">Password</label>
+			<label for="type" class="col-sm-2 control-label text-left">Verify password</label>
 			<div class="col-sm-6">
-			  <input type="password" id="login_input_password_new" name="user_password_new" placeholder="6 character minimum" pattern=".{6,}" class="form-control" required autocomplete="off">
-			</div>
-		  </div>
-		  <div class="form-group">
-			<label for="status" class="col-sm-2 control-label text-left">Re-enter Password</label>
-			<div class="col-sm-6">
-			 <input type="password" id="login_input_password_new" name="user_password_repeat" placeholder="6 character minimum" pattern=".{6,}" class="form-control" required autocomplete="off">
+			  <input type="password" name="password" id="password" placeholder="6 character minimum" pattern=".{6,}" class="form-control" autocomplete="off">
 			</div>
 		  </div>
 		  <div class="form-group">
 			<div class="col-xs-8">
-			 <input type="submit" class="btn btn-default pull-right" id="submit_hardware" name="delete" value="Delete Account">
+			 <input type="submit" class="btn btn-default pull-right" id="database_interact" name="delete" value="Delete Account">
 			</div>
 		  </div>
 		</form>
