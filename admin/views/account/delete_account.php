@@ -20,7 +20,7 @@
 		</div>
 		<br />
 		</div>
-  		<form id="hardware_form" class="form-horizontal" method="post" action="index.php?view=delete_account">
+  		<form id="account_form" class="form-horizontal" method="post" action="index.php?view=delete_account">
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Username</label>
 			<div class="col-sm-6">

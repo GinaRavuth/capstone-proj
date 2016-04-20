@@ -17,47 +17,31 @@
 			<h2 >Edit Account</h2>
 			<p>Please fill out the form to edit an admin account.</p>
 		<div class="error">
-		<?php
-		// show potential errors / feedback (from registration object)
-			if (isset($registration)) {
-    			if ($registration->errors) {
-        			foreach ($registration->errors as $error) {
-            				echo $error;
-       			 	}
-				}
-    			if ($registration->messages) {
-        			foreach ($registration->messages as $message) {
-            				echo $message;
-        			}
-    			}
-			}
-		?>
 		</div>
 		<br />
-		<br />
 		</div>
-  		<form id="register_form" class="form-horizontal" method="post" action="index.php?view=edit_account">
+  		<form id="account_form" class="form-horizontal" method="post" action="index.php?view=edit_account">
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Username</label>
 			<div class="col-sm-6">
-			  <input type="text" name="username" placeholder="Enter the username of the account you wish to edit" class="form-control" pattern="[a-zA-Z0-9]{2,64}">
+			  <input type="text" name="username" id="username" placeholder="Enter the username of the account you wish to edit" class="form-control" pattern="[a-zA-Z0-9]{2,64}">
 			</div>
 		  </div>
 		  <div class="form-group">
-			<label for="type" class="col-sm-2 control-label text-left">Email</label>
+			<label for="type" class="col-sm-2 control-label text-left">New Email</label>
 			<div class="col-sm-6">
-			  <input type="email" name="email" placeholder="Enter the email address of the account you wish to edit" class="form-control">
+			  <input type="email" name="email" id="email" placeholder="Enter a new email address for the account" class="form-control">
 			</div>
 		  </div>
 		  <div class="form-group">
 			<label for="type" class="col-sm-2 control-label text-left">New password</label>
 			<div class="col-sm-6">
-			  <input type="password" id="login_input_password_new" name="password" placeholder="Enter a new password for the account" pattern=".{6,}" class="form-control" autocomplete="off">
+			  <input type="password" name="password" id="password" placeholder="Enter a new password for the account" pattern=".{6,}" class="form-control" autocomplete="off">
 			</div>
 		  </div>
 		  <div class="form-group">
 			<div class="col-xs-8">
-			 <input type="submit" class="btn btn-default pull-right" id="hardware_interact" name="edit" value="Edit Account">
+			 <input type="submit" class="btn btn-default pull-right" id="database_interact" name="edit" value="Edit Account">
 			</div>
 		  </div>
 		</form>

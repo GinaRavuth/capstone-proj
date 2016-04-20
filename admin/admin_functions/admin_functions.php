@@ -1,7 +1,7 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php'); 
 // Include file that has the Login object already created so I can access the methods from it
-include($_SERVER['DOCUMENT_ROOT'].'/admin/index.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/admin/index.php');
 
 // Compare the POST data and then execute based on evaluation
 switch($_POST['function_switch']){
@@ -38,7 +38,14 @@ switch($_POST['function_switch']){
 		$id = $_POST['id'];
 		delete_hardware($id);
 		break;
-	
+	case 'Edit Account':
+		$user = $_POST['user'];
+		$email = $_POST['email'];
+		$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+		
+		edit_account($user,$email,$password);
+		
+		break;
 	case 'Delete Account':
 		
 		$user = $_POST['user'];
@@ -47,7 +54,7 @@ switch($_POST['function_switch']){
 		
 
 		if(password_verify($_POST['password'], $hash)){
-		delete_account($user,$email);
+			delete_account($user,$email);
 		}
 		break;
 }

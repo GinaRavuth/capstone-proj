@@ -327,16 +327,14 @@ function delete_message($id)
 	$delete->execute();
 }
 
-function edit_account() {
+function edit_account($user, $email,$password) {
 	$link = open_database_connection();
-	$sql = "UPDATE users SET user_name = :username, user_password_hash = :password WHERE hardware_id = :id";
+	$sql = "UPDATE users SET user_password_hash = :password, user_email = :email WHERE user_name = :username";
 	$edit = $link->prepare($sql);
-	$edit->bindParam(':id', $id);
-	$edit->bindParam(':type', $type);
-	$edit->bindParam(':status', $status);
-	$edit->bindParam(':notes', $notes);
-	$edit->bindParam(':location', $location);
-	$edit->bindParam(':id', $id);
+	$edit->bindParam(':username', $user);
+	$edit->bindParam(':email', $email);
+	$edit->bindParam(':password', $password);
+	
 	$edit->execute();
 }
 // Get password hash to compare to the entered password
