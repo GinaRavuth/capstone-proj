@@ -2,10 +2,9 @@
 2. Complete backend table rendering and queries
 3. Fix CSS highlighting on table pagination at the bottom (Number isn't the correct color when you click a page button)
 4. Clean and polish codebase. (Remove commented code, add in comments about functionality, format indentation)
-5. Fix all broken links
 6. Correct website text throughout. (Make text more user friendly or more clear and concise)
 7. Design forgotten password page and figure out how to implement password resetting
 8. Implement message responses (may need to be hosted on something with an email server).
-9. Implement CSS dropdown submenu on admin dashboard sidebar
+9. Implement CSS dropdown submenu on admin dashboard sidebar (partially done)
 10.Implement hardware management functions and forms for the backend
 11. Add error handling to ALL splash pages

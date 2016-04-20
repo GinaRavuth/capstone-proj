@@ -16,10 +16,11 @@
 		<div class="col-sm-12">
 			<h2 >Edit Hardware</h2>
 				<p>Please fill out the form below to edit an item in the database.</p>
+			<div class="error">
+			</div>
 			<br />
-			<br />
-		</div>
-		<form id="hardware_form" class="form-horizontal" method="post" action="/splash.php">
+			</div>
+		<form id="hardware_form" class="form-horizontal" method="post">
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Hardware ID</label>
 				<div class="col-sm-6">
@@ -58,7 +59,7 @@
 		  </div>
 		  <div class="form-group">
 			<div class="col-xs-8">
-				<input type="submit" class="btn btn-default pull-right" id="submit_hardware" name="edit" value="Edit Hardware">
+				<input type="submit" class="btn btn-default pull-right" id="database_interact" name="edit" value="Edit Hardware">
 			</div>
 		  </div>
 		</form>

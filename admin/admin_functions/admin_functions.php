@@ -10,7 +10,8 @@ if ($action == 'logout'){
 }
 
 // Allow admin to add hardware manually to database
-if(isset($_POST['id']) && isset($_POST['type']) && isset($_POST['model']) && isset($_POST['status']) && isset($_POST['description']) && isset($_POST['location']) ){
+if($_POST['function_switch'] == 'Add Hardware'){
+	
 $id = $_POST['id'];
 $type = $_POST['type'];
 $model = $_POST['model'];
@@ -19,5 +20,17 @@ $description = $_POST['description'];
 $location = $_POST['location'];
 
 addHardware($id, $type, $model, $status, $description, $location);
+
+} else if ($_POST['function_switch'] == 'Edit Hardware'){
+	
+$id = $_POST['id'];
+$type = $_POST['type'];
+$model = $_POST['model'];
+$status = $_POST['status'];
+$description = $_POST['description'];
+$location = $_POST['location'];
+
+} else if ($_POST['function_switch'] == 'Delete Hardware'){
+	
 }
 ?>

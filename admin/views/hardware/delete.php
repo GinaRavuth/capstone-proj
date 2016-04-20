@@ -16,7 +16,8 @@
 		<div class="col-sm-12">
 			<h2 >Delete Hardware</h2>
 				<p>Please enter the ID of the item to remove from the database.</p>
-			<br />
+			<div class="error">
+			</div>
 			<br />
 		</div>
 		<form id="hardware_form" class="form-horizontal" method="post" action="/splash.php">
@@ -28,7 +29,7 @@
 		  </div>
 		  <div class="form-group">
 			<div class="col-xs-8">
-				<input type="submit" class="btn btn-default pull-right" id="submit_hardware" name="delete" value="Delete Hardware">
+				<input type="submit" class="btn btn-default pull-right" id="database_interact" name="delete" value="Delete Hardware">
 			</div>
 		  </div>
 		</form>

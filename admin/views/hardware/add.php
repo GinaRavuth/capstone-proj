@@ -16,12 +16,11 @@
 		<div class="col-sm-12">
 			<h2 >Add Hardware</h2>
 				<p>Please fill out the form about the piece of hardware you would like to add and click submit.</p>
-			<br />
-			<br />
 		<div class="error">
 		</div>
+		<br />
 		</div>
-		<form id="hardware_form" class="form-horizontal" method="post" action="index.php?view=add">
+		<form id="hardware_form" class="form-horizontal" method="post">
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Hardware ID</label>
 				<div class="col-sm-6">
@@ -60,7 +59,7 @@
 		  </div>
 		  <div class="form-group">
 			<div class="col-xs-8">
-				<input type="submit" class="btn btn-default pull-right" id="submit_hardware" name="add" value="Add Hardware">
+				<input type="submit" class="btn btn-default pull-right" id="database_interact" name="add_hardware" value="Add Hardware">
 			</div>
 		  </div>
 		</form>
