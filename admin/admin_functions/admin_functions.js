@@ -14,12 +14,14 @@ $(document).ready(function() {
 	});
 	
 	// Prevent form from reloading page
-	$("form").on("submit", function (e) {
+	$('form').on('submit', function (e) {
 		e.preventDefault();
 	});
 	// AJAX functions for database interaction on the hardware module
 	$('#database_interact').click(function(){
+	// Variable to determine where the submission is from
 		var function_switch = $('#database_interact').val();
+	// Execute different AJAX calls with different error messaging based on where it's from
 		if (function_switch == 'Add Hardware'){
 			var id = $('#id').val();
 			var type = $('#type').val();
@@ -30,6 +32,7 @@ $(document).ready(function() {
 			
 			if (!id || !type){
 				$('.error').html('<p>You must enter an ID and a type!</p>');
+				$('#hardware_form')[0].reset();
 			} else {
 				var dataString = {function_switch: function_switch, id: id, type: type, model: model, status: status, description: description, location: location};
 				$.ajax({
@@ -38,6 +41,7 @@ $(document).ready(function() {
 					data: dataString,
 					success: function(data){
 						$('.error').html('<p>Hardware has been added to the database!</p>');
+						$('#hardware_form')[0].reset();
 						setTimeout(function(){
 							window.location.reload();
 						}, 1500); 
@@ -54,6 +58,7 @@ $(document).ready(function() {
 
 			if (!id){
 				$('.error').html('<p>You must enter an ID!</p>');
+				$('#hardware_form')[0].reset();
 			} else {
 				var dataString = {function_switch: function_switch, id: id, type: type, model: model, status: status, description: description, location: location};
 				$.ajax({
@@ -72,6 +77,7 @@ $(document).ready(function() {
 			var id = $('#id').val();
 			if (!id){
 				$('.error').html('<p>You must enter an ID!</p>');
+				$('#hardware_form')[0].reset();
 			} else {
 				var dataString = {id: id};
 				$.ajax({
@@ -80,6 +86,7 @@ $(document).ready(function() {
 					data: dataString,
 					success: function(data){
 						$('.error').html('<p>Hardware has been deleted from the database!</p>');
+						$('#hardware_form')[0].reset();
 						setTimeout(function(){
 							window.location.reload();
 						}, 1500); 

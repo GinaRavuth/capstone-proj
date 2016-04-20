@@ -9,7 +9,7 @@ if ($action == 'logout'){
 	$login->doLogout();	
 }
 
-// Allow admin to add hardware manually to database
+// Logic structure for interacting with hardware table in database
 if($_POST['function_switch'] == 'Add Hardware'){
 	
 $id = $_POST['id'];
