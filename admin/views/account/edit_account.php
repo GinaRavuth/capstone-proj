@@ -40,30 +40,24 @@
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Username</label>
 			<div class="col-sm-6">
-			  <input type="text" id="login_input_username" name="user_name" placeholder="Letters and numbers only" class="form-control" pattern="[a-zA-Z0-9]{2,64}" required>
+			  <input type="text" id="login_input_username" name="username" placeholder="Letters and numbers only" class="form-control" pattern="[a-zA-Z0-9]{2,64}" required>
 			</div>
 		  </div>
 		  <div class="form-group">
 			<label for="type" class="col-sm-2 control-label text-left">Email</label>
 			<div class="col-sm-6">
-			  <input type="email" id="login_input_email" name="user_email" placeholder="Email address" class="form-control" required>
+			  <input type="email" id="login_input_email" name="email" placeholder="Email address" class="form-control" required>
 			</div>
 		  </div>
 		  <div class="form-group">
 			<label for="type" class="col-sm-2 control-label text-left">Password</label>
 			<div class="col-sm-6">
-			  <input type="password" id="login_input_password_new" name="user_password_new" placeholder="6 character minimum" pattern=".{6,}" class="form-control" required autocomplete="off">
-			</div>
-		  </div>
-		  <div class="form-group">
-			<label for="status" class="col-sm-2 control-label text-left">Re-enter Password</label>
-			<div class="col-sm-6">
-			 <input type="password" id="login_input_password_new" name="user_password_repeat" placeholder="6 character minimum" pattern=".{6,}" class="form-control" required autocomplete="off">
+			  <input type="password" id="login_input_password_new" name="password" placeholder="6 character minimum" pattern=".{6,}" class="form-control" required autocomplete="off">
 			</div>
 		  </div>
 		  <div class="form-group">
 			<div class="col-xs-8">
-			 <input type="submit" class="btn btn-default pull-right" id="submit_hardware" name="edit" value="Edit Account">
+			 <input type="submit" class="btn btn-default pull-right" id="hardware_interact" name="edit" value="Edit Account">
 			</div>
 		  </div>
 		</form>

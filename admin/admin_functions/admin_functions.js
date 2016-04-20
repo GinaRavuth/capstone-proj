@@ -14,7 +14,7 @@ $(document).ready(function() {
 		});
 	});
 	
-	// Prevent form from reloading page
+	// Prevent hardware form from reloading page
 	$('#hardware_form').on('submit', function (e) {
 		e.preventDefault();
 	});

@@ -188,7 +188,7 @@ function add_hardware($id, $type, $model, $status, $description, $location){
     return $status;
 }
 
-// Front-end message push
+// Front-end message push with splash text
 function message_push($name, $email, $subject, $message){
 	
 	if(empty($_POST['name'])  AND empty($_POST['email'])  AND empty($_POST['subject']) AND empty($_POST['message'])){
@@ -257,38 +257,8 @@ function splash_text($source){
 		
 		return $array;
 		break;
-	case 'Add':
-		$array = array(
-			"display" => "Hardware Added!",
-			"status" => "Use the button below to go back.",
-			"url" => "admin/index.php?view=add",
-			"text" => "Back"
-		);
-		return $array;
-	break;
-	
-	case 'Edit':
-		$array = array(
-			"display" => "Hardware Edited!",
-			"status" => "Use the button below to go back.",
-			"url" => "admin/index.php?view=edit",
-			"text" => "Back"
-		);
-		return $array;
-	break;
-	
-	case 'Delete':
-		$array = array(
-			"display" => "Hardware Deleted!",
-			"status" => "Use the button below to go back.",
-			"url" => "admin/index.php?view=delete",
-			"text" => "Back"
-		);
-		return $array;
-	break;
 	}
 }
-
 
 // Insert message into database
 function message($name, $email, $subject, $message){
@@ -330,14 +300,23 @@ function edit_hardware($id, $type, $model, $status, $description, $location){
 	
 	$edit->execute();
 }
-
+// Delete message from database
 function delete_message($id){
 	$link = open_database_connection();
 	
 	$sql = "DELETE FROM messages WHERE id = :id";
 	$delete = $link->prepare($sql);
 	$delete->bindParam(':id',$id);
+	
 	$delete->execute();	
+}
+
+function edit_account(){
+	
+}
+
+function delete_account(){
+	
 }
 
 ?>
