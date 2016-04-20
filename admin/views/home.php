@@ -70,7 +70,7 @@
 					</a>
                     </div>
                     <div class="col-lg-4 col-sm-6 spaced">
-					<a href="index.php?view=hardware">
+					<a href="index.php?view=manage_hardware">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">
@@ -88,7 +88,7 @@
 					</a>
                     </div>
 					<div class="col-lg-4 col-sm-6 spaced">
-					<a href="index.php?view=register">
+					<a href="index.php?view=manage_accounts">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">
@@ -97,7 +97,7 @@
                                     </div><br/><br/>
 									<div class="col-lg-12 text-center">
 									<br/>
-										<h2>Create Account</h2>
+										<h2>Manage Accounts</h2>
 										<span class="glyphicon glyphicon-user"></span>
 									</div>
                                 </div>

@@ -41,11 +41,11 @@ if ($login->isUserLoggedIn() == true) {
        $url = $_GET['view']; 
         //switch determines what page user is on, if variable is invalid default is home
         switch($url) {
-            case 'hardware':
-                include("views/hardware.php");
+			case 'messages':
+                include("views/messages.php");
                 break;
-            case 'checkout':
-                include("views/checkout.php");
+            case 'manage_hardware':
+                include("views/hardware/manage_hardware.php");
                 break;
 			case 'add':
 				include("views/hardware/add.php");
@@ -56,9 +56,15 @@ if ($login->isUserLoggedIn() == true) {
 			case 'delete':
 				include("views/hardware/delete.php");
 				break;
+			case 'checkout':
+                include("views/checkout.php");
+                break;
             case 'return':
                 include("views/return.php");
                 break;
+			case 'manage_accounts':
+				include("views/account/manage_accounts.php");
+				break;
 			case 'create_account':
 				require_once('classes/Registration.php');
 				$registration = new Registration();
@@ -70,12 +76,6 @@ if ($login->isUserLoggedIn() == true) {
 			case 'delete_account':
 				include("views/account/delete_account.php");
 				break;
-            case 'category':
-                include("views/category.php");
-                break;
-            case 'messages':
-                include("views/messages.php");
-                break;
             default:
                 include("views/home.php");
         }
