@@ -3,10 +3,11 @@ $(document).ready(function() {
 
 	// AJAX to access php object for logout
 	$('#logout').click(function(){
+		var function_switch = 'logout';
 		$.ajax({
 			type: 'POST',
 			url: 'admin_functions/admin_functions.php',
-			data: "action=logout", 
+			data: {function_switch: function_switch}, 
 			success: function(data){
 				//window.location.reload();
 			}
@@ -14,9 +15,10 @@ $(document).ready(function() {
 	});
 	
 	// Prevent form from reloading page
-	$('form').on('submit', function (e) {
+	$('#hardware_form').on('submit', function (e) {
 		e.preventDefault();
 	});
+	
 	// AJAX functions for database interaction on the hardware module
 	$('#database_interact').click(function(){
 	// Variable to determine where the submission is from
@@ -79,7 +81,7 @@ $(document).ready(function() {
 				$('.error').html('<p>You must enter an ID!</p>');
 				$('#hardware_form')[0].reset();
 			} else {
-				var dataString = {id: id};
+				var dataString = {function_switch: function_switch,id: id};
 				$.ajax({
 					type: 'POST',
 					url: 'admin_functions/admin_functions.php',

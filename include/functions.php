@@ -167,7 +167,7 @@ function moveToLoaned($id, $name, $eId, $reason) {
     return $status;
 }
 // Add hardware to database for backend
-function addHardware($id, $type, $model, $status, $description, $location){
+function add_hardware($id, $type, $model, $status, $description, $location){
 	$link = open_database_connection();
 	 
 	$sql = "INSERT INTO hardware (hardware_id, type, model, status, notes, location) VALUES (:id, :type, :model, :status, :notes, :location)";
@@ -306,12 +306,29 @@ function message($name, $email, $subject, $message){
 }
 
 // Remove hardware from database
-function remove_hardware($id){
-
+function delete_hardware($id){
+	$link = open_database_connection();
+	
+	$sql = "DELETE FROM hardware WHERE hardware_id = :id";
+	$delete = $link->prepare($sql);
+	$delete->bindParam(':id',$id);
+	$delete->execute();	
 }
 // Edit hardware in the database
 function edit_hardware($id, $type, $model, $status, $description, $location){
-
+	$link = open_database_connection();
+	
+	$sql = "UPDATE hardware SET type = :type, model = :model,status = :status, notes = :description, location = :location WHERE hardware_id = :id";
+	
+	$edit = $link->prepare($sql);
+	$edit->bindParam(':id',$id);
+	$edit->bindParam(':type',$type);
+	$edit->bindParam(':status',$status);
+	$edit->bindParam(':notes',$notes);
+	$edit->bindParam(':location',$location);
+	$edit->bindParam(':id',$id);
+	
+	$edit->execute();
 }
 
 function delete_message($id){
