@@ -20,6 +20,18 @@
 	text-decoration: none;
 	padding-right: 50px;
 	
+	
+}
+#drop2 li {
+	
+	text-decoration:none;
+	list-style-type:none;
+}
+#drop2 li a{
+	text-decoration: none;
+	padding-right: 50px;
+	
+	
 }
 /*end dropdown */
 .modal-body{

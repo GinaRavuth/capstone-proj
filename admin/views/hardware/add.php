@@ -22,36 +22,7 @@
 <body>
     <div id="wrapper">
 <!-- Sidebar -->
-       <div id="sidebar-wrapper">
-            <ul class="sidebar-nav text-center">
-                <li class="sidebar-brand">
-                   <a href="index.php"><h1>Ordino</h1></a>
-                </li>
-                <li>
-                    <a href="index.php?view=messages">Check Messages</a>
-                </li>
-                <li>
-                    <a href="index.php?view=checkout">Approve Checkouts</a>
-                </li>
-                <li>
-                    <a href="index.php?view=return">Approve Returns</a>
-                </li>
-                <li>
-					<a role="button" data-toggle="collapse" href="#drop" aria-expanded="false" aria-controls="collapseExample">Manage Hardware <span class="caret"></a>
-						<ul class="collapse" id="drop">
-							<li><a href="index.php?view=add">Add Hardware</a></li>
-							<li><a href="index.php?view=edit">Edit Hardware</a></li>
-							<li><a href="index.php?view=delete">Delete Hardware</a></li>
-						</ul>
-				</li>
-				<li>
-                    <a href="index.php?view=register">Create Account</a>
-                </li>
-                <li>
-                    <a href="" name="logout" id="logout" value="logout">Log out</a>
-                </li>
-            </ul>
-        </div>
+       <?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_nav.php'); ?>
 <!-- /#sidebar-wrapper -->
 <!-- nav bar at top -->
 		<nav class="navbar navbar-default navbar-static-top">
@@ -66,8 +37,10 @@
 				<p>Please fill out the form about the piece of hardware you would like to add and click submit.</p>
 			<br />
 			<br />
+		<div class="error">
 		</div>
-		<form id="hardware_form" class="form-horizontal" method="post" action="/splash.php">
+		</div>
+		<form id="hardware_form" class="form-horizontal" method="post" action="index.php?view=add">
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Hardware ID</label>
 				<div class="col-sm-6">
