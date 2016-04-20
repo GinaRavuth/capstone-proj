@@ -24,19 +24,19 @@
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Username</label>
 			<div class="col-sm-6">
-			  <input type="text"  name="name" id="username" placeholder="Letters and numbers only" class="form-control" pattern="[a-zA-Z0-9]{2,64}">
+			  <input type="text"  name="name" id="username" placeholder="Enter the username of the account you wish to delete" class="form-control" pattern="[a-zA-Z0-9]{2,64}">
 			</div>
 		  </div>
 		  <div class="form-group">
 			<label for="type" class="col-sm-2 control-label text-left">Email</label>
 			<div class="col-sm-6">
-			  <input type="email"  name="email" id="email" placeholder="Email address" class="form-control">
+			  <input type="email"  name="email" id="email" placeholder="Enter the email address of the account you wish to delete" class="form-control">
 			</div>
 		  </div>
 		  <div class="form-group">
 			<label for="type" class="col-sm-2 control-label text-left">Verify password</label>
 			<div class="col-sm-6">
-			  <input type="password" name="password" id="password" placeholder="6 character minimum" pattern=".{6,}" class="form-control" autocomplete="off">
+			  <input type="password" name="password" id="password" placeholder="Verify the password of the account" pattern=".{6,}" class="form-control" autocomplete="off">
 			</div>
 		  </div>
 		  <div class="form-group">

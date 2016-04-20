@@ -19,7 +19,7 @@
 		</div>
         <div class="row">
             <div class="col-md-8">
-                <h2 class="bold">Request Hardware</h2>
+                <h2 class="bold">Important!</h2>
                 <p><strong>Before returning</strong>, please check that your hardware has been placed in its original location. If the hardware cannot be located by the approver your return will be denied and you will continue to be responsible for your hardware.</p>
                 <form class="form-horizontal" method="post" action="return_request.php">
                     <div class="form-group">

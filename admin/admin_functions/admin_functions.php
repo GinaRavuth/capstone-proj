@@ -43,9 +43,12 @@ switch($_POST['function_switch']){
 		
 		$user = $_POST['user'];
 		$email = $_POST['email'];
-		$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-		echo $password;
-		delete_account($user,$email,$password);
+		$hash = get_hash($user,$email);
+		
+
+		if(password_verify($_POST['password'], $hash)){
+		delete_account($user,$email);
+		}
 		break;
 }
 
