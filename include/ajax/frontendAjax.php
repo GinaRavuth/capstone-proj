@@ -27,6 +27,7 @@ switch($url) {
     case "returns.php":
         $table = 'loaned_hardware';
         $primaryKey = 'eagle_id';
+        $where = 'checkout_auth = 1';
         break;
     default:
         $table = 'hardware';
@@ -51,7 +52,9 @@ for($i = 0; $i < count($columnNames); $i++) {
 
 
 if(isset($joinQuery)) {
-    $results = SSP::simple( $_GET, $sqlDetails, $table, $primaryKey, $columns, $joinQuery);
+    $results = SSP::simple( $_GET, $sqlDetails, $table, $primaryKey, $columns, $joinQuery);    
+} elseif(isset($where)) {
+    $results = SSP::complex( $_GET, $sqlDetails, $table, $primaryKey, $columns, $where);
 } else {
     $results = SSP::simple( $_GET, $sqlDetails, $table, $primaryKey, $columns);
 }

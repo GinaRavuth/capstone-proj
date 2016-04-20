@@ -19,7 +19,7 @@ if(checkIfExists($_GET['id'],'hardware') === 1){
     $description = "<p>Name: $name</p>
 					<p>Eagle ID: $eID</p>
 					<p>Hardware Id: $id</p>
-					<p>Date: $date</p>
+					<p>Checkout Date: $date</p>
                     ";
 } else {
     $description = '<p>Item not found</p>';
@@ -39,4 +39,4 @@ if(isset($_POST['submit']) && checkIfExists($_GET['id'],'hardware') === 1) {
     }
 }
 
-require_once($_SERVER['DOCUMENT_ROOT'].'/include/request_template.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/include/return_template.php');
