@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_head.php'); ?>
-    <title>Ordino - Admin Dashboard</title>
 </head>
 <body>
 <!-- Wrapper -->
     <div id="wrapper">
-      <?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_nav.php'); ?>
+		<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_nav.php'); ?>
 <!-- Admin dashboard top navbar -->
 		<nav class="navbar navbar-default navbar-static-top">
 			<div id="page" class="container">

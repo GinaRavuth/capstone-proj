@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
 	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_head.php'); ?>
-	<title>Ordino - Admin Registration</title>
 </head>
 <body>
 <!-- Wrapper -->
     <div id="wrapper">
-       <?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_nav.php'); ?>
+		<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_nav.php'); ?>
 		<nav class="navbar navbar-default navbar-static-top">
 			<div id="page" class="container">
 				<h1>Ordino</h1>
@@ -15,8 +14,8 @@
 		</nav>
 <!-- Page Content -->
 		<div class="col-sm-12">
-			<h2 >Create Account</h2>
-			<p>Please fill out the form to create a new admin account.</p>
+			<h2 >Edit Account</h2>
+			<p>Please fill out the form to edit an admin account.</p>
 		<div class="error">
 		<?php
 		// show potential errors / feedback (from registration object)
@@ -64,7 +63,7 @@
 		  </div>
 		  <div class="form-group">
 			<div class="col-xs-8">
-			 <input type="submit" class="btn btn-default pull-right" id="submit_hardware" name="register" value="Register">
+			 <input type="submit" class="btn btn-default pull-right" id="submit_hardware" name="edit" value="Edit Account">
 			</div>
 		  </div>
 		</form>

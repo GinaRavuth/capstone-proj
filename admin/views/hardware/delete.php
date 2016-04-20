@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
 	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_head.php'); ?>
-    <title>Ordino - Admin Dashboard</title>
-
 </head>
 <body>
 <!-- Wrapper -->
