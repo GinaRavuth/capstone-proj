@@ -16,9 +16,9 @@
 				<p><?php echo $description; ?></p>
 			</div>
 		</div>
-	<div class="dataTables_wrapper form-inline dt-boostrap">
+	<div class="form-inline dt-boostrap">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-xs-12">
 			<div class="input-group">
 				<label class="control-label" id="label_category" for="cats">Choose Category: &nbsp; </label>
 				<div class="selectContainer">
