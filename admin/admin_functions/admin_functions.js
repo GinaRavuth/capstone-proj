@@ -109,8 +109,8 @@ $(document).ready(function() {
 				var email = $('#email').val();
 				var password = $('#password').val();
 			
-				if (!user || !email || !password){
-					$('.error').html('<p>You must fill out all form sections!</p>');
+				if ((!user) || ((user) && (!email && !password))){
+					$('.error').html('<p>You must enter the username and at least one additional field!</p>');
 					$('#account_form')[0].reset();
 				}else {
 					var dataString = {function_switch: function_switch, user: user, email:email, password:password};
@@ -120,8 +120,12 @@ $(document).ready(function() {
 						data: dataString,
 						success: function(data){
 							alert(data);
-							$('.error').html('<p>The admin account: <b>'+user+'</b> has been edited in the database!</p>');
-							$('#account_form')[0].reset();
+							if (data == 0){
+								$('.error').html('<p>The admin account: <b>'+user+'</b> does not exist in the database!</p>');
+							} else {
+								$('.error').html('<p>The admin account: <b>'+user+'</b> has been edited in the database!</p>');
+								$('#account_form')[0].reset();
+							}
 						}
 					});
 				}

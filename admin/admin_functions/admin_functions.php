@@ -1,7 +1,5 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php'); 
-
-
 // Compare the POST data and then execute based on evaluation
 switch($_POST['function_switch']){
 	case 'logout':

@@ -158,6 +158,22 @@ function checkIfExists($id, $table)
 	}
 }
 
+function check_user($user, $table)
+{
+	$link = open_database_connection();
+	$sql = "SELECT user_name FROM $table WHERE user_name = :user";
+	$query = $link->prepare($sql);
+	$query->bindParam(':user', $user);
+	$query->execute();
+	$rows = $query->fetchAll(PDO::FETCH_NUM);
+	if (count($rows) >= 1) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
+}
+
 function moveToLoaned($id, $name, $eId, $reason)
 {
 	$link = open_database_connection();
@@ -305,12 +321,12 @@ function delete_hardware($id)
 
 function edit_hardware($id, $type, $model, $status, $description, $location)
 {	
-$link = open_database_connection();
+	$link = open_database_connection();
 	$hardware = checkIfExists($id,'hardware');
 
 	if ($hardware == 0){
 		echo $hardware;
-	} else if ($hardware ==1) {
+	} else {
 		if(!empty($type) && !empty($model) && !empty($status) && !empty($description) && !empty($location)){
 
 			$sql = "UPDATE hardware SET type = :type, model = :model,status = :status, notes = :description, location = :location WHERE hardware_id = :id";
@@ -377,15 +393,37 @@ function delete_message($id)
 	$delete->execute();
 }
 // Edit the email and password of an account
-function edit_account($user, $email,$password){
+function edit_account($user, $email, $password){
 	$link = open_database_connection();
-	$sql = "UPDATE users SET user_password_hash = :password, user_email = :email WHERE user_name = :username";
-	$edit = $link->prepare($sql);
-	$edit->bindParam(':username', $user);
-	$edit->bindParam(':email', $email);
-	$edit->bindParam(':password', $password);
+	$check = check_user($user, 'users');
 	
-	$edit->execute();
+	if ($check == 0){
+		echo $check;
+	} else {
+		if (!empty($email) && !empty($password)){
+			$sql = "UPDATE users SET user_password_hash = :password, user_email = :email WHERE user_name = :username";
+			$edit = $link->prepare($sql);
+			$edit->bindParam(':username', $user);
+			$edit->bindParam(':email', $email);
+			$edit->bindParam(':password', $password);
+			$edit->execute();
+		} else if (!empty($email)){
+			$sql = "UPDATE users SET user_email = :email WHERE user_name = :username";
+			$edit = $link->prepare($sql);
+			$edit->bindParam(':username', $user);
+			$edit->bindParam(':email', $email);
+
+			$edit->execute();
+		} else if (!empty($password)){
+			$sql = "UPDATE users SET user_password_hash = :password WHERE user_name = :username";
+			$edit = $link->prepare($sql);
+			$edit->bindParam(':username', $user);
+			$edit->bindParam(':password', $password);
+			
+			$edit->execute();
+		}
+		echo $check;
+	}
 }
 // Get password hash to compare to the entered password
 function get_hash($user, $email){
