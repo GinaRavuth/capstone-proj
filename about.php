@@ -9,7 +9,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open Sans:400,300,700' rel='stylesheet' type='text/css'>
 	<link href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" rel="stylesheet" type='text/css'>
-	<link rel="icon" type="image/png" href="css/favicon-32x32.png" sizes="32x32">
+	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/favicon.php'); ?>
 </head>
 <body >
 <!-- Navigation -->
@@ -100,7 +100,6 @@
 <!--scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="include/message/message.js"></script>
-  <!--end scripts -->
+<!--end scripts -->
 </body>
 </html>
