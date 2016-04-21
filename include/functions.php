@@ -227,8 +227,8 @@ function message_push($name, $email, $subject, $message)
 {
 	if (empty($_POST['name']) AND empty($_POST['email']) AND empty($_POST['subject']) AND empty($_POST['message'])) {
 		$array = array(
-			"display" => "There was a problem.",
-			"status" => "Please re-submit your message.",
+			"display" => "Please fill out all fields!",
+			"status" => "Click return to re-submit your message.",
 			"url" => "about.php",
 			"text" => 'Return'
 		);
@@ -284,6 +284,15 @@ function splash_text($source)
 			"status" => "Use the button below to return home.",
 			"url" => "hardware.php",
 			"text" => 'Home'
+		);
+		return $array;
+		break;
+	case 'Empty':
+		$array = array(
+			"display" => "Please fill out all fields!",
+			"status" => "Use the button below to re-submit your request.",
+			"url" => "javascript:history.go(-1)",
+			"text" => 'Return'
 		);
 		return $array;
 		break;

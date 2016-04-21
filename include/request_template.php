@@ -19,17 +19,17 @@
 		</div>
 		<h2 class="bold">Request Form</h2>
 		<p>Please fill out the form below to submit a hardware request.</p><br>
-		<form class="form-horizontal" method="post" action="splash.php">
+		<form class="form-horizontal" method="post" action="/splash.php">
 			<div class="form-group">
 				<label for="name" class="col-sm-1 control-label text-left">Name</label>
 				<div class="col-sm-7">
-					<input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+					<input type="text" class="form-control" id="name" name="name" placeholder="Name">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="eagleid" class="col-sm-1 control-label text-left">Eagle ID</label>
 				<div class="col-sm-7">
-					<input type="text" class="form-control" id="eagleid" name="eagleid" placeholder="Eagle ID" required>
+					<input type="text" class="form-control" id="eagleid" name="eagleid" placeholder="Eagle ID">
 				</div>
 			</div>
 			<div class="form-group">
@@ -40,7 +40,7 @@
 			</div>
 			<div class="form-group">
 				<div class="col-sm-8">
-					<input type="submit" class="btn btn-default pull-right" name="Checkout" id="submit" name="submit">
+					<input type="submit" class="btn btn-default pull-right" name="Checkout" id="submit" value="Request Hardware">
 				</div>
 			</div>
 		</form>

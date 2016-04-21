@@ -14,43 +14,23 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
 	$text = $return['text'];
 		
 } else if(isset($_POST['Checkout'])) {
-
-	$return = splash_text('Checkout');
-	$display = $return['display'];
-	$status = $return['status'];
-	$url = $return['url'];
-	$text = $return['text'];
-		
+	
+	if (!empty($_POST['name']) && !empty($_POST['eagleid']) && !empty($_POST['message'])){
+		$return = splash_text('Checkout');
+		$display = $return['display'];
+		$status = $return['status'];
+		$url = $return['url'];
+		$text = $return['text'];
+	} else {
+		$return = splash_text('Empty');
+		$display = $return['display'];
+		$status = $return['status'];
+		$url = $return['url'];
+		$text = $return['text'];
+	}
 } else if (isset($_POST['Return'])){
 		
 	$return = splash_text('Return');
-	$display = $return['display'];
-	$status = $return['status'];
-	$url = $return['url'];
-	$text = $return['text'];
-	
-} else if (isset($_POST['addHardware'])){
-	$return = splash_text('addHardware');
-	$display = $return['display'];
-	$status = $return['status'];
-	$url = $return['url'];
-	$text = $return['text'];
-} else if (isset($_POST['add'])){
-	$return = splash_text('Add');
-	$display = $return['display'];
-	$status = $return['status'];
-	$url = $return['url'];
-	$text = $return['text'];
-	
-} else if (isset($_POST['edit'])){
-	$return = splash_text('Edit');
-	$display = $return['display'];
-	$status = $return['status'];
-	$url = $return['url'];
-	$text = $return['text'];
-
-} else if (isset($_POST['delete'])){
-	$return = splash_text('Delete');
 	$display = $return['display'];
 	$status = $return['status'];
 	$url = $return['url'];
