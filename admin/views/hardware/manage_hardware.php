@@ -19,6 +19,7 @@
 		<div id="content_header" class="col-sm-6">
 			<h2>Manage Hardware</h2>
 			<p>Use this module to manage hardware. You may add, edit, or delete hardware</p>
+			<hr />
 			<br />
 		</div>
 		 <div id="manage_hardware">

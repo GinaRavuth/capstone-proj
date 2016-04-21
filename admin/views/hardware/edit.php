@@ -13,14 +13,15 @@
 		  </div>
 		</nav>
 <!-- Page Content -->
-		<div id="admin_form" class="col-sm-12">
+		<div id="content_header" class="col-sm-12">
 			<h2 >Edit Hardware</h2>
 				<p>Please fill out the form below to edit an item in the database.</p>
+				<hr />
 			<div class="error">
 			</div>
 			<br />
 			</div>
-		<form id="hardware_form" class="form-horizontal" method="post">
+		<form id="admin_form" class="form-horizontal" method="post">
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Hardware ID</label>
 				<div class="col-sm-6">
@@ -58,8 +59,8 @@
 				</div>
 		  </div>
 		  <div class="form-group">
-			<div class="col-xs-8">
-				<input type="submit" class="btn btn-default pull-right" id="database_interact" name="edit" value="Edit Hardware">
+			<div class="col-sm-8">
+				<input type="submit" class="btn btn-default" id="database_interact" name="edit" value="Edit Hardware">
 			</div>
 		  </div>
 		</form>

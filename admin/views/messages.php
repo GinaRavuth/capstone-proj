@@ -15,16 +15,16 @@
 		</nav>
 <!-- End top navbar -->
 <!-- Page Content -->
-		<div class="col-sm-6" id="message">
+		<div class="col-sm-12" id="message">
 			<div id="content_header">
 				<h2>Message Inbox</h2>
 				<p class="inbox">Check your messages below.</p>
+				<hr />
 				<div class="error">
 				</div>
 			</div>
-			<br />
-			<table class="table" id="message_table">	
-			</table>	
+			<table class="table table-hover" id="message_table">	
+			</table>
 		</div>
 <!-- End page content -->
     </div>

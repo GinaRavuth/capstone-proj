@@ -16,6 +16,7 @@
 		<div id="content_header" class="col-sm-12">
 			<h2 >Create Account</h2>
 			<p>Please fill out the form to create a new admin account.</p>
+			<hr />
 		<div class="error">
 		<?php
 		// show potential errors / feedback (from registration object)
@@ -61,7 +62,7 @@
 			</div>
 		  </div>
 		  <div class="form-group">
-			<div class="col-xs-8">
+			<div class="col-sm-8">
 			 <input type="submit" class="btn btn-default pull-right" id="submit_hardware" name="register" value="Create Account">
 			</div>
 		  </div>

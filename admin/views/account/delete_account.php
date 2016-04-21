@@ -16,6 +16,7 @@
 		<div id="content_header" class="col-sm-12">
 			<h2>Delete Account</h2>
 			<p>Please fill out the form to delete an admin account.</p>
+			<hr />
 		<div class="error">
 		</div>
 		<br />
@@ -40,7 +41,7 @@
 			</div>
 		  </div>
 		  <div class="form-group">
-			<div class="col-xs-8">
+			<div class="col-sm-8">
 			 <input type="submit" class="btn btn-default pull-right" id="database_interact" name="delete" value="Delete Account">
 			</div>
 		  </div>

@@ -16,6 +16,7 @@
 		<div id="content_header" class="col-sm-12">
 			<h2 >Add Hardware</h2>
 				<p>Please fill out the form about the piece of hardware you would like to add and click submit.</p>
+				<hr />
 		<div class="error">
 		</div>
 		<br />
@@ -57,8 +58,8 @@
 					<input type="text" class="form-control" id="location" name="location" placeholder="Location">
 				</div>
 		  </div>
-		  <div class="form-group">
-			<div class="col-xs-8">
+		  <div class="form-group" id="btn">
+			<div class="col-sm-8">
 				<input type="submit" class="btn btn-default pull-right" id="database_interact" name="add_hardware" value="Add Hardware">
 			</div>
 		  </div>

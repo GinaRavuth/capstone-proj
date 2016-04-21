@@ -18,6 +18,7 @@
 		<div id="content_header" class="col-sm-6">
 			<h2 >Manage Accounts</h2>
 			<p>Use this module to manage admin accounts. You may add, edit, or delete accounts.</p>
+			<hr />
 			<br />
 		</div>
 		 <div id="manage_hardware">
