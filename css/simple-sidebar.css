@@ -14,9 +14,6 @@
 ul{
 	list-style:none;
 }
-.active{
-	display:block;
-}
 #manage_hardware{
 	display: none;
 }
