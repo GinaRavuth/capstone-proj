@@ -1,12 +1,12 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php'); 
-// Include file that has the Login object already created so I can access the methods from it
-require_once($_SERVER['DOCUMENT_ROOT'].'/admin/index.php');
+
 
 // Compare the POST data and then execute based on evaluation
 switch($_POST['function_switch']){
 	case 'logout':
-	
+// Include file that has the Login object already created so I can access the methods from it
+		include($_SERVER['DOCUMENT_ROOT'].'/admin/index.php');
 		$login->doLogout();	
 		break;
 	case 'Add Hardware':
@@ -32,7 +32,6 @@ switch($_POST['function_switch']){
 		
 		
 		edit_hardware($id, $type, $model, $status, $description, $location);
-		
 		
 		break;
 	case 'Delete Hardware':

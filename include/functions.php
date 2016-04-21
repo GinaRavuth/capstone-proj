@@ -305,58 +305,65 @@ function delete_hardware($id)
 
 function edit_hardware($id, $type, $model, $status, $description, $location)
 {	
-	$link = open_database_connection();
-	if(!empty($type) && !empty($model) && !empty($status) && !empty($description) && !empty($location)){
+$link = open_database_connection();
+	$hardware = checkIfExists($id,'hardware');
 
-		$sql = "UPDATE hardware SET type = :type, model = :model,status = :status, notes = :description, location = :location WHERE hardware_id = :id";
-		$edit = $link->prepare($sql);
-		$edit->bindParam(':id', $id);
-		$edit->bindParam(':type', $type);
-		$edit->bindParam(':model', $model);
-		$edit->bindParam(':status', $status);
-		$edit->bindParam(':description', $description);
-		$edit->bindParam(':location', $location);
-	
-		$edit->execute();
-	} else if (!empty($type) && !empty($model) && !empty($status) && !empty($description)){
+	if ($hardware == 0){
+		echo $hardware;
+	} else if ($hardware ==1) {
+		if(!empty($type) && !empty($model) && !empty($status) && !empty($description) && !empty($location)){
 
-		$sql = "UPDATE hardware SET type = :type, model = :model,status = :status, notes = :description WHERE hardware_id = :id";
-		$edit = $link->prepare($sql);
-		$edit->bindParam(':id', $id);
-		$edit->bindParam(':type', $type);
-		$edit->bindParam(':model', $model);
-		$edit->bindParam(':status', $status);
-		$edit->bindParam(':description', $description);
+			$sql = "UPDATE hardware SET type = :type, model = :model,status = :status, notes = :description, location = :location WHERE hardware_id = :id";
+			$edit = $link->prepare($sql);
+			$edit->bindParam(':id', $id);
+			$edit->bindParam(':type', $type);
+			$edit->bindParam(':model', $model);
+			$edit->bindParam(':status', $status);
+			$edit->bindParam(':description', $description);
+			$edit->bindParam(':location', $location);
 	
-		$edit->execute();
-	} else if (!empty($type) && !empty($model) && !empty($status)){
+			$edit->execute();
+		} else if (!empty($type) && !empty($model) && !empty($status) && !empty($description)){
+
+			$sql = "UPDATE hardware SET type = :type, model = :model,status = :status, notes = :description WHERE hardware_id = :id";
+			$edit = $link->prepare($sql);
+			$edit->bindParam(':id', $id);
+			$edit->bindParam(':type', $type);
+			$edit->bindParam(':model', $model);
+			$edit->bindParam(':status', $status);
+			$edit->bindParam(':description', $description);
 	
-		$sql = "UPDATE hardware SET type = :type, model = :model,status = :status WHERE hardware_id = :id";
-		$edit = $link->prepare($sql);
-		$edit->bindParam(':id', $id);
-		$edit->bindParam(':type', $type);
-		$edit->bindParam(':model', $model);
-		$edit->bindParam(':status', $status);
+			$edit->execute();
+		} else if (!empty($type) && !empty($model) && !empty($status)){
+	
+			$sql = "UPDATE hardware SET type = :type, model = :model,status = :status WHERE hardware_id = :id";
+			$edit = $link->prepare($sql);
+			$edit->bindParam(':id', $id);
+			$edit->bindParam(':type', $type);
+			$edit->bindParam(':model', $model);
+			$edit->bindParam(':status', $status);
 		
 	
-		$edit->execute();
-	} else if (!empty($type) && !empty($model)){
+			$edit->execute();
+		} else if (!empty($type) && !empty($model)){
 		
-		$sql = "UPDATE hardware SET type = :type, model = :model WHERE hardware_id = :id";
-		$edit = $link->prepare($sql);
-		$edit->bindParam(':id', $id);
-		$edit->bindParam(':type', $type);
-		$edit->bindParam(':model', $model);
+			$sql = "UPDATE hardware SET type = :type, model = :model WHERE hardware_id = :id";
+			$edit = $link->prepare($sql);
+			$edit->bindParam(':id', $id);
+			$edit->bindParam(':type', $type);
+			$edit->bindParam(':model', $model);
 	
-		$edit->execute();
-	} else if (!empty($type)){
+			$edit->execute();
+		} else if (!empty($type)){
 	
-		$sql = "UPDATE hardware SET type = :type WHERE hardware_id = :id";
-		$edit = $link->prepare($sql);
-		$edit->bindParam(':id', $id);
-		$edit->bindParam(':type', $type);
+			$sql = "UPDATE hardware SET type = :type WHERE hardware_id = :id";
+			$edit = $link->prepare($sql);
+			$edit->bindParam(':id', $id);
+			$edit->bindParam(':type', $type);
 	
-		$edit->execute();
+			$edit->execute();
+		}
+		echo $hardware;
 	}
 }
 

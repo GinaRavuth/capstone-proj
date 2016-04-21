@@ -73,8 +73,13 @@ $(document).ready(function() {
 						url: 'admin_functions/admin_functions.php',
 						data: dataString,
 						success: function(data){
-							$('.error').html('<p>Hardware with ID: <b>'+ id + '</b> has been edited in the database!</p>');
-							$('#hardware_form')[0].reset();
+							if (data == 0){
+								$('.error').html('<p>Hardware with ID: <b>'+ id + '</b> does not exist in the database!</p>');
+								$('#hardware_form')[0].reset();
+							} else {
+								$('.error').html('<p>Hardware with ID: <b>'+ id + '</b> has been edited in the database!</p>');
+								$('#hardware_form')[0].reset();
+							}
 						}
 					});
 				}
