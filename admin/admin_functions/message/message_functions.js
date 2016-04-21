@@ -8,7 +8,7 @@ $(document).ready(function() {
 			var data = JSON.parse(data);
 	// Handle empty messages
 			if($.isEmptyObject(data)){
-				$('#message').html('<h2>Message Inbox</h2><p>Check your messages below.</p><br /><table class="table table-striped table-bordered" id="message_table"></table>');
+				$('#message').html('<div id="content_header"><h2>Message Inbox</h2><p class="inbox">Check your messages below.</p><div class="error"></div><br /><table class="table table-striped table-bordered" id="message_table"></table>');
 				
 				$('#message_table').append('<tr><td>Inbox Empty!</td></tr>');
 			} else {
@@ -56,11 +56,7 @@ $(document).ready(function() {
 				data: data,
 				success: function(data){
 					e.preventDefault();
-					$('tr').remove();
-					/* setTimeout(function(){
-						location.reload();
-					}, 1500); */
-					
+					//$('tr').remove();
 				}
 			});
 		});
