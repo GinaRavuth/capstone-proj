@@ -33,6 +33,9 @@
 	
 	
 }
+#manage_hardware{
+	display: none;
+}
 /*end dropdown */
 .modal-body{
 	display: table;
@@ -64,6 +67,9 @@ td{
 }
 /* media query */
 @media screen and (max-width: 768px) {
+	#manage_hardware{
+		display: block;
+	}
     #sidebar-wrapper {
        display:none !important;
 	   margin-left:0;
@@ -73,9 +79,15 @@ td{
 	 .container h1{
 		text-align:center;
 	}
+	#content_header{
+		text-align:center;
+	}
 }
 @media screen and (min-width: 768px) {
 	 #page.container h1{
+		display:none;
+	}
+	#page.container p{
 		display:none;
 	}
 	
@@ -184,10 +196,6 @@ padding-top: 0 !important;
 }
 
 /* Sidebar Styles */
-#submenu{
-	display:none;
-	list-style: none;
-}
 .sidebar-nav {
     position: absolute;
     top: 0;
