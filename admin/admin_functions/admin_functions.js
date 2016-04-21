@@ -63,8 +63,8 @@ $(document).ready(function() {
 				var description = $('#description').val();
 				var location = $('#location').val();
 
-				if (!id){
-					$('.error').html('<p>You must enter an ID!</p>');
+				if ((!id) || (((id) && !type && !model && !status && !description && !location))){
+					$('.error').html('<p>You must enter an ID and at least one additional field!</p>');
 					$('#hardware_form')[0].reset();
 				} else {
 					var dataString = {function_switch: function_switch, id: id, type: type, model: model, status: status, description: description, location: location};

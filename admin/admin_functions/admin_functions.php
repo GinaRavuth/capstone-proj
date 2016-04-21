@@ -30,7 +30,9 @@ switch($_POST['function_switch']){
 		$description = $_POST['description'];
 		$location = $_POST['location'];
 		
+		
 		edit_hardware($id, $type, $model, $status, $description, $location);
+		
 		
 		break;
 	case 'Delete Hardware':

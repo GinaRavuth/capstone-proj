@@ -299,12 +299,15 @@ function delete_hardware($id)
 	$delete->execute();
 }
 
+
+
 // Edit hardware in the database
 
 function edit_hardware($id, $type, $model, $status, $description, $location)
 {	
 	$link = open_database_connection();
-	if(isset($type) && isset($model) && isset($status) && isset($description) && isset($location)){
+	if(!empty($type) && !empty($model) && !empty($status) && !empty($description) && !empty($location)){
+
 		$sql = "UPDATE hardware SET type = :type, model = :model,status = :status, notes = :description, location = :location WHERE hardware_id = :id";
 		$edit = $link->prepare($sql);
 		$edit->bindParam(':id', $id);
@@ -315,7 +318,8 @@ function edit_hardware($id, $type, $model, $status, $description, $location)
 		$edit->bindParam(':location', $location);
 	
 		$edit->execute();
-	} else if (isset($type) && isset($model) && isset($status) && isset($description)){
+	} else if (!empty($type) && !empty($model) && !empty($status) && !empty($description)){
+
 		$sql = "UPDATE hardware SET type = :type, model = :model,status = :status, notes = :description WHERE hardware_id = :id";
 		$edit = $link->prepare($sql);
 		$edit->bindParam(':id', $id);
@@ -325,7 +329,8 @@ function edit_hardware($id, $type, $model, $status, $description, $location)
 		$edit->bindParam(':description', $description);
 	
 		$edit->execute();
-	} else if (isset($type) && isset($model) && isset($status)){
+	} else if (!empty($type) && !empty($model) && !empty($status)){
+	
 		$sql = "UPDATE hardware SET type = :type, model = :model,status = :status WHERE hardware_id = :id";
 		$edit = $link->prepare($sql);
 		$edit->bindParam(':id', $id);
@@ -335,7 +340,8 @@ function edit_hardware($id, $type, $model, $status, $description, $location)
 		
 	
 		$edit->execute();
-	} else if (isset($type) && isset($model)){
+	} else if (!empty($type) && !empty($model)){
+		
 		$sql = "UPDATE hardware SET type = :type, model = :model WHERE hardware_id = :id";
 		$edit = $link->prepare($sql);
 		$edit->bindParam(':id', $id);
@@ -343,7 +349,8 @@ function edit_hardware($id, $type, $model, $status, $description, $location)
 		$edit->bindParam(':model', $model);
 	
 		$edit->execute();
-	} else if (isset($type)){
+	} else if (!empty($type)){
+	
 		$sql = "UPDATE hardware SET type = :type WHERE hardware_id = :id";
 		$edit = $link->prepare($sql);
 		$edit->bindParam(':id', $id);
