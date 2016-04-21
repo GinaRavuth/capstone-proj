@@ -67,6 +67,9 @@ td{
 		text-align: justify;'
 		text-justify: distribute;
 	}
+	#content_header p.inbox{
+		text-align: center;
+	}
 	#hardware_form{
 		padding: 10px;
 	}
@@ -75,9 +78,6 @@ td{
 	}
 	#register_form{
 		padding: 10px;
-	}
-	.col-xs-8 {
-		width: 0 auto;
 	}
 }
 @media screen and (min-width: 768px) {

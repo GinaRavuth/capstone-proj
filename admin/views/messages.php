@@ -16,9 +16,12 @@
 <!-- End top navbar -->
 <!-- Page Content -->
 		<div class="col-sm-8" id="message">
-			<h2>Message Inbox</h2>
-			<p>Check your messages below.</p>
-			<div class="error">
+			<div id="content_header">
+				<h2>Message Inbox</h2>
+				<p class="inbox">Check your messages below.</p>
+				<br />
+				<div class="error">
+				</div>
 			</div>
 			<br />
 			<table class="table table-striped table-bordered" id="message_table">	
