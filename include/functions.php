@@ -309,10 +309,16 @@ function message($name, $email, $subject, $message)
 function delete_hardware($id)
 {
 	$link = open_database_connection();
+	$hardware = checkIfExists($id,'hardware');
+	if ($hardware == 0){
+		echo $hardware;
+	} else {
 	$sql = "DELETE FROM hardware WHERE hardware_id = :id";
 	$delete = $link->prepare($sql);
 	$delete->bindParam(':id', $id);
 	$delete->execute();
+	echo $hardware;
+	}
 }
 
 

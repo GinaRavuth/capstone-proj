@@ -97,8 +97,12 @@ $(document).ready(function() {
 						url: 'admin_functions/admin_functions.php',
 						data: dataString,
 						success: function(data){
-							$('.error').html('<p>Hardware has been deleted from the database!</p>');
-							$('#hardware_form')[0].reset();
+							if (data == 0){
+								$('.error').html('<p>Hardware does not exist the database!</p>');
+							} else {
+								$('.error').html('<p>Hardware has been deleted from the database!</p>');
+								$('#hardware_form')[0].reset();
+							}
 						}
 					});
 				}
