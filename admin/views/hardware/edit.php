@@ -13,7 +13,7 @@
 		  </div>
 		</nav>
 <!-- Page Content -->
-		<div class="col-sm-12">
+		<div id="content_header" class="col-sm-12">
 			<h2 >Edit Hardware</h2>
 				<p>Please fill out the form below to edit an item in the database.</p>
 			<div class="error">

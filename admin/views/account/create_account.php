@@ -13,7 +13,7 @@
 			</div>
 		</nav>
 <!-- Page Content -->
-		<div class="col-sm-12">
+		<div id="content_header" class="col-sm-12">
 			<h2 >Create Account</h2>
 			<p>Please fill out the form to create a new admin account.</p>
 		<div class="error">
@@ -33,7 +33,6 @@
 			}
 		?>
 		</div>
-		<br />
 		<br />
 		</div>
   		<form id="register_form" class="form-horizontal" method="post" action="index.php?view=create_account" name="registerform">

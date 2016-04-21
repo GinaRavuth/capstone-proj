@@ -13,7 +13,7 @@
 		  </div>
 		</nav>
 <!-- Page Content -->
-		<div class="col-sm-12">
+		<div id="content_header" class="col-sm-12">
 			<h2 >Add Hardware</h2>
 				<p>Please fill out the form about the piece of hardware you would like to add and click submit.</p>
 		<div class="error">

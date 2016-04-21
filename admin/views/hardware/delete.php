@@ -13,7 +13,7 @@
 		  </div>
 		</nav>
 <!-- Page Content -->
-		<div class="col-sm-12">
+		<div id="content_header" class="col-sm-12">
 			<h2 >Delete Hardware</h2>
 				<p>Please enter the ID of the item to remove from the database.</p>
 			<div class="error">
