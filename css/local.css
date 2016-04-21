@@ -1,17 +1,18 @@
-body{
-	font-family: Quicksand !important;
-}
-#ordino{
-font-family: Quicksand; font-size: 3em;color: #4f4f4f; text-align:left; margin-left: -10px; margin-top: 8px;
-}
 * {
   -webkit-border-radius: 0 !important;
      -moz-border-radius: 0 !important;
           border-radius: 0 !important;
 }
+body{
+	font-family: Quicksand !important;
+}
 p{
 	font-family: Open Sans;
 }
+#ordino{
+font-family: Quicksand; font-size: 3em;color: #4f4f4f; text-align:left; margin-left: -10px; margin-top: 8px;
+}
+
 .navbar-default{
 	background: #fff !important;
 	border-color: #fff !important;
@@ -31,7 +32,7 @@ p{
 	border-bottom: 1px solid #337ab7;
 }
 .navbar-default .navbar-nav > li > a:active, a:focus{
-	color: #337ab7 !important;
+	color: #337ab7;
 }
 .nav-right{
 	float: right;
