@@ -15,15 +15,15 @@
 		</nav>
 <!-- End top navbar -->
 <!-- Page Content -->
-		<div class="col-sm-8" id="message">
+		<div class="col-sm-6" id="message">
 			<div id="content_header">
 				<h2>Message Inbox</h2>
 				<p class="inbox">Check your messages below.</p>
-				<hr />
 				<div class="error">
 				</div>
 			</div>
-			<table class="table table-striped table-bordered" id="message_table">	
+			<br />
+			<table class="table" id="message_table">	
 			</table>	
 		</div>
 <!-- End page content -->
