@@ -31,7 +31,7 @@
 					</select>
 				</div>
 			</div>
-			<table class="table table-striped table-bordered dt-responsive"  id="dataTable">
+			<table class="table table-striped table-bordered"  id="dataTable">
 				<thead>
 					<tr>
 					<?php foreach($columns as $tableHead): ?>

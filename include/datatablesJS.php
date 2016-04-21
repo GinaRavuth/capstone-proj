@@ -8,6 +8,7 @@ $(document).ready(function() {
 	
 	//set up table
 	var table = $('#dataTable').DataTable( {
+		"responsive": true,
 		"processing": true,
 		"ajax": {
 			'type': 'POST',
