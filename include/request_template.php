@@ -23,13 +23,13 @@
 			<div class="form-group">
 				<label for="name" class="col-sm-1 control-label text-left">Name</label>
 				<div class="col-sm-7">
-					<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+					<input type="text" class="form-control" id="name" name="name" placeholder="Name" required="required">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="eagleid" class="col-sm-1 control-label text-left">Eagle ID</label>
 				<div class="col-sm-7">
-					<input type="text" class="form-control" id="eagleid" name="eagleid" placeholder="Eagle ID">
+					<input type="text" class="form-control" id="eagleid" name="eagleid" placeholder="Eagle ID" required="required">
 				</div>
 			</div>
 			<div class="form-group">

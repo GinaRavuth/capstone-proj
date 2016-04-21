@@ -178,11 +178,11 @@ function moveToLoaned($id, $name, $eId, $reason)
 {
 	$link = open_database_connection();
 	$date = date('Y-m-d G:i:s');
-	$sql = "INSERT INTO loaned_hardware (hardware_id, eagle_id, name, date_out) VALUES ((SELECT hardware_id FROM hardware WHERE hardware_id=:hardware_id), :eagle_id, :name, :date)";
+	$sql = "INSERT INTO loaned_hardware (loaned_hardware_id, eagle_id, name, date_out) VALUES ((SELECT hardware_id FROM hardware WHERE hardware_id=:loaned_hardware_id), :eagle_id, :name, :date)";
 	$insert = $link->prepare($sql);
-	$insert->bindParam(':hardware_id', $id);
-	$insert->bindParam(':eagle_id', $eId);
-	$insert->bindParam(':name', $name);
+	$insert->bindParam(':loaned_hardware_id', strip_tags($id));
+	$insert->bindParam(':eagle_id', intval($eId));
+	$insert->bindParam(':name', strip_tags($name));
 	$insert->bindParam(':date', $date);
 	if ($insert->execute()) {
 		$status = 1;
@@ -194,8 +194,19 @@ function moveToLoaned($id, $name, $eId, $reason)
 	return $status;
 }
 
-function returnHardware($id, $name, $eId) {
-    
+function returnHardware($id) {
+    $link = open_database_connection();
+	$sql = 'UPDATE loaned_hardware SET return_auth=1 WHERE loaned_hardware_id = :id';
+	$update = $link->prepare($sql);
+	$update->bindParam(':id', $id);
+		
+	if($update->execute()) {
+		$status = 1;
+	} else {
+		$status = 0;
+	}
+	
+	return $status;
 }
 
 // Add hardware to database for backend
@@ -296,6 +307,14 @@ function splash_text($source)
 		);
 		return $array;
 		break;
+	default:
+		$array = array(
+			"display" => "Thank you for using Ordino",
+			"status" => "",
+			"url" => "index.html",
+			"text" => 'Home'
+		);
+		return $array;
 	}
 }
 

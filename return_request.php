@@ -21,22 +21,19 @@ if(checkIfExists($_GET['id'],'hardware') === 1){
 					<p>Hardware Id: $id</p>
 					<p>Checkout Date: $date</p>
                     ";
-} else {
-    $description = '<p>Item not found</p>';
-}
-
-if(isset($_POST['submit']) && checkIfExists($_GET['id'],'hardware') === 1) {
-    //do all the query stuff....
-    $name = $_POST['name'];
-    $eId = $_POST['eagleid'];
-    $reason = $_POST['message'];
-   // $status = moveToLoaned($id, $name, $eId, $reason);
-    
-    if($status===1) {
-        header('Location: /checked.html');
-    } else {
-        $description = "<h4>Checkout failed</h4>";
+					
+    if(isset($_POST['submit'])) {
+        $id = strip_tags($_GET['id']);
+        $status = returnHardware($id);
+        
+        if($status===1) {
+            header('Location: /splash.php');
+        } else {
+            $description .= "<h4>Checkout failed, please resubmit</h4>";
+        }
     }
+} else {
+    $description = '<h4>Item not found</h4>';
 }
 
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/return_template.php');
