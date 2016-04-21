@@ -75,3 +75,6 @@ footer p{
 	position:fixed;
 	height:60px;	
 }
+#dataTable{
+	width: 100% !important;
+}

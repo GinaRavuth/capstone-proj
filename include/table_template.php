@@ -16,6 +16,7 @@
 				<p><?php echo $description; ?></p>
 			</div>
 		</div>
+	<div class="dataTables_wrapper form-inline dt-boostrap">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="input-group">
@@ -30,7 +31,7 @@
 					</select>
 				</div>
 			</div>
-			<table class="table table-striped table-bordered" id="dataTable">
+			<table class="table table-striped table-bordered dt-responsive"  id="dataTable">
 				<thead>
 					<tr>
 					<?php foreach($columns as $tableHead): ?>
@@ -41,6 +42,7 @@
 				<tbody id="tableBody">
 				</tbody>
 			</table>
+		</div>
 		</div>
 	</div>
 </div>
