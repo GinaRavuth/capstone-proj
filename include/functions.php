@@ -1,4 +1,3 @@
-
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/admin/config/db.php');
 
@@ -303,21 +302,58 @@ function delete_hardware($id)
 // Edit hardware in the database
 
 function edit_hardware($id, $type, $model, $status, $description, $location)
-{
+{	
 	$link = open_database_connection();
-	$sql = "UPDATE hardware SET type = :type, model = :model,status = :status, notes = :description, location = :location WHERE hardware_id = :id";
-	$edit = $link->prepare($sql);
-	$edit->bindParam(':id', $id);
-	$edit->bindParam(':type', $type);
-	$edit->bindParam(':status', $status);
-	$edit->bindParam(':notes', $notes);
-	$edit->bindParam(':location', $location);
-	$edit->bindParam(':id', $id);
-	$edit->execute();
+	if(isset($type) && isset($model) && isset($status) && isset($description) && isset($location)){
+		$sql = "UPDATE hardware SET type = :type, model = :model,status = :status, notes = :description, location = :location WHERE hardware_id = :id";
+		$edit = $link->prepare($sql);
+		$edit->bindParam(':id', $id);
+		$edit->bindParam(':type', $type);
+		$edit->bindParam(':model', $model);
+		$edit->bindParam(':status', $status);
+		$edit->bindParam(':description', $description);
+		$edit->bindParam(':location', $location);
+	
+		$edit->execute();
+	} else if (isset($type) && isset($model) && isset($status) && isset($description)){
+		$sql = "UPDATE hardware SET type = :type, model = :model,status = :status, notes = :description WHERE hardware_id = :id";
+		$edit = $link->prepare($sql);
+		$edit->bindParam(':id', $id);
+		$edit->bindParam(':type', $type);
+		$edit->bindParam(':model', $model);
+		$edit->bindParam(':status', $status);
+		$edit->bindParam(':description', $description);
+	
+		$edit->execute();
+	} else if (isset($type) && isset($model) && isset($status)){
+		$sql = "UPDATE hardware SET type = :type, model = :model,status = :status WHERE hardware_id = :id";
+		$edit = $link->prepare($sql);
+		$edit->bindParam(':id', $id);
+		$edit->bindParam(':type', $type);
+		$edit->bindParam(':model', $model);
+		$edit->bindParam(':status', $status);
+		
+	
+		$edit->execute();
+	} else if (isset($type) && isset($model)){
+		$sql = "UPDATE hardware SET type = :type, model = :model WHERE hardware_id = :id";
+		$edit = $link->prepare($sql);
+		$edit->bindParam(':id', $id);
+		$edit->bindParam(':type', $type);
+		$edit->bindParam(':model', $model);
+	
+		$edit->execute();
+	} else if (isset($type)){
+		$sql = "UPDATE hardware SET type = :type WHERE hardware_id = :id";
+		$edit = $link->prepare($sql);
+		$edit->bindParam(':id', $id);
+		$edit->bindParam(':type', $type);
+	
+		$edit->execute();
+	}
 }
 
 // Delete message from database
-
 function delete_message($id)
 {
 	$link = open_database_connection();
@@ -326,8 +362,8 @@ function delete_message($id)
 	$delete->bindParam(':id', $id);
 	$delete->execute();
 }
-
-function edit_account($user, $email,$password) {
+// Edit the email and password of an account
+function edit_account($user, $email,$password){
 	$link = open_database_connection();
 	$sql = "UPDATE users SET user_password_hash = :password, user_email = :email WHERE user_name = :username";
 	$edit = $link->prepare($sql);
@@ -359,6 +395,7 @@ function delete_account($user, $email){
 	$delete = $link->prepare($sql);
 	$delete->bindParam(':user', $user);
 	$delete->bindParam(':email', $email);
+	
 	$delete->execute();
 }
 
