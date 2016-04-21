@@ -14,6 +14,16 @@
 ul{
 	list-style:none;
 }
+table,tr,td{
+	border: none;
+	border-bottom: 1px solid #ddd;
+}
+.table>tbody>tr>th{
+	border:none;
+}
+#message_table th{
+	background-color:#ffffff;
+}
 #manage_hardware{
 	display: none;
 }
@@ -70,13 +80,7 @@ td{
 	#content_header p.inbox{
 		text-align: center;
 	}
-	#hardware_form{
-		padding: 10px;
-	}
-	#account_form{
-		padding: 10px;
-	}
-	#register_form{
+	#admin_form{
 		padding: 10px;
 	}
 }
