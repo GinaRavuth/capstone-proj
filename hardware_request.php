@@ -22,20 +22,7 @@ if(checkIfExists($_GET['id'],'hardware') === 1){
                     <p>Status: $status</p>
                     <p>Model: $model</p>
                     <p>Notes: $notes</p>
-                    <p>Location: $location</p>";
-                    
-    if(isset($_POST['submit'])) {
-        $name = $_POST['name'];
-        $eId = $_POST['eagleid'];
-        $reason = $_POST['message'];
-        $status = moveToLoaned($id, $name, $eId, $reason);
-        
-        if($status===1) {
-            header('Location: /splash.php');
-        } else {
-            $description .= "<h4>Checkout failed, please resubmit</h4>";
-        }
-    }
+                    <p>Location: $location</p>";   
 } else {
     $description = '<h4>Item not found</h4>';
 }

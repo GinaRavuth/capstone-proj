@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/css.php'); ?>
+	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/favicon.php'); ?>
 </head>
 <body >
 	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/navbar.php'); ?>
@@ -23,13 +24,13 @@
 			<div class="form-group">
 				<label for="name" class="col-sm-1 control-label text-left">Name</label>
 				<div class="col-sm-7">
-					<input type="text" class="form-control" id="name" name="name" placeholder="Name" required="required">
+					<input type="text" class="form-control" id="name" name="name" placeholder="Name">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="eagleid" class="col-sm-1 control-label text-left">Eagle ID</label>
 				<div class="col-sm-7">
-					<input type="text" class="form-control" id="eagleid" name="eagleid" placeholder="Eagle ID" required="required">
+					<input type="text" class="form-control" id="eagleid" name="eagleid" placeholder="Eagle ID">
 				</div>
 			</div>
 			<div class="form-group">
@@ -38,8 +39,10 @@
 					<textarea class="form-control" rows="5" id="message" name="message" placeholder="Why do you need this hardware?"></textarea>
 				</div>
 			</div>
+			
 			<div class="form-group">
 				<div class="col-sm-8">
+					<input type="hidden" name="hardware_id" value="<?php echo $id ?>">
 					<input type="submit" class="btn btn-default pull-right" name="Checkout" id="submit" value="Request Hardware">
 				</div>
 			</div>

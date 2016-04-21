@@ -307,14 +307,6 @@ function splash_text($source)
 		);
 		return $array;
 		break;
-	default:
-		$array = array(
-			"display" => "Thank you for using Ordino",
-			"status" => "",
-			"url" => "index.html",
-			"text" => 'Home'
-		);
-		return $array;
 	}
 }
 
