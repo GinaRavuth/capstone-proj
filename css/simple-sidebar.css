@@ -67,6 +67,18 @@ td{
 		text-align: justify;'
 		text-justify: distribute;
 	}
+	#hardware_form{
+		padding: 10px;
+	}
+	#content_form{
+		padding: 10px;
+	}
+	#register_form{
+		padding: 10px;
+	}
+	.col-xs-8 {
+		width: 0 auto;
+	}
 }
 @media screen and (min-width: 768px) {
 	 #page.container h1{
