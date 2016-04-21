@@ -8,6 +8,7 @@
 	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/favicon.php'); ?>
 </head>
 <body >
+<!-- Page content -->
 	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/navbar.php'); ?>
     <div class="container" style="margin-top: 120px;">
 		<div class="row">
@@ -33,9 +34,8 @@
             </div>
        
         </div>
-
 	</div> 
+<!-- End content -->
 	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/js.php');?>  
-<!--end scripts -->
 </body>
 </html>

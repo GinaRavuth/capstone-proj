@@ -1,3 +1,4 @@
+<!-- DataTables Script -->
 <script>
 $(document).ready(function() {
 	
@@ -27,3 +28,4 @@ $(document).ready(function() {
 	categoryChange();	
 });
 </script>
+<!-- End DataTables script -->
