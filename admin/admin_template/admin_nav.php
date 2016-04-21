@@ -19,7 +19,7 @@
 				<li><a href="index.php?view=add">Add Hardware</a></li>
 				<li><a href="index.php?view=edit">Edit Hardware</a></li>
 				<li><a href="index.php?view=delete">Delete Hardware</a></li>
-				</ul>
+			</ul>
 		</li>
 		<li>
             <a id="drop" href="#">Manage Accounts <span class="caret"></a>
