@@ -65,7 +65,7 @@ td{
 	}
 	#content_header p{
 		text-align: justify;'
-		text-justify: inter-word;
+		text-justify: distribute;
 	}
 }
 @media screen and (min-width: 768px) {
