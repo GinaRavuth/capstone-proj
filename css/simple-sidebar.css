@@ -11,27 +11,11 @@
           border-radius: 0 !important;
 }
 /* dropdown */
-#drop li {
-	
-	text-decoration:none;
-	list-style-type:none;
+ul{
+	list-style:none;
 }
-#drop li a{
-	text-decoration: none;
-	padding-right: 50px;
-	
-	
-}
-#drop2 li {
-	
-	text-decoration:none;
-	list-style-type:none;
-}
-#drop2 li a{
-	text-decoration: none;
-	padding-right: 50px;
-	
-	
+.active{
+	display:block;
 }
 #manage_hardware{
 	display: none;

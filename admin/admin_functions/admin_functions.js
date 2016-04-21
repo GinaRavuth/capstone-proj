@@ -164,10 +164,8 @@ $(document).ready(function() {
 	});
 
 // Menu dropdown
-	$('li').click(function(){
-		$("#drop").accordion({collapsible : true, active : false});
-		$('.collapse').collapse();
-		$("#drop2").accordion({collapsible : true, active : false});
-		$('.collapse').collapse();
+	$('.submenu').hide();
+	$('a').click(function(){
+		$(this).parent().children('ul').toggle();
 	});
 });
