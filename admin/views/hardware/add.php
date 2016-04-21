@@ -20,7 +20,7 @@
 		</div>
 		<br />
 		</div>
-		<form id="hardware_form" class="form-horizontal" method="post">
+		<form id="admin_form" class="form-horizontal" method="post">
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Hardware ID</label>
 				<div class="col-sm-6">

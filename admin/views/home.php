@@ -18,7 +18,7 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-4 col-sm-6 spaced">
+                    <div class="col-lg-4 col-sm-6">
 					<a href="index.php?view=messages">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
@@ -35,7 +35,7 @@
                         </div>
 					</a>
                     </div>
-                    <div class="col-lg-4 col-sm-6 spaced">
+                    <div class="col-lg-4 col-sm-6">
 					<a href="index.php?view=checkout">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
@@ -52,7 +52,7 @@
                         </div>
 					</a>
                     </div>
-                    <div class="col-lg-4 col-sm-6 spaced">
+                    <div class="col-lg-4 col-sm-6">
 					<a href="index.php?view=return">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
@@ -69,7 +69,7 @@
                         </div>
 					</a>
                     </div>
-                    <div class="col-lg-4 col-sm-6 spaced">
+                    <div class="col-lg-4 col-sm-6">
 					<a href="index.php?view=manage_hardware">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
@@ -87,7 +87,7 @@
                         </div>
 					</a>
                     </div>
-					<div class="col-lg-4 col-sm-6 spaced">
+					<div class="col-lg-4 col-sm-6">
 					<a href="index.php?view=manage_accounts">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
@@ -105,7 +105,7 @@
                         </div>
 					</a>
                     </div>
-					<div class="col-lg-4 col-sm-6 spaced">
+					<div class="col-lg-4 col-sm-6">
 					<a href="" id="logout">
                         <div class="panel panel-primary">
                             <div class="panel-heading">

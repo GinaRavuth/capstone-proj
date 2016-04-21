@@ -35,7 +35,7 @@
 		</div>
 		<br />
 		</div>
-  		<form id="register_form" class="form-horizontal" method="post" action="index.php?view=create_account" name="registerform">
+  		<form id="admin_form" class="form-horizontal" method="post" action="index.php?view=create_account" name="registerform">
 		  <div class="form-group">
 			<label for="id" class="col-sm-2 control-label text-left">Username</label>
 			<div class="col-sm-6">

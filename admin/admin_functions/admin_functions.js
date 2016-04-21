@@ -15,14 +15,9 @@ $(document).ready(function() {
 	});
 	
 // Prevent hardware form from reloading page & scroll to top for mobile
-	$('#hardware_form').on('submit', function (e) {
+	$('#admin_form').on('submit', function (e) {
 		e.preventDefault();
 		 $('html, body').scrollTop(0);
-	});
-	
-	$('#account_form').on('submit', function (e){
-		e.preventDefault();
-		$('html, body').scrollTop(0);
 	});
 
 // AJAX functions for database interaction on the hardware module

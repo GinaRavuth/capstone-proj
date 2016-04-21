@@ -19,11 +19,10 @@
 			<div id="content_header">
 				<h2>Message Inbox</h2>
 				<p class="inbox">Check your messages below.</p>
-				<br />
+				<hr />
 				<div class="error">
 				</div>
 			</div>
-			<br />
 			<table class="table table-striped table-bordered" id="message_table">	
 			</table>	
 		</div>

@@ -136,13 +136,9 @@ nav{
 .panel-heading:hover{
 	opacity: .8;
 }
-.spaced{
-	margin-right: -6px;
-}
 
 #wrapper {
-    padding-left: 0;
-    
+    padding-left: 0; 
 }
 
 
