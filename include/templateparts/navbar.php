@@ -4,7 +4,9 @@
 		<div class="navbar-header">
             <button type="button" class="navbar-toggle toggle-button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
-                <h1 id="ordino">Ordino<span class="caret"></span><h1>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
 				<a class="navbar-brand" href="../index.html">
 				<h1 id="ordino">Ordino</h1>
