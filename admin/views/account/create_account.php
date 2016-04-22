@@ -9,7 +9,7 @@
 		<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_nav.php'); ?>
 		<nav class="navbar navbar-default navbar-static-top">
 			<div id="page" class="container">
-				<h1>Ordino</h1>
+				<h1>Ordino<span class="caret"></span></h1>
 			</div>
 		</nav>
 <!-- Page Content -->
