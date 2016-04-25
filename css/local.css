@@ -72,7 +72,6 @@ h2{
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) {
 #navbar-collapse-main {
-  width: 100%;
   text-align: center;
 }
 .nav-right{
