@@ -89,6 +89,10 @@ td{
 	#admin_form{
 		padding: 10px;
 	}
+	.btn{
+		width: 100%;
+		margin: auto;
+	}
 }
 @media screen and (min-width: 768px) {
 	 #page.container h1{
