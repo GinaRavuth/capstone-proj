@@ -10,20 +10,27 @@
      -moz-border-radius: 0 !important;
           border-radius: 0 !important;
 }
+
+/* Hide the navbar at the top. Take away dropdown border and hover/active effects */
 .navbar.navbar-default.navbar-fixed-top{
 	display: none;
 	width: 100%;
+	border: 0;
 }
-
+#navbar-collapse-main{
+	border: 0;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+	background-color: transparent;
+}
 #content_header{
 	margin-top: 70px;
-
 }
-/* dropdown */
+/* Remove styling from list links */
 ul{
 	list-style:none;
 }
-/* end */
+
 .btn{
 	float:right;
 }

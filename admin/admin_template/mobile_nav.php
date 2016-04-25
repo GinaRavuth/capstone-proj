@@ -1,8 +1,8 @@
 <!-- Start mobile nav -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
 		<div class="navbar-header">
-            <button type="button" class="navbar-toggle toggle-button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-expanded="false">
+            <button class="navbar-toggle toggle-button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="header_text">Ordino<span class="caret"></span><span>
             </button>
