@@ -75,6 +75,9 @@ h2{
   width: 100%;
   text-align: center;
 }
+.nav-right{
+	float: none;
+}
 .dataTables_filter ,.dataTables_length {
 	float: left;
 	clear: both;
