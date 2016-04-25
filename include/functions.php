@@ -100,6 +100,7 @@ function linkDataTablesID($array, $url)
 	switch ($url) {
 	case 'hardware.php':
 		$destinationURL = 'hardware_request.php';
+		if ($a > 0) {
 		do {
 			$id = $array['data'][$b][0];
 			$type = $array['data'][$b][1];
@@ -112,6 +113,7 @@ function linkDataTablesID($array, $url)
 		}
 
 		while ($b < $a);
+		}
 		break;
 
 	case 'returns.php':

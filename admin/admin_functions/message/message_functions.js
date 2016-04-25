@@ -32,7 +32,7 @@ $(document).ready(function() {
 			var email = data[id]['email'];				
 			var subject = data[id]['subject'];
 			var message = data[id]['message'];
-			$('#message').html('<h4>From: '+name+'</h4><h4>Email: '+email+'</h4><h4>Subject: '+subject+'</h4><hr /><br /><p>'+message+'</p><br /><br /><button type="button" class="btn btn-default">Return to Inbox</button><br /><br /><span id="'+data[id]['id']+'"><button class="btn btn-default">Delete</button>');
+			$('#message').html('<div id="content_header"><h2>Message</h2></div><h4>From: '+name+'</h4><h4>Email: '+email+'</h4><h4>Subject: '+subject+'</h4><hr /><br /><p>'+message+'</p><br /><br /><button type="button" class="btn btn-default">Return to Inbox</button><br /><br /><span id="'+data[id]['id']+'"><button class="btn btn-default">Delete</button>');
 		});
 			inbox();
 			remove(data);

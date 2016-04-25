@@ -7,11 +7,7 @@
 <!-- Wrapper -->
     <div id="wrapper">
 		<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_nav.php'); ?>
-		<nav class="navbar navbar-default navbar-static-top">
-			<div id="page" class="container">
-				<h1>Ordino<span class="caret"></span></h1>
-			</div>
-		</nav>
+		<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/mobile_nav.php'); ?>
 <!-- Page Content -->
 		<div id="content_header" class="col-sm-12">
 			<h2>Delete Account</h2>

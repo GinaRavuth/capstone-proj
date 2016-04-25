@@ -8,11 +8,7 @@
     <div id="wrapper">
 		<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_nav.php'); ?>
 <!-- Admin dashboard top navbar -->
-		<nav class="navbar navbar-default navbar-static-top">
-			<div id="page" class="container">
-				<h1>Ordino<span class="caret"></span></h1>
-			</div>
-		</nav>
+		<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/mobile_nav.php'); ?>
 <!-- End top navbar -->
 <!-- Page Content -->
 		<div class="col-sm-12" id="message">
