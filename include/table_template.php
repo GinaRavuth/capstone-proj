@@ -31,6 +31,7 @@
 					</select>
 				</div>
 			</div>
+			<br />
 			<table class="table table-striped table-bordered"  id="dataTable">
 				<thead>
 					<tr>

@@ -74,4 +74,11 @@ h2{
 #navbar-collapse-main {
   width: 100%;
 }
+.dataTables_filter ,.dataTables_length {
+	float: left;
+	clear: both;
+}
+.dataTables_length label{
+	padding-left: 16px;
+}
 }

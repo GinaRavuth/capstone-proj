@@ -18,6 +18,7 @@ $(document).ready(function() {
 			}
 		}
 	});
+	
     function categoryChange() {
         $("#cats").change(function() {
             var categoryOption = $(this).val();
@@ -25,7 +26,7 @@ $(document).ready(function() {
         });          
     }
 	
-	categoryChange();	
+	categoryChange();
 });
 </script>
 <!-- End DataTables script -->
