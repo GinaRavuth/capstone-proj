@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="easy-sidebar-active">
 <head>
     <?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_head.php'); ?>
 </head>
@@ -8,7 +8,8 @@
     <div id="wrapper">
 		<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_nav.php'); ?>
 <!-- Admin dashboard top navbar -->
-		<nav class="navbar navbar-default navbar-static-top module role="navigation"">
+		<nav class="navbar navbar-default navbar-static-top module easy-sidebar">
+		<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_nav.php'); ?>
 			<div id="page" class="container text-center">
 			<h1>Ordino<span class="caret"></span></h1>
 		  </div>

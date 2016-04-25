@@ -58,7 +58,9 @@ h1{
 	 color: #4F4F4F;
 	 text-align:center;
 }
-h3,h2{text-align:center;}
+h3,h2,p{
+text-align:center;
+}
 
 .error {
 	font-size: 15px;

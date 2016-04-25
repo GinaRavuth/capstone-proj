@@ -1,5 +1,4 @@
 <?php
-echo var_dump($_POST);
 session_start();
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php'); 
 	if(isset($_POST['Submit'])){
@@ -46,6 +45,17 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
 		$url = $return['url'];
 		$text = $return['text'];	
 	}
+} else if(isset($_POST['Password'])){
+	$name = $_POST['user_name'];
+	$email = $_POST['email'];
+	$subject = 'Password Change Request!';
+	$message = $_POST['message'];
+
+	$return = message_push($name, $email, $subject, $message);
+	$display = $return['display'];
+	$status = $return['status'];
+	$url = $return['url'];
+	$text = $return['text'];
 }
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/splash_template.php');
 ?>

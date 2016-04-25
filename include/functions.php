@@ -240,7 +240,7 @@ function message_push($name, $email, $subject, $message)
 		$array = array(
 			"display" => "Please fill out all fields!",
 			"status" => "Click return to re-submit your message.",
-			"url" => "about.php",
+			"url" => "javascript:history.go(-1)",
 			"text" => 'Return'
 		);
 		return $array;
@@ -249,8 +249,8 @@ function message_push($name, $email, $subject, $message)
 		message($name, $email, $subject, $message);
 		$array = array(
 			"display" => "Message Sent!",
-			"status" => "Thank you for using Ordino",
-			"url" => "hardware.php",
+			"status" => "Thank you for using Ordino.",
+			"url" => "index.html",
 			"text" => 'Home'
 		);
 		return $array;

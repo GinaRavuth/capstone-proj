@@ -6,11 +6,13 @@
 <body>
 <!-- Wrapper -->
 	<div id="wrapper">
-		<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_nav.php'); ?>
+	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/admin/admin_template/admin_nav.php'); ?>
 		<nav class="navbar navbar-default navbar-static-top module">
+			<a class="top" href="index.php">
 			<div id="page" class="container text-center">
-				<h1>Ordino<span class="caret"></span></h1>
-			</div>
+				<h1>Ordino</h1>
+			</div> 
+			</a>
 		</nav>
 <!-- Page Content -->
 		<div id="content_header" class="col-sm-12">

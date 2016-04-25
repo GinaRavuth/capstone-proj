@@ -18,6 +18,9 @@ ul{
 .btn{
 	float:right;
 }
+.top:link{
+	color: #333;
+}
 table,tr,td{
 	border: none;
 	border-bottom: 1px solid #ddd;
@@ -86,10 +89,6 @@ td{
 	#admin_form{
 		padding: 10px;
 	}
-	.btn{
-		width: 100%;
-		margin: auto;
-	}
 }
 @media screen and (min-width: 768px) {
 	 #page.container h1{
@@ -121,10 +120,7 @@ transform: scaleX(-1);
 -webkit-transform: scaleX(-1);
 -ms-transform: scaleX(-1);
 }
-nav{
-    z-index: -1 !important;
-	
-}
+
 
 .badge{
 	border-radius:5px !important;

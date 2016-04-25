@@ -16,41 +16,29 @@
 		<div class="row centered">
 			<div class="col-lg-12 center-block dec-marg">
 				<h1>Ordino</h1>
-				<h3>Admin Portal</h3>
+				<h3>Forgot Password?</h3>
+				<p>Please fill out the form below to request a new password.</p>
 			</div>
 <!-- Error message div -->
 			<div class="error">
-				<?php
-					// show potential errors / feedback (from login object)
-					if (isset($login)) {
-						if ($login->errors) {
-							foreach ($login->errors as $error) {
-								echo $error;
-							}
-					}
-						if ($login->messages) {
-							foreach ($login->message as $alert) {
-								echo  $alert;
-							}
-						}
-					}
-				?>
 			</div>
 <!-- End error message div -->
 		</div>
 <!-- Login form -->
 <div class="row">
 	<div class="col-sm-4"></div>
-		<form class="form-group col-sm-4" method="post" action="index.php" name="loginform">
+		<form class="form-group col-sm-4" method="post" action="/splash.php" name="loginform">
 			<label for="usr"></label>
 			<input id="login_input_username" type="text" class="form-control" name="user_name" placeholder="Username">
-			<label for="pwd"></label>
-			<input id="login_input_password" type="password" class="form-control" id="pwd" name="user_password" autocomplete="off" placeholder="Password">
+			<label for="email"></label>
+			<input type="text" class="form-control" name="email" placeholder="Email">
+			<label for="message"></label>
+			<textarea class="form-control" name="message" placeholder="Message"></textarea>
 			<br />
 			<div class="text-center button-index">
-				<input id="btn-style" type="submit" class="btn"  name="login" value="Log In" />
+				<input id="btn-style" type="submit" class="btn"  name="Password" value="Request" />
 					<p  class="space-password-button">
-						<a href="forgot_password.php">Forgot password? </a> | <a href="/index.html">Ordino Homepage</a>
+						<a href="index.php">Admin Dashboard</a> | <a href="/index.html">Ordino Homepage</a>
 					</p>
 			</div>
 		</form>
