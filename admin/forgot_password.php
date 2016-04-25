@@ -8,6 +8,7 @@
 	<link href='/css/local-index.css' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/favicon.php'); ?>
 <!-- End login header -->
 </head>
 <body id="">
