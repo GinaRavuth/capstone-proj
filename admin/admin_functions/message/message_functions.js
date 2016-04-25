@@ -15,7 +15,7 @@ $(document).ready(function() {
 	// Draw table with messages from database
 				$("#message_table").append('<tr><th>#</th><th>From:</th><th>Subject:</th><th>Action:</th></tr>');
 				$.each(data, function(index,val){
-					$("#message_table").append('<tr id="row" class="'+data[index]['id']+'"><td>'+(index+1)+'</td><td><a class="inbox" id="'+index+'"href="">'+data[index]['name']+'</a></td><td>'+data[index]['subject']+'</td><td><span id="'+data[index]['id']+'"><button class="btn btn-default">Delete</button></span></td></tr>');
+					$("#message_table").append('<tr id="row" class="'+data[index]['id']+'"><td>'+(index+1)+'</td><td><a class="inbox" id="'+index+'"href="">'+data[index]['name']+'</a></td><td>'+data[index]['subject']+'</td><td><span id="'+data[index]['id']+'"><button id="delete_button" class="btn btn-default">Delete</button></span></td></tr>');
 				});
 				remove(data);
 				click(data);

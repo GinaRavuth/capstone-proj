@@ -18,6 +18,9 @@ ul{
 .btn{
 	float:right;
 }
+#delete_button{
+	float: left;
+}
 .top:link{
 	color: #333;
 }
