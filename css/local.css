@@ -73,6 +73,7 @@ h2{
 @media only screen and (max-width : 767px) {
 #navbar-collapse-main {
   width: 100%;
+  text-align: center;
 }
 .dataTables_filter ,.dataTables_length {
 	float: left;
