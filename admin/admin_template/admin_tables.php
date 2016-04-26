@@ -26,20 +26,8 @@
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			
-			<div class="input-group">
-				<label class="control-label" id="label_category" for="cats">Choose Category: &nbsp; </label>
-				<div class="selectContainer">
-					<select name="categories" class="form-control" id="cats">
-						<option value="select" selected disabled>Select Type</option>
-						<?php foreach($types as $type): ?>
-						<option value="<?php echo $type ?>"><?php echo $type ?></option>                
-						<?php endforeach; ?>
-					</select>
-				</div>
-			</div>
 	
-			<table class="table table-striped table-bordered" id="dataTable">
+			<table class="table table-striped table-bordered">
 				<thead>
 					<tr>
 					<?php foreach($columns as $tableHead): ?>
@@ -47,7 +35,10 @@
 					<?php endforeach; ?>
 					</tr>
 				</thead>
-				<tbody id="tableBody">
+				<tbody>
+					 <tr>
+						<td></td>
+					 </tr>
 				</tbody>
 			</table>
 
@@ -59,7 +50,6 @@
 <!-- Table scripts -->
 	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/js.php');?>
 	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/templateparts/css.php');?>
-	<?php require_once($_SERVER['DOCUMENT_ROOT'].'/include/datatablesJS.php');?>
 <!-- End table scripts -->
 </body>
 </html>
