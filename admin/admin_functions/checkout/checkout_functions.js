@@ -8,26 +8,20 @@ $(document).ready(function() {
 			var data = JSON.parse(data);
 	// Handle empty messages
 			if($.isEmptyObject(data)){
-				$('#checkout').html('<div id="content_header"><h2>Approve Checkouts</h2><p class="inbox">Approve pending checkouts</p><div class="error"></div><br /><table class="table table-striped table-bordered" id="message_table"></table>');
+				$('#checkout').html('<div id="content_header"><h2>Approve Checkouts</h2><p class="inbox">Approve pending checkouts</p><div class="error"></div><br /><table class="table table-striped table-bordered" id="checkout_table"></table>');
 				
 				$('#checkout_table').append('<tr><td>No pending checkouts!</td></tr>');
 			} else {
 	// Draw table with messages from database
 				$("#checkout_table").append('<tr><th>Hardware ID</th><th>Student</th><th>Eagle ID</th><th>Date Checked Out</th><th>Approve</th></tr>');
 				$.each(data, function(index,val){
-					$("#checkout_table").append('<tr id="row" class="'+data[index]['loaned_hardware_id']+'"><td>'+data[index]['loaned_hardware_id']+'</td><td><a class="inbox" id="'+index+'"href="">'+data[index]['name']+'</td><td>'+data[index]['eagle_id']+'</td><td>'+data[index]['date_out']+'</td><td><span id="'+data[index]['loaned_hardware_id']+'"><button id="delete_button" class="btn btn-default">Approve</button></span></td></tr>');
+					$("#checkout_table").append('<tr id="'+data[index]['loaned_hardware_id']+'"><td>'+data[index]['loaned_hardware_id']+'</td><td><a class="inbox" id="'+index+'"href="">'+data[index]['name']+'</td><td>'+data[index]['eagle_id']+'</td><td>'+data[index]['date_out']+'</td><td><span id="'+data[index]['loaned_hardware_id']+'"><button id="delete_button" class="btn btn-default">Approve</button></span></td></tr>');
 				});
 				remove(data);
 			}
 		}
 	});
-	
-	// Go back to inbox by reloading page
-	function inbox(){
-		$(document).on('click','button.btn', function(e){
-			location.reload();
-		});
-	}
+
 	
 	// Delete message
 	function remove(data){
@@ -40,7 +34,7 @@ $(document).ready(function() {
 				data: data,
 				success: function(data){
 					e.preventDefault();
-					//$('tr').remove();
+					location.reload();
 				}
 			});
 		});

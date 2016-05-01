@@ -19,7 +19,7 @@
 				<div class="error">
 				</div>
 			</div>
-			<table class="table table-hover" id="checkout_table">	
+			<table class="table table-hover" id="checkout_table">
 			</table>
 		</div>
 <!-- End page content -->

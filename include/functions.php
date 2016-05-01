@@ -196,6 +196,20 @@ function moveToLoaned($id, $name, $eId, $reason)
 	return $status;
 }
 
+function getReturns() {
+	$link = open_database_connection();
+	$sql = "SELECT loaned_hardware_id_, name, eagle_id, date_out FROM loaned_hardware WHERE return_auth=1";
+	$select = $link->prepare($sql);
+	$select->execute();
+	$returns = array();
+	while ($row = $select->fetch(PDO::FETCH_ASSOC)) {
+		$returns[] = $row;
+	}
+
+	close_database_connection($link);
+	return ($returns);
+}
+
 function getApprovals() {
 	$link = open_database_connection();
 	$sql = "SELECT loaned_hardware_id, name, eagle_id, date_out FROM loaned_hardware WHERE checkout_auth=0";
