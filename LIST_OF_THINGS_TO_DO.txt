@@ -1,4 +1,0 @@
-1. Get responsive design working properly
-2. Complete backend table rendering and queries
-6. Correct website text throughout. (Make text more user friendly or more clear and concise)
-7. Design forgotten password page and figure out how to implement password resetting
